@@ -25,4 +25,5 @@ Thumbs.db
 # Logs & Test Artifacts
 *.log
 frontend/test_screenshots/
+frontend/test_live_prod.cjs
 
