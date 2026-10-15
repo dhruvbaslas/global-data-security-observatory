@@ -290,47 +290,65 @@ body {
   margin-top: 0.25rem;
 }
 
-/* ---------------- Filters ---------------- */
+/* ---------------- Unified Command & Filter Dock ---------------- */
 .filter-section {
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
-  margin-bottom: 2rem;
-}
-
-.search-bar-container {
-  position: relative;
-  max-width: 600px;
+  margin-bottom: 2.5rem;
+  max-width: 1040px;
+  margin-left: auto;
+  margin-right: auto;
   width: 100%;
-  margin: 0 auto;
 }
 
-.search-icon {
+.filter-command-bar {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  background: rgba(15, 23, 42, 0.75);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-lg);
+  padding: 0.65rem 0.85rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(16px);
+}
+
+.search-bar-wrap {
+  position: relative;
+  flex: 1;
+  min-width: 260px;
+}
+
+.search-bar-wrap .search-icon {
   position: absolute;
   left: 14px;
   top: 50%;
   transform: translateY(-50%);
   color: var(--color-text-muted);
+  font-size: 0.95rem;
+  pointer-events: none;
 }
 
-.search-input {
+.search-bar-wrap .search-input {
   width: 100%;
-  padding: 0.75rem 2.5rem 0.75rem 2.75rem;
-  background-color: var(--color-surface);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-full);
+  padding: 0.65rem 2.2rem 0.65rem 2.5rem;
+  background: rgba(8, 12, 22, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: var(--radius-md);
   color: #fff;
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   outline: none;
   transition: var(--transition-fast);
 }
 
-.search-input:focus {
+.search-bar-wrap .search-input:focus {
   border-color: var(--color-accent);
-  box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.15);
+  background: rgba(8, 12, 22, 0.9);
+  box-shadow: 0 0 0 2px rgba(56, 189, 248, 0.2);
 }
 
-.clear-search-btn {
+.search-bar-wrap .clear-search-btn {
   position: absolute;
   right: 12px;
   top: 50%;
@@ -339,7 +357,61 @@ body {
   border: none;
   color: var(--color-text-muted);
   cursor: pointer;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
+  padding: 2px 6px;
+}
+
+.filter-select-group {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-shrink: 0;
+}
+
+.compact-select {
+  width: 210px;
+}
+
+.compact-select .searchable-select-trigger {
+  background: rgba(8, 12, 22, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  padding: 0.55rem 0.8rem;
+  font-size: 0.85rem;
+  min-height: 38px;
+}
+
+.compact-select .searchable-select-trigger:hover {
+  border-color: rgba(56, 189, 248, 0.4);
+}
+
+.featured-pills-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.pills-lead-label {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+@media (max-width: 860px) {
+  .filter-command-bar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .filter-select-group {
+    width: 100%;
+  }
+  .compact-select {
+    flex: 1;
+    width: 100%;
+  }
 }
 
 .filter-pills {

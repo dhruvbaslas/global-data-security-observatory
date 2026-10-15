@@ -51,9 +51,10 @@ export default function CountryFilter({
 
   return (
     <div className="filter-section">
-      <div className="filter-controls-row">
+      {/* Unified Command & Filter Dock */}
+      <div className="filter-command-bar">
         {/* Live Search Input */}
-        <div className="search-bar-container">
+        <div className="search-bar-wrap">
           <span className="search-icon" aria-hidden="true">🔍</span>
           <input
             type="text"
@@ -74,60 +75,64 @@ export default function CountryFilter({
           )}
         </div>
 
-        {/* Regulatory Archetype Dropdown Filter with Type-Search */}
-        <div className="archetype-filter-wrap">
-          <SearchableSelect
-            id="archetype-select"
-            options={archetypeOptions}
-            value={selectedArchetype}
-            onChange={onSelectArchetype}
-            placeholder="Filter framework..."
-            ariaLabel="Filter by regulatory archetype"
-            className="archetype-select"
-          />
-        </div>
+        <div className="filter-select-group">
+          {/* Regulatory Archetype Dropdown Filter */}
+          <div className="archetype-filter-wrap">
+            <SearchableSelect
+              id="archetype-select"
+              options={archetypeOptions}
+              value={selectedArchetype}
+              onChange={onSelectArchetype}
+              placeholder="Archetype..."
+              ariaLabel="Filter by regulatory archetype"
+              className="archetype-select compact-select"
+            />
+          </div>
 
-        {/* Sovereign Nations Dropdown with Fast Type-Search across all 197 UN countries */}
-        <div className="country-quick-select-wrap">
-          <SearchableSelect
-            id="sovereign-jump-select"
-            options={countryOptions}
-            value={selectedCountry}
-            onChange={onSelectCountry}
-            placeholder="Type country name..."
-            ariaLabel="Jump to sovereign country"
-            className="sovereign-select"
-          />
+          {/* Sovereign Nations Dropdown for fast 1-click jump to any UN country */}
+          <div className="country-quick-select-wrap">
+            <SearchableSelect
+              id="sovereign-jump-select"
+              options={countryOptions}
+              value={selectedCountry}
+              onChange={onSelectCountry}
+              placeholder="Jump to country..."
+              ariaLabel="Jump to sovereign country"
+              className="sovereign-select compact-select"
+            />
+          </div>
         </div>
       </div>
 
       {/* Quick-Access Filter Pills */}
-      <div className="filter-pills" role="toolbar" aria-label="Quick country filters">
-        <button
-          className={`filter-pill ${selectedCountry === 'ALL' ? 'active' : ''}`}
-          onClick={() => onSelectCountry('ALL')}
-          aria-pressed={selectedCountry === 'ALL'}
-        >
-          <span className="pill-flag">🌐</span>
-          <span className="pill-name">{t(lang, 'allNations')}</span>
-          <span className="pill-badge">{countryList.length}</span>
-        </button>
+      <div className="featured-pills-row">
+        <span className="pills-lead-label">Featured:</span>
+        <div className="filter-pills" role="toolbar" aria-label="Quick country filters">
+          <button
+            className={`filter-pill ${selectedCountry === 'ALL' ? 'active' : ''}`}
+            onClick={() => onSelectCountry('ALL')}
+            aria-pressed={selectedCountry === 'ALL'}
+          >
+            <span className="pill-flag">🌐</span>
+            <span className="pill-name">{t(lang, 'allNations')}</span>
+          </button>
 
-        {QUICK_PILL_CODES.map((code) => {
-          const country = countries[code];
-          if (!country) return null;
-          return (
-            <button
-              key={country.code}
-              className={`filter-pill ${selectedCountry === country.code ? 'active' : ''}`}
-              onClick={() => onSelectCountry(country.code)}
-              aria-pressed={selectedCountry === country.code}
-            >
-              <span className="pill-flag">{country.flag}</span>
-              <span className="pill-name">{country.name}</span>
-            </button>
-          );
-        })}
+          {QUICK_PILL_CODES.map((code) => {
+            const country = countries[code];
+            if (!country) return null;
+            return (
+              <button
+                key={country.code}
+                className={`filter-pill ${selectedCountry === country.code ? 'active' : ''}`}
+                onClick={() => onSelectCountry(country.code)}
+                aria-pressed={selectedCountry === country.code}
+              >
+                <span className="pill-flag">{country.flag}</span>
+                <span className="pill-name">{country.name}</span>
+              </button>
+            );
+          })}
+        </div>
       </div>
     </div>
   );
