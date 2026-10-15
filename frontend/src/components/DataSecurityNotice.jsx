@@ -12,6 +12,7 @@
  */
 
 import React, { useState, useEffect } from 'react';
+import { createPortal } from 'react-dom';
 import { t } from '../utils/i18n';
 
 export default function DataSecurityNotice({ lang = 'en' }) {
@@ -46,7 +47,7 @@ export default function DataSecurityNotice({ lang = 'en' }) {
         <span>{t(lang, 'privacyFirst', 'Privacy-First Architecture')}</span>
       </button>
 
-      {isOpen && (
+      {isOpen && typeof document !== 'undefined' && createPortal(
         <div
           className="modal-backdrop-centered"
           onClick={() => setIsOpen(false)}
@@ -118,7 +119,8 @@ export default function DataSecurityNotice({ lang = 'en' }) {
               </button>
             </div>
           </div>
-        </div>
+        </div>,
+        document.body
       )}
     </>
   );

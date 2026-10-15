@@ -41,3 +41,4 @@ We are committed to providing a welcoming, inclusive, and harassment-free enviro
 - **Python**: PEP 8 compliance, type hints, docstrings, defensive sanitization.
 - **JavaScript / React**: Modern functional components with hooks, zero external heavyweight UI dependencies (pure SVG charts), accessible semantic HTML.
 - **Privacy First**: Maintain zero tracking, client-side data isolation, and strict Content Security Policy.
+

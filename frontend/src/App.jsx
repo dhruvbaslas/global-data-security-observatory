@@ -128,11 +128,34 @@ export default function App() {
             {activeView === 'overview' && (
               <section className="overview-view">
                 <div className="hero-banner">
-                  <h2>Sovereign Data Protection Portfolios</h2>
-                  <p>
-                    Inspect data privacy regimes across all 197 United Nations & sovereign economies.
-                    Scraped and harmonized from official authorities.
+                  <div className="hero-pill-badge">
+                    <span className="live-status-dot" aria-hidden="true"></span>
+                    <span>GLOBAL PRIVACY & DATA SOVEREIGNTY OBSERVATORY</span>
+                  </div>
+                  <h2 className="hero-title">Sovereign Data Protection Portfolios</h2>
+                  <p className="hero-description">
+                    Authoritative regulatory telemetry and policy benchmarking spanning all 197 sovereign United Nations economies.
+                    Harmonized across statutory coverage, enforcement penalties, transparency, and cross-border adequacy.
                   </p>
+
+                  <div className="global-stats-ribbon" role="region" aria-label="Global observatory statistics">
+                    <div className="stat-card">
+                      <span className="stat-value">{Object.keys(countries).length || 197}</span>
+                      <span className="stat-label">Sovereign Nations</span>
+                    </div>
+                    <div className="stat-card">
+                      <span className="stat-value">5</span>
+                      <span className="stat-label">Security Dimensions</span>
+                    </div>
+                    <div className="stat-card">
+                      <span className="stat-value">GDPR Art. 45</span>
+                      <span className="stat-label">Transfer Adequacy</span>
+                    </div>
+                    <div className="stat-card">
+                      <span className="stat-value">Zero-Trust</span>
+                      <span className="stat-label">Client Sandbox</span>
+                    </div>
+                  </div>
                 </div>
 
                 <CountryFilter

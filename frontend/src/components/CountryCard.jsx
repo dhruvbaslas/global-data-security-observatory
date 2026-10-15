@@ -12,6 +12,7 @@
  */
 
 import React, { useState } from 'react';
+import { createPortal } from 'react-dom';
 import {
   PARAMETER_KEYS,
   calculateOverallScore,
@@ -145,17 +146,26 @@ export default function CountryCard({
         </div>
       )}
 
-      {/* Radar view modal toggle */}
-      {showRadar && (
-        <div className="modal-backdrop-centered" onClick={() => setShowRadar(false)}>
+      {/* Radar view modal toggle — Mounted via React Portal directly to document.body */}
+      {showRadar && typeof document !== 'undefined' && createPortal(
+        <div className="modal-backdrop-centered" onClick={() => setShowRadar(false)} role="dialog" aria-modal="true">
           <div className="modal-box-centered radar-modal-centered" onClick={(e) => e.stopPropagation()}>
             <div className="modal-header">
-              <h3>{country.flag} {country.name} — Security Radar</h3>
-              <button className="modal-close-btn" onClick={() => setShowRadar(false)}>✕</button>
+              <div className="modal-header-title-group">
+                <span className="modal-icon-badge" aria-hidden="true">{country.flag}</span>
+                <div>
+                  <h3>{country.name}</h3>
+                  <p className="modal-subheading">Visual Security Dimension Radar Map</p>
+                </div>
+              </div>
+              <button className="modal-close-btn" onClick={() => setShowRadar(false)} aria-label="Close modal">✕</button>
             </div>
-            <ParameterRadar countryA={country} size={340} />
+            <div className="radar-modal-content">
+              <ParameterRadar countryA={country} size={360} />
+            </div>
           </div>
-        </div>
+        </div>,
+        document.body
       )}
 
       {/* Card actions */}

@@ -9,6 +9,7 @@
  */
 
 import React, { useState, useRef } from 'react';
+import { createPortal } from 'react-dom';
 import {
   PARAMETER_KEYS,
   compareCountries,
@@ -409,9 +410,9 @@ export default function ComparisonView({
             </button>
           </div>
 
-          {/* Social Share Modal Card for Stories/Posts */}
-          {showShareModal && (
-            <div className="modal-backdrop-centered" onClick={() => setShowShareModal(false)}>
+          {/* Social Share Modal Card for Stories/Posts — Mounted to document.body via Portal */}
+          {showShareModal && typeof document !== 'undefined' && createPortal(
+            <div className="modal-backdrop-centered" onClick={() => setShowShareModal(false)} role="dialog" aria-modal="true">
               <div className="modal-box-centered share-snapshot-modal" onClick={(e) => e.stopPropagation()}>
                 <div className="modal-header">
                   <h3>📱 Share Comparison Snapshot</h3>
@@ -467,7 +468,8 @@ export default function ComparisonView({
                   </button>
                 </div>
               </div>
-            </div>
+            </div>,
+            document.body
           )}
         </div>
       )}

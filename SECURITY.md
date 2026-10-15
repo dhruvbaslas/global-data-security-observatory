@@ -22,3 +22,4 @@ If you discover a security vulnerability or potential threat in this codebase:
 3. Include details of the potential vulnerability, steps to reproduce, and impact assessment.
 
 We will acknowledge receipt within 48 hours and work with you on a swift, coordinated disclosure.
+
