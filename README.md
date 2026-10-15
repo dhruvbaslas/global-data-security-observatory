@@ -10,31 +10,27 @@
 
 The **Global Data Security Observatory** is a single-page web application that scrapes, analyzes, and compares data security policies from official government websites across multiple countries. It provides:
 
-- **Country Overview** — Filterable cards showing each country's data protection framework
-- **Side-by-Side Comparison** — Select any two countries and compare their policies parameter-by-parameter
-- **Best of Best Analysis** — AI-scored ranking identifying the strongest data security policies globally
-- **Dynamic Expansion** — Add new countries on-the-fly with their official website links
-
-### Countries Covered (Default)
-
-| Country | Authority | Key Legislation |
-|---------|-----------|-----------------|
-| 🇺🇸 United States | FTC / State AGs | CCPA, HIPAA, GLBA, FERPA, FTC Act |
-| 🇮🇳 India | MeitY | Digital Personal Data Protection Act 2023 |
-| 🇫🇷 France | CNIL | GDPR (EU), Loi Informatique et Libertés |
-| 🇬🇧 United Kingdom | ICO | UK GDPR, Data Protection Act 2018 |
-| 🇯🇵 Japan | PPC | Act on Protection of Personal Information (APPI) |
-| 🇨🇳 China | CAC | PIPL, Data Security Law, Cybersecurity Law |
+- **Global 197 Sovereign Nations** — Complete database of all UN-recognized countries and sovereign territories
+- **Country Overview** — Filterable cards with search, jump-to-nation select, and archetype filters
+- **Side-by-Side Comparison** — Head-to-head parameter breakdown, dual radar spider visualizer, and **Cross-Border Transfer Adequacy Matrix** (GDPR Art. 45 & Standard Contractual Clauses)
+- **Social Media Story Sharing** — Generate and share high-res comparison cards formatted for Twitter/X, Instagram Stories, Facebook, and WhatsApp
+- **Best of Best Analysis** — Podium showcasing **#1 Champions** and **#2 Runner-Ups** overall and across every security dimension
+- **Dynamic Expansion** — Add new nations or regional frameworks on-the-fly with client-side sandbox validation
+- **Regulatory Archetype Classification** — Grouping nations into EU Omnibus GDPR, US Sectoral, Data Localization, or Modern Hybrid frameworks
+- **72-Hour Breach Mandate Flags** — Instant indicators for mandatory data breach notification requirements
+- **Privacy-First Architecture** — Zero analytics, no cookies, isolated client sandbox, guaranteed viewport-centered modals
+- **7-Language Localization** — Lightweight, accurate dictionary engine for English, French, Spanish, German, Japanese, Chinese, and Hindi
 
 ### Security Parameters Analyzed
 
-| Parameter | Description |
-|-----------|-------------|
-| **Policy Coverage** | Breadth and comprehensiveness of data protection laws |
-| **Enforcement Strength** | How strictly rules are applied and penalties enforced |
-| **Transparency** | Clarity and public accessibility of regulations |
-| **Update Frequency** | How often policies are revised and modernized |
-| **International Alignment** | Compliance with global standards (GDPR, ISO 27001, etc.) |
+| Parameter | Weight | Description |
+|-----------|--------|-------------|
+| **Policy Coverage** | 25% | Breadth and comprehensiveness of data protection laws |
+| **Enforcement Strength** | 25% | Regulatory fines, audits, and statutory enforcement rigor |
+| **Transparency** | 20% | Clarity, public disclosure, and accessibility of guidelines |
+| **Update Frequency** | 15% | Cadence of regulatory updates, circulars, and modernization |
+| **International Alignment** | 15% | Cross-border adequacy, APEC CBPR, Convention 108+, ISO conformity |
+
 
 ---
 
