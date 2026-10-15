@@ -2,7 +2,7 @@ const puppeteer = require('puppeteer-core');
 const path = require('path');
 
 const CHROME_PATH = 'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe';
-const APP_URL = 'http://127.0.0.1:4173';
+const APP_URL = process.env.APP_URL || 'http://127.0.0.1:4173';
 
 async function runTests() {
   console.log('🚀 Starting Chrome automation tests...');
