@@ -19,6 +19,7 @@ import {
 import { evaluateAdequacy, has72hBreachNotification } from '../utils/archetypes';
 import { t } from '../utils/i18n';
 import ParameterRadar from './ParameterRadar';
+import SearchableSelect from './SearchableSelect';
 
 export default function ComparisonView({
   countries,
@@ -32,6 +33,7 @@ export default function ComparisonView({
   const [codeB, setCodeB] = useState(initialCountryB);
   const [copied, setCopied] = useState(false);
   const [showShareModal, setShowShareModal] = useState(false);
+  const [downloadingImg, setDownloadingImg] = useState(false);
 
   const countryA = countries[codeA] || countryList[0] || null;
   const countryB = countries[codeB] || countryList[1] || countryList[0] || null;
@@ -41,6 +43,140 @@ export default function ComparisonView({
 
   const scoreA = countryA ? calculateOverallScore(countryA.scores) : 0;
   const scoreB = countryB ? calculateOverallScore(countryB.scores) : 0;
+
+  const countryOptions = countryList
+    .slice()
+    .sort((a, b) => a.name.localeCompare(b.name))
+    .map((c) => ({
+      value: c.code,
+      label: c.name,
+      sublabel: c.code,
+      flag: c.flag,
+    }));
+
+  // Download high-res 1200x630 graphic card for social media posting
+  const downloadCardImage = () => {
+    if (!countryA || !countryB || !comparison) return;
+    try {
+      setDownloadingImg(true);
+      const canvas = document.createElement('canvas');
+      canvas.width = 1200;
+      canvas.height = 630;
+      const ctx = canvas.getContext('2d');
+
+      // 1. Cybersecurity dark background
+      const grad = ctx.createLinearGradient(0, 0, 1200, 630);
+      grad.addColorStop(0, '#030712');
+      grad.addColorStop(0.5, '#0b1329');
+      grad.addColorStop(1, '#020617');
+      ctx.fillStyle = grad;
+      ctx.fillRect(0, 0, 1200, 630);
+
+      // Glowing border
+      ctx.strokeStyle = '#38bdf8';
+      ctx.lineWidth = 4;
+      ctx.strokeRect(12, 12, 1176, 606);
+
+      // Top branding
+      ctx.fillStyle = '#94a3b8';
+      ctx.font = '600 24px system-ui, -apple-system, sans-serif';
+      ctx.fillText('🛡️ GLOBAL DATA SECURITY OBSERVATORY', 60, 70);
+
+      ctx.fillStyle = '#38bdf8';
+      ctx.font = '700 22px system-ui, -apple-system, sans-serif';
+      ctx.textAlign = 'right';
+      ctx.fillText('SOVEREIGN BENCHMARK', 1140, 70);
+      ctx.textAlign = 'left';
+
+      // Divider line
+      ctx.strokeStyle = '#1e293b';
+      ctx.lineWidth = 2;
+      ctx.beginPath();
+      ctx.moveTo(60, 95);
+      ctx.lineTo(1140, 95);
+      ctx.stroke();
+
+      // Country A side (Left)
+      ctx.fillStyle = '#ffffff';
+      ctx.font = '80px system-ui';
+      ctx.fillText(countryA.flag || '🌐', 140, 210);
+
+      ctx.fillStyle = '#f8fafc';
+      ctx.font = '700 36px system-ui, -apple-system, sans-serif';
+      ctx.fillText(countryA.name, 140, 275);
+
+      ctx.fillStyle = '#38bdf8';
+      ctx.font = '800 48px system-ui, -apple-system, sans-serif';
+      ctx.fillText(`${scoreA} / 10`, 140, 340);
+
+      // VS badge (Center)
+      ctx.fillStyle = '#1e293b';
+      ctx.beginPath();
+      ctx.arc(600, 255, 48, 0, 2 * Math.PI);
+      ctx.fill();
+      ctx.strokeStyle = '#38bdf8';
+      ctx.lineWidth = 3;
+      ctx.stroke();
+
+      ctx.fillStyle = '#38bdf8';
+      ctx.font = '800 30px system-ui, -apple-system, sans-serif';
+      ctx.textAlign = 'center';
+      ctx.fillText('VS', 600, 266);
+      ctx.textAlign = 'left';
+
+      // Country B side (Right)
+      ctx.fillStyle = '#ffffff';
+      ctx.font = '80px system-ui';
+      ctx.fillText(countryB.flag || '🌐', 760, 210);
+
+      ctx.fillStyle = '#f8fafc';
+      ctx.font = '700 36px system-ui, -apple-system, sans-serif';
+      ctx.fillText(countryB.name, 760, 275);
+
+      ctx.fillStyle = '#f43f5e';
+      ctx.font = '800 48px system-ui, -apple-system, sans-serif';
+      ctx.fillText(`${scoreB} / 10`, 760, 340);
+
+      // Outcome Banner
+      ctx.fillStyle = 'rgba(16, 185, 129, 0.15)';
+      ctx.fillRect(140, 395, 920, 60);
+      ctx.strokeStyle = '#10b981';
+      ctx.lineWidth = 2;
+      ctx.strokeRect(140, 395, 920, 60);
+
+      ctx.fillStyle = '#34d399';
+      ctx.font = '700 24px system-ui, -apple-system, sans-serif';
+      ctx.textAlign = 'center';
+      const outcomeText =
+        scoreA > scoreB
+          ? `🏆 ${countryA.name} leads overall (+${(scoreA - scoreB).toFixed(1)} pts advantage)`
+          : scoreB > scoreA
+          ? `🏆 ${countryB.name} leads overall (+${(scoreB - scoreA).toFixed(1)} pts advantage)`
+          : '🤝 Benchmark Parity: Both jurisdictions scored equally';
+      ctx.fillText(outcomeText, 600, 434);
+
+      // Cross-Border Transfer Status
+      ctx.fillStyle = '#94a3b8';
+      ctx.font = '500 20px system-ui, -apple-system, sans-serif';
+      ctx.fillText(
+        `Cross-Border Transfer: ${adequacyResult?.status || 'Assessed'} (${adequacyResult?.badge || 'SCC / BCR'})`,
+        600,
+        500
+      );
+      ctx.fillText('Observatory covers all 197 sovereign UN nations', 600, 540);
+      ctx.textAlign = 'left';
+
+      const dataUrl = canvas.toDataURL('image/png');
+      const link = document.createElement('a');
+      link.download = `data-security-${countryA.code}-vs-${countryB.code}.png`;
+      link.href = dataUrl;
+      link.click();
+    } catch (err) {
+      console.error('Failed to generate image:', err);
+    } finally {
+      setDownloadingImg(false);
+    }
+  };
 
   // Generate plain text report
   const handleExportText = () => {
@@ -101,25 +237,19 @@ export default function ComparisonView({
         <p>{t(lang, 'selectCountries')}</p>
       </div>
 
-      {/* Selectors Bar */}
+      {/* Selectors Bar with Type-Search across all 197 countries */}
       <div className="selectors-bar">
         <div className="country-selector">
-          <label htmlFor="country-a-select">{t(lang, 'countryA')}:</label>
-          <select
+          <label id="country-a-label">{t(lang, 'countryA')}:</label>
+          <SearchableSelect
             id="country-a-select"
+            options={countryOptions}
             value={codeA}
-            onChange={(e) => setCodeA(e.target.value)}
-            className="select-input"
-          >
-            {countryList
-              .slice()
-              .sort((a, b) => a.name.localeCompare(b.name))
-              .map((c) => (
-                <option key={`a-${c.code}`} value={c.code}>
-                  {c.flag} {c.name} ({c.code})
-                </option>
-              ))}
-          </select>
+            onChange={setCodeA}
+            placeholder="Type country A..."
+            ariaLabel="Select Country A"
+            className="country-a-select"
+          />
         </div>
 
         <button
@@ -137,22 +267,16 @@ export default function ComparisonView({
         </button>
 
         <div className="country-selector">
-          <label htmlFor="country-b-select">{t(lang, 'countryB')}:</label>
-          <select
+          <label id="country-b-label">{t(lang, 'countryB')}:</label>
+          <SearchableSelect
             id="country-b-select"
+            options={countryOptions}
             value={codeB}
-            onChange={(e) => setCodeB(e.target.value)}
-            className="select-input"
-          >
-            {countryList
-              .slice()
-              .sort((a, b) => a.name.localeCompare(b.name))
-              .map((c) => (
-                <option key={`b-${c.code}`} value={c.code}>
-                  {c.flag} {c.name} ({c.code})
-                </option>
-              ))}
-          </select>
+            onChange={setCodeB}
+            placeholder="Type country B..."
+            ariaLabel="Select Country B"
+            className="country-b-select"
+          />
         </div>
       </div>
 
@@ -337,6 +461,9 @@ export default function ComparisonView({
                   </button>
                   <button className="btn-social btn-copy" onClick={handleExportText}>
                     📋 Copy Text Snippet
+                  </button>
+                  <button className="btn-social btn-download" onClick={downloadCardImage} disabled={downloadingImg}>
+                    {downloadingImg ? '⏳ Rendering...' : '💾 Download Story Graphic (.png)'}
                   </button>
                 </div>
               </div>

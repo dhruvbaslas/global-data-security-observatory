@@ -11,9 +11,11 @@
 The **Global Data Security Observatory** is a single-page web application that scrapes, analyzes, and compares data security policies from official government websites across multiple countries. It provides:
 
 - **Global 197 Sovereign Nations** — Complete database of all UN-recognized countries and sovereign territories
+- **Instant Type-to-Search Comboboxes** — Fast interactive search & fuzzy filtering across all 197 nations and regulatory archetypes
 - **Country Overview** — Filterable cards with search, jump-to-nation select, and archetype filters
 - **Side-by-Side Comparison** — Head-to-head parameter breakdown, dual radar spider visualizer, and **Cross-Border Transfer Adequacy Matrix** (GDPR Art. 45 & Standard Contractual Clauses)
-- **Social Media Story Sharing** — Generate and share high-res comparison cards formatted for Twitter/X, Instagram Stories, Facebook, and WhatsApp
+- **Interactive Country Swap** — 1-click swap button to invert Comparison perspectives
+- **Social Media Story Sharing & Graphic Export** — Generate and share high-res 1200×630 cards formatted for Twitter/X, Instagram Stories, Facebook, and WhatsApp, plus instant `.png` canvas graphic download
 - **Best of Best Analysis** — Podium showcasing **#1 Champions** and **#2 Runner-Ups** overall and across every security dimension
 - **Dynamic Expansion** — Add new nations or regional frameworks on-the-fly with client-side sandbox validation
 - **Regulatory Archetype Classification** — Grouping nations into EU Omnibus GDPR, US Sectoral, Data Localization, or Modern Hybrid frameworks

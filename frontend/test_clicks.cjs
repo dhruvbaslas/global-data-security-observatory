@@ -96,16 +96,47 @@ async function runTests() {
       }
     }
 
-    // 5. Test Country Filters & Archetype Dropdown
-    console.log('\n--- 4. Testing Country Filters & Archetype Dropdown ---');
-    const archetypeSelect = await page.$('.archetype-select');
-    if (archetypeSelect) {
-      await page.select('.archetype-select', 'eu_omnibus');
+    // 5. Test Country Filters & Searchable Select Dropdowns
+    console.log('\n--- 4. Testing Country Filters & Type-to-Search Comboboxes ---');
+    // Test Archetype Searchable Select
+    const archetypeTrigger = await page.$('.archetype-select .searchable-select-trigger');
+    if (archetypeTrigger) {
+      await archetypeTrigger.click();
+      await page.waitForSelector('.archetype-select .searchable-select-dropdown', { visible: true });
+      const archInput = await page.$('.archetype-select .search-inline-input');
+      if (archInput) await archInput.type('Omnibus');
       await new Promise(r => setTimeout(r, 200));
-      console.log('✅ Filtered by EU Omnibus (GDPR)');
-      await page.select('.archetype-select', 'ALL');
+      const firstArchOpt = await page.$('.archetype-select .select-option-item');
+      if (firstArchOpt) await firstArchOpt.click();
+      console.log('✅ Type-searched and selected EU Omnibus archetype');
+
+      // Reset
+      await archetypeTrigger.click();
+      const allArchOpt = await page.$('.archetype-select .select-option-item');
+      if (allArchOpt) await allArchOpt.click();
+      console.log('✅ Reset archetype filter');
+    }
+
+    // Test Sovereign Nation Type-Search Combobox
+    const sovereignTrigger = await page.$('.sovereign-select .searchable-select-trigger');
+    if (sovereignTrigger) {
+      await sovereignTrigger.click();
+      await page.waitForSelector('.sovereign-select .searchable-select-dropdown', { visible: true });
+      const sovInput = await page.$('.sovereign-select .search-inline-input');
+      if (sovInput) await sovInput.type('Germany');
       await new Promise(r => setTimeout(r, 200));
-      console.log('✅ Reset archetype filter to ALL');
+      const germanyOpt = await page.$('.sovereign-select .select-option-item');
+      if (germanyOpt) await germanyOpt.click();
+      console.log('✅ Type-searched and selected Germany from 197 sovereign nations');
+
+      // Reset to All
+      await sovereignTrigger.click();
+      const sovInputReset = await page.$('.sovereign-select .search-inline-input');
+      if (sovInputReset) await sovInputReset.type('All');
+      await new Promise(r => setTimeout(r, 200));
+      const allNationsOpt = await page.$('.sovereign-select .select-option-item');
+      if (allNationsOpt) await allNationsOpt.click();
+      console.log('✅ Reset back to All Nations');
     }
 
     // Test quick country filter pills
@@ -176,14 +207,38 @@ async function runTests() {
     await page.waitForSelector('.comparison-view', { visible: true });
     console.log('✅ Comparison view loaded');
 
+    // Test Type-Search on Country A
+    const countryATrigger = await page.$('.country-a-select .searchable-select-trigger');
+    if (countryATrigger) {
+      await countryATrigger.click();
+      const inputA = await page.$('.country-a-select .search-inline-input');
+      if (inputA) await inputA.type('India');
+      await new Promise(r => setTimeout(r, 200));
+      const optA = await page.$('.country-a-select .select-option-item');
+      if (optA) await optA.click();
+      console.log('✅ Type-searched and selected India for Country A');
+    }
+
+    // Test Type-Search on Country B
+    const countryBTrigger = await page.$('.country-b-select .searchable-select-trigger');
+    if (countryBTrigger) {
+      await countryBTrigger.click();
+      const inputB = await page.$('.country-b-select .search-inline-input');
+      if (inputB) await inputB.type('France');
+      await new Promise(r => setTimeout(r, 200));
+      const optB = await page.$('.country-b-select .select-option-item');
+      if (optB) await optB.click();
+      console.log('✅ Type-searched and selected France for Country B');
+    }
+
     // Test Swap button
     const swapBtn = await page.$('.swap-btn');
     if (swapBtn) {
       await swapBtn.click();
-      console.log('✅ Clicked Swap Countries button');
+      console.log('✅ Clicked Swap Countries button (Swapped India & France)');
     }
 
-    // Test Share Snapshot button
+    // Test Share Snapshot button & Graphic Download
     const shareBtn = await page.$('.btn-share-snapshot');
     if (shareBtn) {
       await shareBtn.click();
@@ -195,8 +250,15 @@ async function runTests() {
       console.log(`Found ${socialBtns.length} social share buttons`);
       for (const btn of socialBtns) {
         const btnText = await page.evaluate(el => el.textContent, btn);
-        // Note: we don't want to actually navigate out or pop up windows, but verify they are clickable
         console.log(`✅ Verified social button: ${btnText.trim()}`);
+      }
+
+      // Test Graphic Card Download button
+      const downloadBtn = await page.$('.share-snapshot-modal .btn-download');
+      if (downloadBtn) {
+        await downloadBtn.click();
+        await new Promise(r => setTimeout(r, 300));
+        console.log('✅ Clicked Download Story Graphic (.png) canvas export');
       }
 
       const closeShare = await page.$('.share-snapshot-modal .modal-close-btn');

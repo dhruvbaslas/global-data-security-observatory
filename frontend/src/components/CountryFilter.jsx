@@ -13,6 +13,8 @@ import React from 'react';
 import { LEGAL_ARCHETYPES } from '../utils/archetypes';
 import { t } from '../utils/i18n';
 
+import SearchableSelect from './SearchableSelect';
+
 // Priority benchmark countries displayed as quick access pills
 const QUICK_PILL_CODES = ['US', 'IN', 'FR', 'GB', 'DE', 'JP', 'CN', 'BR', 'CA', 'AU', 'KR', 'SG'];
 
@@ -27,6 +29,25 @@ export default function CountryFilter({
   lang = 'en',
 }) {
   const countryList = Object.values(countries);
+
+  const archetypeOptions = Object.values(LEGAL_ARCHETYPES).map((arch) => ({
+    value: arch.id,
+    label: t(lang, arch.labelKey, arch.id),
+    icon: arch.emoji,
+  }));
+
+  const countryOptions = [
+    { value: 'ALL', label: `${t(lang, 'allNations')} (${countryList.length})`, flag: '🌐' },
+    ...countryList
+      .slice()
+      .sort((a, b) => a.name.localeCompare(b.name))
+      .map((c) => ({
+        value: c.code,
+        label: c.name,
+        sublabel: c.code,
+        flag: c.flag,
+      })),
+  ];
 
   return (
     <div className="filter-section">
@@ -53,44 +74,30 @@ export default function CountryFilter({
           )}
         </div>
 
-        {/* Regulatory Archetype Dropdown Filter */}
+        {/* Regulatory Archetype Dropdown Filter with Type-Search */}
         <div className="archetype-filter-wrap">
-          <label htmlFor="archetype-select" className="sr-only">Regulatory Archetype</label>
-          <select
+          <SearchableSelect
             id="archetype-select"
-            className="select-input archetype-select"
+            options={archetypeOptions}
             value={selectedArchetype}
-            onChange={(e) => onSelectArchetype(e.target.value)}
-            aria-label="Filter by regulatory archetype"
-          >
-            {Object.values(LEGAL_ARCHETYPES).map((arch) => (
-              <option key={arch.id} value={arch.id}>
-                {arch.emoji} {t(lang, arch.labelKey, arch.id)}
-              </option>
-            ))}
-          </select>
+            onChange={onSelectArchetype}
+            placeholder="Filter framework..."
+            ariaLabel="Filter by regulatory archetype"
+            className="archetype-select"
+          />
         </div>
 
-        {/* Sovereign Nations Dropdown for fast 1-click jump to any UN country */}
+        {/* Sovereign Nations Dropdown with Fast Type-Search across all 197 UN countries */}
         <div className="country-quick-select-wrap">
-          <label htmlFor="sovereign-jump-select" className="sr-only">{t(lang, 'jumpToCountry')}</label>
-          <select
+          <SearchableSelect
             id="sovereign-jump-select"
-            className="select-input sovereign-select"
+            options={countryOptions}
             value={selectedCountry}
-            onChange={(e) => onSelectCountry(e.target.value)}
-            aria-label="Jump to sovereign country"
-          >
-            <option value="ALL">🌐 {t(lang, 'allNations')} ({countryList.length})</option>
-            {countryList
-              .slice()
-              .sort((a, b) => a.name.localeCompare(b.name))
-              .map((c) => (
-                <option key={`opt-${c.code}`} value={c.code}>
-                  {c.flag} {c.name} ({c.code})
-                </option>
-              ))}
-          </select>
+            onChange={onSelectCountry}
+            placeholder="Type country name..."
+            ariaLabel="Jump to sovereign country"
+            className="sovereign-select"
+          />
         </div>
       </div>
 
