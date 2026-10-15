@@ -95,7 +95,7 @@ export default function ComparisonView({
   };
 
   return (
-    <section className="comparison-section">
+    <section className="comparison-section comparison-view">
       <div className="section-header">
         <h2>⚖️ {t(lang, 'headToHead')}</h2>
         <p>{t(lang, 'selectCountries')}</p>
@@ -122,7 +122,19 @@ export default function ComparisonView({
           </select>
         </div>
 
-        <div className="vs-badge" aria-hidden="true">VS</div>
+        <button
+          type="button"
+          className="vs-badge swap-btn"
+          onClick={() => {
+            const temp = codeA;
+            setCodeA(codeB);
+            setCodeB(temp);
+          }}
+          title="Swap countries"
+          aria-label="Swap Country A and Country B"
+        >
+          ⇄ VS
+        </button>
 
         <div className="country-selector">
           <label htmlFor="country-b-select">{t(lang, 'countryB')}:</label>
@@ -265,10 +277,10 @@ export default function ComparisonView({
 
           {/* Export & Social Share Actions */}
           <div className="comparison-footer-actions">
-            <button className="btn btn-outline" onClick={handleExportText}>
+            <button className="btn btn-outline btn-copy-report" onClick={handleExportText}>
               {copied ? `✅ ${t(lang, 'copiedSuccess')}` : `📋 ${t(lang, 'copyReport')}`}
             </button>
-            <button className="btn btn-primary" onClick={() => setShowShareModal(true)}>
+            <button className="btn btn-primary btn-share-snapshot" onClick={() => setShowShareModal(true)}>
               📱 {t(lang, 'shareSnapshot')}
             </button>
           </div>

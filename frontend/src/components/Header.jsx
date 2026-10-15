@@ -90,6 +90,7 @@ export default function Header({
             <button
               key={tab.id}
               role="tab"
+              data-tab={tab.id}
               className={`nav-tab ${activeView === tab.id ? 'nav-tab-active' : ''}`}
               aria-selected={activeView === tab.id}
               tabIndex={activeView === tab.id ? 0 : -1}
@@ -129,7 +130,7 @@ export default function Header({
 
           {/* Add Country button */}
           <button
-            className="btn btn-primary header-add-btn"
+            className="btn btn-primary header-add-btn btn-add-country"
             onClick={() => {
               onAddCountry();
               setMobileMenuOpen(false);

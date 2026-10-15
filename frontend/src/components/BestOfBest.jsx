@@ -46,7 +46,7 @@ export default function BestOfBest({ countries, analysis, lang = 'en' }) {
   });
 
   return (
-    <section className="best-of-best-section">
+    <section className="best-of-best-section best-of-best">
       <div className="section-header">
         <h2>🏆 {t(lang, 'bestOfBestTitle')}</h2>
         <p>{t(lang, 'bestOfBestSubtitle')}</p>

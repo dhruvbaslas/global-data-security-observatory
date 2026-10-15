@@ -161,7 +161,7 @@ export default function CountryCard({
       {/* Card actions */}
       <div className="card-actions">
         <button
-          className="btn btn-outline"
+          className="btn btn-outline btn-details"
           onClick={() => setExpanded(!expanded)}
           aria-expanded={expanded}
         >
@@ -169,7 +169,7 @@ export default function CountryCard({
         </button>
 
         <button
-          className="btn btn-outline"
+          className="btn btn-outline btn-radar-modal"
           onClick={() => setShowRadar(true)}
         >
           🕸️ {t(lang, 'radar')}
@@ -177,7 +177,7 @@ export default function CountryCard({
 
         {onCompareWith && (
           <button
-            className="btn btn-secondary"
+            className="btn btn-secondary btn-compare-action"
             onClick={() => onCompareWith(country.code)}
           >
             ⚖️ {t(lang, 'compareWith')}

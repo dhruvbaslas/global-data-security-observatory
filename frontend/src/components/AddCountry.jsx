@@ -76,8 +76,8 @@ export default function AddCountry({ isOpen, onClose, onAddCountry }) {
   };
 
   return (
-    <div className="modal-backdrop" onClick={onClose} role="dialog" aria-modal="true">
-      <div className="modal-box" onClick={(e) => e.stopPropagation()}>
+    <div className="modal-backdrop modal-backdrop-centered" onClick={onClose} role="dialog" aria-modal="true">
+      <div className="modal-box modal-box-centered add-country-modal" onClick={(e) => e.stopPropagation()}>
         <div className="modal-header">
           <h3>➕ Dynamic Country Expansion</h3>
           <button className="modal-close-btn" onClick={onClose} aria-label="Close modal">✕</button>
@@ -90,7 +90,7 @@ export default function AddCountry({ isOpen, onClose, onAddCountry }) {
         {error && <div className="alert alert-error">{error}</div>}
         {success && <div className="alert alert-success">✅ Country added successfully into dataset!</div>}
 
-        <form onSubmit={handleSubmit} className="modal-form">
+        <form onSubmit={handleSubmit} className="modal-form" noValidate>
           <div className="form-group">
             <label htmlFor="country-name-input">Country Name *</label>
             <input
@@ -148,7 +148,7 @@ export default function AddCountry({ isOpen, onClose, onAddCountry }) {
             <button type="button" className="btn btn-outline" onClick={onClose}>
               Cancel
             </button>
-            <button type="submit" className="btn btn-primary">
+            <button type="submit" className="btn btn-primary btn-submit">
               Add to Dataset
             </button>
           </div>

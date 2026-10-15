@@ -99,3 +99,4 @@ export function evaluateAdequacy(codeA, codeB) {
     color: 'var(--color-score-fair)',
   };
 }
+
