@@ -12,6 +12,7 @@
 
 import { useState, useCallback } from 'react';
 import DataSecurityNotice from './DataSecurityNotice';
+import ShieldLogo from './ShieldLogo';
 import { SUPPORTED_LANGUAGES, t } from '../utils/i18n';
 
 export default function Header({
@@ -56,7 +57,7 @@ export default function Header({
       <div className="header-brand">
         <div className="header-title-group">
           <span className="header-icon" aria-hidden="true">
-            🛡️
+            <ShieldLogo size={24} />
           </span>
           <div>
             <h1 className="header-title">{t(lang, 'appTitle')}</h1>

@@ -105,13 +105,19 @@ def sanitize_html(raw_html: str) -> str:
     )
 
     # 2. Remove remaining dangerous tags (opening/closing/self-closing)
-    text = _DANGEROUS_TAG_RE.sub("", text)
+    prev = None
+    while prev != text:
+        prev = text
+        text = _DANGEROUS_TAG_RE.sub("", text)
 
     # 3. Strip inline event handlers from any remaining HTML tags
     text = _EVENT_HANDLER_RE.sub("", text)
 
     # 4. Strip all remaining HTML tags, keeping only text content
-    text = re.sub(r"<[^>]+>", " ", text)
+    prev = None
+    while prev != text:
+        prev = text
+        text = re.sub(r"<[^>]+>", " ", text)
 
     # 5. Decode HTML entities (e.g., &amp; -> &)
     text = html.unescape(text)

@@ -57,10 +57,17 @@ export function sanitizeHTML(str) {
   // Guard against non-string inputs
   if (typeof str !== 'string') return '';
 
-  // Remove all HTML tags using a regex that matches opening, closing,
-  // and self-closing tags. This is safe for our use case because we
-  // only need to strip tags, not parse HTML.
-  return str.replace(/<[^>]*>/g, '');
+  // Remove all HTML tags iteratively until the string stabilizes.
+  // This loop prevents incomplete multi-character sanitization bypasses
+  // such as <<script>script> or <scr<script>ipt>.
+  let prev;
+  let sanitized = str;
+  do {
+    prev = sanitized;
+    sanitized = sanitized.replace(/<[^>]*>/g, '');
+  } while (sanitized !== prev);
+
+  return sanitized;
 }
 
 /**

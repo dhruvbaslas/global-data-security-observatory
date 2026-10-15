@@ -195,7 +195,7 @@ class TestSanitizeURL:
         """Scheme and host are lowercased."""
         result = sanitize_url("HTTPS://WWW.Example.COM/Path")
         assert result is not None
-        assert result.startswith("https://www.example.com")
+        assert result == "https://www.example.com/Path"
 
 
 # ===================================================================

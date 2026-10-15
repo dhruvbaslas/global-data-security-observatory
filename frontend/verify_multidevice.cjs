@@ -79,10 +79,40 @@ async function run() {
         console.log(`✅ Clean console: 0 errors`);
       }
 
+      // Check Brand Shield Logo SVG renders
+      const shieldLogo = await page.$('.brand-shield-svg');
+      if (shieldLogo) {
+        console.log(`✅ Unified Vector Shield Logo rendered on ${vp.name}`);
+      } else {
+        console.error(`❌ Shield SVG Logo missing on ${vp.name}`);
+        testPassed = false;
+      }
+
       // Check Country Cards render
       const cardCount = await page.$$eval('.country-card', (cards) => cards.length);
       console.log(`✅ Loaded ${cardCount} country cards in overview`);
       if (cardCount === 0) throw new Error(`No country cards found on ${vp.name}`);
+
+      // Verify Overview Search Bar and Dropdowns are STRICTLY within mobile browser bounds
+      const searchWrap = await page.$('.search-bar-wrap');
+      const archWrap = await page.$('.archetype-filter-wrap');
+      const countryJumpWrap = await page.$('.country-quick-select-wrap');
+      if (searchWrap && archWrap && countryJumpWrap) {
+        const sRect = await searchWrap.boundingBox();
+        const aRect = await archWrap.boundingBox();
+        const cRect = await countryJumpWrap.boundingBox();
+
+        const searchInside = sRect.x >= 0 && sRect.x + sRect.width <= vp.width + 2;
+        const archInside = aRect.x >= 0 && aRect.x + aRect.width <= vp.width + 2;
+        const countryInside = cRect.x >= 0 && cRect.x + cRect.width <= vp.width + 2;
+
+        if (searchInside && archInside && countryInside) {
+          console.log(`✅ Search & both dropdowns strictly inside viewport bounds! (Search width: ${sRect.width.toFixed(0)}px, Arch width: ${aRect.width.toFixed(0)}px, Country width: ${cRect.width.toFixed(0)}px)`);
+        } else {
+          console.error(`❌ Search or dropdowns overflow window!`, { sRect, aRect, cRect, vpWidth: vp.width });
+          testPassed = false;
+        }
+      }
 
       // Test Privacy Architecture Modal centering
       if (vp.width <= 992) {
@@ -154,6 +184,18 @@ async function run() {
       const vsBadge = await page.$('.vs-badge');
       if (vsBadge) {
         console.log(`✅ VS Badge and Country Selectors present`);
+      }
+
+      // Verify Mobile Parameter Breakdown on mobile screens
+      if (vp.width <= 768) {
+        const isMobileBreakdownVisible = await page.$eval('.mobile-comparison-breakdown', el => window.getComputedStyle(el).display !== 'none').catch(() => false);
+        const isDesktopTableHidden = await page.$eval('.desktop-comparison-table', el => window.getComputedStyle(el).display === 'none').catch(() => false);
+        if (isMobileBreakdownVisible && isDesktopTableHidden) {
+          console.log(`✅ Mobile parameter breakdown cards active & desktop cramped table hidden on ${vp.name}!`);
+        } else {
+          console.error(`❌ Mobile comparison view check failed! (mobile cards visible: ${isMobileBreakdownVisible}, desktop hidden: ${isDesktopTableHidden})`);
+          testPassed = false;
+        }
       }
 
       // Test Share Snapshot Modal

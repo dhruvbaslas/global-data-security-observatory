@@ -942,6 +942,105 @@ body {
   color: var(--color-text-muted);
 }
 
+/* Default Visibility: Desktop Table Visible, Mobile Breakdown Hidden */
+.desktop-comparison-table {
+  display: block;
+}
+
+.mobile-comparison-breakdown {
+  display: none;
+}
+
+/* Mobile-Optimized Parameter Comparison Cards */
+.mobile-comparison-breakdown {
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+}
+
+.mobile-breakdown-lead h4 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 0.75rem;
+  text-align: center;
+}
+
+.mobile-parameter-card {
+  background: linear-gradient(180deg, rgba(16, 21, 35, 0.85) 0%, rgba(10, 14, 24, 0.95) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-md);
+  padding: 1.15rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+.mobile-param-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  margin-bottom: 0.85rem;
+}
+
+.mobile-param-title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.mobile-param-sides-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.mobile-side-box {
+  background: rgba(15, 23, 42, 0.65);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: var(--radius-sm);
+  padding: 0.85rem 1rem;
+  transition: border-color var(--transition-fast);
+}
+
+.mobile-side-box.is-winner {
+  border-color: rgba(56, 189, 248, 0.45);
+  background: rgba(56, 189, 248, 0.06);
+}
+
+.mobile-side-headline {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.45rem;
+}
+
+.mobile-side-identity {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 600;
+  font-size: 0.92rem;
+  color: #fff;
+}
+
+.side-flag {
+  font-size: 1.25rem;
+}
+
+.side-score {
+  font-weight: 800;
+  font-size: 1.05rem;
+}
+
+.mobile-side-text {
+  font-size: 0.82rem;
+  color: var(--color-text-secondary);
+  line-height: 1.5;
+}
+
 .comparison-footer-actions {
   display: flex;
   justify-content: center;
@@ -2068,9 +2167,9 @@ body {
     flex-direction: column;
     justify-content: center;
     gap: 5px;
-    width: 32px;
-    height: 32px;
-    padding: 4px;
+    width: 34px;
+    height: 34px;
+    padding: 5px;
     background: rgba(30, 41, 59, 0.6);
     border-radius: var(--radius-sm);
     border: 1px solid var(--color-border);
@@ -2122,25 +2221,77 @@ body {
   }
 
   .main-content {
-    padding: 1.25rem;
+    padding: 1.15rem;
   }
 
-  .hero-banner h2 {
-    font-size: 1.85rem;
+  /* Command & Filter Dock on Mobile/Tablet: 100% contained, zero horizontal overflow */
+  .filter-section {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    margin-bottom: 2rem !important;
   }
 
-  .champion-title {
-    font-size: 1.75rem;
+  .filter-command-bar {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    gap: 0.75rem !important;
+    padding: 0.85rem !important;
+  }
+
+  .search-bar-wrap {
+    width: 100% !important;
+    min-width: 0 !important;
+    flex: none !important;
+    box-sizing: border-box !important;
+  }
+
+  .search-bar-wrap .search-input {
+    width: 100% !important;
+    box-sizing: border-box !important;
+    font-size: 0.92rem !important;
+  }
+
+  .filter-select-group {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    width: 100% !important;
+    gap: 0.65rem !important;
+    flex-shrink: 0 !important;
+    box-sizing: border-box !important;
+  }
+
+  .archetype-filter-wrap,
+  .country-quick-select-wrap,
+  .compact-select {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .searchable-select-container {
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .searchable-select-trigger {
+    width: 100% !important;
+    min-height: 42px !important;
+    box-sizing: border-box !important;
   }
 
   .cards-grid {
     grid-template-columns: 1fr;
-    gap: 1rem;
+    gap: 1.25rem;
   }
 
   .selectors-bar {
     flex-direction: column;
     gap: 1rem;
+    padding: 1.15rem;
   }
 
   .vs-badge {
@@ -2167,17 +2318,6 @@ body {
     max-width: 100% !important;
   }
 
-  .table-responsive {
-    margin: 0 -0.5rem;
-    width: calc(100% + 1rem);
-  }
-
-  .comparison-table th, .comparison-table td,
-  .leaderboard-table th, .leaderboard-table td {
-    padding: 0.75rem 0.6rem;
-    font-size: 0.75rem;
-  }
-
   .modal-box, .radar-modal-box {
     margin: 1rem;
     padding: 1.25rem;
@@ -2186,50 +2326,87 @@ body {
   }
 }
 
-@media (max-width: 480px) {
-  .hero-banner h2 {
-    font-size: 1.5rem;
+/* ---------------- Mobile Specific (< 768px) ---------------- */
+@media (max-width: 768px) {
+  .hero-banner {
+    padding: 1rem 0 0.5rem 0;
+    margin-bottom: 1.75rem;
   }
-  .hero-banner p {
-    font-size: 0.9rem;
-  }
-  .country-card {
-    padding: 1rem;
-  }
-}
 
-@media (max-width: 580px) {
+  .hero-title {
+    font-size: 1.85rem;
+    line-height: 1.25;
+  }
+
+  .hero-description {
+    font-size: 0.95rem;
+  }
+
+  .global-stats-ribbon {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.65rem;
+    padding: 0.6rem;
+    margin-top: 1.5rem;
+  }
+
+  .stat-card {
+    padding: 0.75rem 0.5rem;
+  }
+
+  .stat-value {
+    font-size: 1.2rem;
+  }
+
+  .stat-label {
+    font-size: 0.68rem;
+  }
+
+  /* Switch comparison table to clean mobile card breakdown */
+  .desktop-comparison-table {
+    display: none !important;
+  }
+
+  .mobile-comparison-breakdown {
+    display: flex !important;
+  }
+
   .social-share-buttons {
     grid-template-columns: 1fr;
   }
-  .filter-command-bar {
-    padding: 0.75rem;
+
+  .featured-pills-row {
+    gap: 0.4rem;
   }
-  .search-bar-wrap {
-    min-width: 100%;
-  }
-  .filter-select-group {
-    flex-direction: column;
-    width: 100%;
-    gap: 0.5rem;
-  }
-  .compact-select {
-    width: 100%;
+
+  .filter-pill {
+    font-size: 0.78rem;
+    padding: 0.35rem 0.75rem;
   }
 }
 
-/* ---------------- Tablet Optimization (769px - 1024px) ---------------- */
-@media (min-width: 769px) and (max-width: 1024px) {
-  .cards-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1.25rem;
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 1.55rem;
   }
-  .filter-command-bar {
-    gap: 0.6rem;
-    padding: 0.55rem 0.75rem;
+
+  .hero-description {
+    font-size: 0.88rem;
   }
-  .compact-select {
-    width: 180px;
+
+  .country-card {
+    padding: 1.15rem;
+  }
+
+  .header-title {
+    font-size: 1.1rem;
+  }
+
+  .header-subtitle {
+    font-size: 0.72rem;
+  }
+
+  .modal-box-centered {
+    padding: 1.25rem !important;
   }
 }
 

@@ -466,8 +466,8 @@ export default function ComparisonView({
             <ParameterRadar countryA={countryA} countryB={countryB} size={390} />
           </div>
 
-          {/* Detailed Parameter Table */}
-          <div className="table-responsive">
+          {/* Detailed Parameter Table (Desktop / Tablet) */}
+          <div className="table-responsive desktop-comparison-table">
             <table className="comparison-table">
               <thead>
                 <tr>
@@ -510,6 +510,71 @@ export default function ComparisonView({
                 })}
               </tbody>
             </table>
+          </div>
+
+          {/* Clean Mobile-Optimized Parameter Cards (Prevents cramped table on mobile) */}
+          <div className="mobile-comparison-breakdown mobile-only-view">
+            <div className="mobile-breakdown-lead">
+              <h4>📊 Detailed Parameter Breakdown</h4>
+            </div>
+            {PARAMETER_KEYS.map((key) => {
+              const p = comparison.parameters[key];
+              const descA = countryA.details ? countryA.details[key] : '';
+              const descB = countryB.details ? countryB.details[key] : '';
+
+              return (
+                <div key={key} className="mobile-parameter-card">
+                  <div className="mobile-param-card-header">
+                    <span className="mobile-param-title">{p.label}</span>
+                    <div className="mobile-param-leader">
+                      {p.winner === 'A' && (
+                        <span className="winner-tag tag-a">
+                          🏆 {countryA.name} (+{(p.scoreA - p.scoreB).toFixed(1)})
+                        </span>
+                      )}
+                      {p.winner === 'B' && (
+                        <span className="winner-tag tag-b">
+                          🏆 {countryB.name} (+{(p.scoreB - p.scoreA).toFixed(1)})
+                        </span>
+                      )}
+                      {p.winner === 'tie' && (
+                        <span className="winner-tag tag-tie">🤝 Parity</span>
+                      )}
+                    </div>
+                  </div>
+
+                  <div className="mobile-param-sides-grid">
+                    {/* Country A side */}
+                    <div className={`mobile-side-box ${p.winner === 'A' ? 'is-winner' : ''}`}>
+                      <div className="mobile-side-headline">
+                        <div className="mobile-side-identity">
+                          <span className="side-flag">{countryA.flag}</span>
+                          <span className="side-name">{countryA.name}</span>
+                        </div>
+                        <span className="side-score" style={{ color: getScoreColor(p.scoreA) }}>
+                          {p.scoreA}/10
+                        </span>
+                      </div>
+                      {descA && <p className="mobile-side-text">{descA}</p>}
+                    </div>
+
+                    {/* Country B side */}
+                    <div className={`mobile-side-box ${p.winner === 'B' ? 'is-winner' : ''}`}>
+                      <div className="mobile-side-headline">
+                        <div className="mobile-side-identity">
+                          <span className="side-flag">{countryB.flag}</span>
+                          <span className="side-name">{countryB.name}</span>
+                        </div>
+                        <span className="side-score" style={{ color: getScoreColor(p.scoreB) }}>
+                          {p.scoreB}/10
+                        </span>
+                      </div>
+                      {descB && <p className="mobile-side-text">{descB}</p>}
+                    </div>
+                  </div>
+                </div>
+              );
+            })}
           </div>
 
           {/* Export & Social Share Actions */}
