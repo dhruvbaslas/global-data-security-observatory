@@ -292,6 +292,8 @@ body {
 
 /* ---------------- Unified Command & Filter Dock ---------------- */
 .filter-section {
+  position: relative;
+  z-index: 80;
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
@@ -303,10 +305,12 @@ body {
 }
 
 .filter-command-bar {
+  position: relative;
+  z-index: 80;
   display: flex;
   align-items: center;
   gap: 0.85rem;
-  background: rgba(15, 23, 42, 0.75);
+  background: rgba(15, 23, 42, 0.88);
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: var(--radius-lg);
   padding: 0.65rem 0.85rem;
@@ -366,6 +370,8 @@ body {
   align-items: center;
   gap: 0.75rem;
   flex-shrink: 0;
+  position: relative;
+  z-index: 85;
 }
 
 .compact-select {
@@ -456,6 +462,8 @@ body {
 
 /* ---------------- Country Cards Grid ---------------- */
 .cards-grid {
+  position: relative;
+  z-index: 1;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
   gap: 1.5rem;
@@ -699,6 +707,8 @@ body {
 }
 
 .selectors-bar {
+  position: relative;
+  z-index: 80;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -713,6 +723,8 @@ body {
 }
 
 .country-selector {
+  position: relative;
+  z-index: 85;
   display: flex;
   flex-direction: column;
   gap: 0.4rem;
@@ -1736,6 +1748,19 @@ body {
   margin-bottom: 1rem;
 }
 
+.share-feedback-toast {
+  background: rgba(16, 185, 129, 0.2);
+  border: 1px solid #10b981;
+  color: #a7f3d0;
+  padding: 0.6rem 0.9rem;
+  border-radius: var(--radius-md);
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 0.85rem;
+  animation: fadeIn 0.2s ease-out;
+}
+
 .social-share-buttons {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -1743,7 +1768,7 @@ body {
 }
 
 .btn-social {
-  padding: 0.65rem;
+  padding: 0.7rem 0.65rem;
   border-radius: var(--radius-sm);
   font-size: 0.82rem;
   font-weight: 600;
@@ -1751,6 +1776,40 @@ body {
   border: 1px solid transparent;
   color: #fff;
   transition: var(--transition-fast);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  text-align: center;
+}
+
+.btn-social:hover {
+  transform: translateY(-1px);
+}
+
+.btn-primary-share {
+  grid-column: 1 / -1;
+  background: linear-gradient(135deg, #0284c7 0%, #2563eb 100%);
+  border: 1px solid rgba(56, 189, 248, 0.6);
+  font-weight: 700;
+  font-size: 0.95rem;
+  padding: 0.85rem 1rem;
+  box-shadow: 0 4px 16px rgba(37, 99, 235, 0.4);
+}
+
+.btn-primary-share:hover {
+  background: linear-gradient(135deg, #0369a1 0%, #1d4ed8 100%);
+  box-shadow: 0 6px 20px rgba(37, 99, 235, 0.6);
+}
+
+.btn-copy-image {
+  background: #1e293b;
+  border: 1px solid rgba(56, 189, 248, 0.3);
+}
+
+.btn-copy-image:hover {
+  background: #334155;
+  border-color: var(--color-accent);
 }
 
 .btn-twitter {
@@ -1770,6 +1829,19 @@ body {
   background-color: #334155;
 }
 
+.btn-download {
+  grid-column: 1 / -1;
+  background: rgba(56, 189, 248, 0.15);
+  border: 1px solid rgba(56, 189, 248, 0.4);
+  color: var(--color-accent);
+  padding: 0.75rem;
+  font-weight: 700;
+}
+
+.btn-download:hover {
+  background: rgba(56, 189, 248, 0.25);
+}
+
 /* ---------------- Mobile & Multi-Device Responsiveness ---------------- */
 @media (max-width: 992px) {
   .app-header {
@@ -1786,7 +1858,7 @@ body {
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 992px) {
   .app-header {
     flex-direction: column;
     align-items: stretch;
@@ -1930,10 +2002,78 @@ body {
   }
 }
 
+@media (max-width: 580px) {
+  .social-share-buttons {
+    grid-template-columns: 1fr;
+  }
+  .filter-command-bar {
+    padding: 0.75rem;
+  }
+  .search-bar-wrap {
+    min-width: 100%;
+  }
+  .filter-select-group {
+    flex-direction: column;
+    width: 100%;
+    gap: 0.5rem;
+  }
+  .compact-select {
+    width: 100%;
+  }
+}
+
+/* ---------------- Tablet Optimization (769px - 1024px) ---------------- */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+  }
+  .filter-command-bar {
+    gap: 0.6rem;
+    padding: 0.55rem 0.75rem;
+  }
+  .compact-select {
+    width: 180px;
+  }
+}
+
+/* ---------------- 4K & Large Screen TV Optimization (1920px+) ---------------- */
+@media (min-width: 1920px) {
+  .app-header .header-container {
+    max-width: 1720px;
+  }
+  .main-content {
+    max-width: 1720px;
+    padding: 3rem 2rem;
+  }
+  .cards-grid {
+    grid-template-columns: repeat(auto-fill, minmax(390px, 1fr));
+    gap: 2rem;
+  }
+  .hero-title {
+    font-size: 3.2rem;
+  }
+  .hero-description {
+    font-size: 1.25rem;
+    max-width: 860px;
+  }
+  .filter-section {
+    max-width: 1200px;
+  }
+  .selectors-bar {
+    max-width: 1000px;
+    padding: 1.75rem;
+  }
+}
+
 /* ---------------- Searchable Select (Combobox) ---------------- */
 .searchable-select-container {
   position: relative;
   width: 100%;
+}
+
+.searchable-select-container.is-open {
+  z-index: 999;
 }
 
 .searchable-select-trigger {
@@ -2007,13 +2147,19 @@ body {
   top: calc(100% + 6px);
   left: 0;
   right: 0;
-  z-index: 1000;
+  z-index: 9999;
   background: #0b1324;
   border: 1px solid var(--color-border-focus);
   border-radius: var(--radius-md);
-  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.8), 0 0 20px rgba(56, 189, 248, 0.15);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.95), 0 0 0 1px rgba(56, 189, 248, 0.25);
   overflow: hidden;
   animation: fadeIn 0.15s ease-out;
+}
+
+.searchable-select-dropdown.is-drop-up {
+  top: auto;
+  bottom: calc(100% + 6px);
+  box-shadow: 0 -20px 45px rgba(0, 0, 0, 0.95), 0 0 0 1px rgba(56, 189, 248, 0.25);
 }
 
 .search-input-wrap {

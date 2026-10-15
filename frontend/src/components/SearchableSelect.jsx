@@ -33,6 +33,8 @@ export default function SearchableSelect({
   // Selected option lookup
   const selectedOption = options.find((opt) => opt.value === value) || null;
 
+  const [dropUp, setDropUp] = useState(false);
+
   // Filter options based on user search query
   const filteredOptions = options.filter((opt) => {
     if (!searchQuery.trim()) return true;
@@ -42,6 +44,20 @@ export default function SearchableSelect({
     const matchSub = opt.sublabel?.toLowerCase().includes(q);
     return matchLabel || matchVal || matchSub;
   });
+
+  // Calculate if dropdown should flip upwards when space below is tight
+  useEffect(() => {
+    if (isOpen && containerRef.current) {
+      const rect = containerRef.current.getBoundingClientRect();
+      const spaceBelow = window.innerHeight - rect.bottom;
+      const spaceAbove = rect.top;
+      if (spaceBelow < 280 && spaceAbove > spaceBelow) {
+        setDropUp(true);
+      } else {
+        setDropUp(false);
+      }
+    }
+  }, [isOpen]);
 
   // Keep highlighted index in valid range when filtered list changes
   useEffect(() => {
@@ -173,7 +189,10 @@ export default function SearchableSelect({
       </div>
 
       {isOpen && (
-        <div className="searchable-select-dropdown" id={`${selectId}-list`}>
+        <div
+          className={`searchable-select-dropdown ${dropUp ? 'is-drop-up' : ''}`}
+          id={`${selectId}-list`}
+        >
           <div className="search-input-wrap">
             <span className="search-inline-icon" aria-hidden="true">🔍</span>
             <input

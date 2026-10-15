@@ -122,6 +122,17 @@ async function runTests() {
     if (sovereignTrigger) {
       await sovereignTrigger.click();
       await page.waitForSelector('.sovereign-select .searchable-select-dropdown', { visible: true });
+
+      // Verify the dropdown is ON TOP of cards / elements using elementFromPoint
+      const dropdownEl = await page.$('.sovereign-select .searchable-select-dropdown');
+      const box = await dropdownEl.boundingBox();
+      const isTopmost = await page.evaluate((x, y) => {
+        const el = document.elementFromPoint(x, y);
+        return el && el.closest('.searchable-select-dropdown') !== null;
+      }, box.x + 30, box.y + 40);
+      if (!isTopmost) throw new Error('Sovereign dropdown is obstructed or behind other elements!');
+      console.log('✅ Verified sovereign dropdown is drawn ON TOP of underlying elements (no card clipping)!');
+
       const sovInput = await page.$('.sovereign-select .search-inline-input');
       if (sovInput) await sovInput.type('Germany');
       await new Promise(r => setTimeout(r, 200));
@@ -248,9 +259,19 @@ async function runTests() {
       // Test social buttons
       const socialBtns = await page.$$('.share-snapshot-modal .btn-social');
       console.log(`Found ${socialBtns.length} social share buttons`);
+      expectTrue(socialBtns.length >= 6, 'Should have at least 6 social sharing options');
       for (const btn of socialBtns) {
         const btnText = await page.evaluate(el => el.textContent, btn);
         console.log(`✅ Verified social button: ${btnText.trim()}`);
+      }
+
+      // Test Copy Image button & Toast feedback
+      const copyImgBtn = await page.$('.share-snapshot-modal .btn-copy-image');
+      if (copyImgBtn) {
+        await copyImgBtn.click();
+        await page.waitForSelector('.share-feedback-toast', { visible: true });
+        const feedbackText = await page.$eval('.share-feedback-toast', el => el.textContent);
+        console.log(`✅ Clicked Copy Image button, toast shown: "${feedbackText.trim()}"`);
       }
 
       // Test Graphic Card Download button
@@ -282,12 +303,52 @@ async function runTests() {
       expectTrue(paramRankRows.length >= 5, 'Should have at least 5 parameter rows');
     }
 
-    // 9. Mobile Responsiveness Test (375x667 Viewport)
-    console.log('\n--- 8. Testing Mobile Responsiveness & Viewport Centering ---');
-    await page.setViewport({ width: 375, height: 667, isMobile: true, hasTouch: true });
-    await new Promise(r => setTimeout(r, 300));
+    // 9. Comprehensive Multi-Device / Form Factor Suite (Mobile, Tablet, Desktop, TV 1080p, TV 4K)
+    console.log('\n--- 8. Testing Multi-Form Factor Responsiveness (Mobile, Tablet, Desktop, TV) ---');
 
-    // Test Mobile Hamburger & Privacy Modal
+    const devices = [
+      { name: 'Mobile (iPhone SE / Android)', width: 375, height: 667, isMobile: true },
+      { name: 'Tablet (iPad / Tablet)', width: 820, height: 1180, isMobile: false },
+      { name: 'Desktop (Standard Laptop)', width: 1280, height: 800, isMobile: false },
+      { name: 'TV 1080p (Full HD)', width: 1920, height: 1080, isMobile: false },
+      { name: 'TV 4K (Ultra HD)', width: 3840, height: 2160, isMobile: false }
+    ];
+
+    // Switch to overview view for grid and command bar testing
+    const overviewNavBtn = await page.$('button[data-tab="overview"]');
+    if (overviewNavBtn) await overviewNavBtn.click();
+    await page.waitForSelector('.cards-grid', { visible: true });
+
+    for (const dev of devices) {
+      console.log(`\nTesting viewport: ${dev.name} (${dev.width}x${dev.height})...`);
+      await page.setViewport({ width: dev.width, height: dev.height, isMobile: dev.isMobile });
+      await new Promise(r => setTimeout(r, 250));
+
+      // Verify zero horizontal overflow
+      const overflow = await page.evaluate(() => {
+        return document.documentElement.scrollWidth > window.innerWidth;
+      });
+      if (overflow) {
+        const scrollW = await page.evaluate(() => document.documentElement.scrollWidth);
+        throw new Error(`Horizontal overflow detected on ${dev.name}! scrollWidth=${scrollW}, innerWidth=${dev.width}`);
+      }
+      console.log(`✅ Zero horizontal overflow on ${dev.name} (scrollWidth <= ${dev.width}px)`);
+
+      // Verify command dock visibility
+      const commandBar = await page.$('.filter-command-bar');
+      expectTrue(commandBar !== null, `Command bar should be visible on ${dev.name}`);
+
+      // Verify cards grid adapts cleanly
+      const cards = await page.$$('.country-card');
+      expectTrue(cards.length > 0, `Country cards should render on ${dev.name}`);
+      console.log(`✅ ${cards.length} country cards rendered cleanly on ${dev.name}`);
+    }
+
+    // Retest mobile hamburger navigation & centered privacy modal on mobile
+    console.log('\n--- 9. Mobile Interaction Verification ---');
+    await page.setViewport({ width: 375, height: 667, isMobile: true, hasTouch: true });
+    await new Promise(r => setTimeout(r, 200));
+
     const hamburgerBtn = await page.$('.hamburger-btn');
     if (hamburgerBtn) {
       await hamburgerBtn.click();
@@ -300,7 +361,6 @@ async function runTests() {
         await page.waitForSelector('.modal-box-centered', { visible: true });
         const mobileBox = await page.$('.modal-box-centered');
         const mBox = await mobileBox.boundingBox();
-        console.log(`Mobile Modal bounds: x=${mBox.x}, y=${mBox.y}, w=${mBox.width}, h=${mBox.height}`);
         if (mBox.x < 0 || (mBox.x + mBox.width) > 375) {
           throw new Error(`Modal exceeds mobile viewport width! w=${mBox.width} at x=${mBox.x}`);
         }
