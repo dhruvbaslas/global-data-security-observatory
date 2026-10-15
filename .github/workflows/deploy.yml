@@ -1,0 +1,131 @@
+name: Deploy to GitHub Pages
+
+# ============================================================================
+# CI/CD Pipeline for Global Data Security Observatory
+# 
+# This workflow:
+# 1. Runs Python scraper to generate/update country data
+# 2. Runs scraper tests (pytest)
+# 3. Builds the React frontend (Vite)
+# 4. Runs frontend tests (Vitest)
+# 5. Deploys built artifacts to GitHub Pages
+#
+# Triggers: push to main, manual dispatch, weekly schedule (data refresh)
+# ============================================================================
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:  # Allow manual triggering
+  schedule:
+    # Run weekly on Mondays at 06:00 UTC to refresh scraped data
+    - cron: '0 6 * * 1'
+
+# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Allow only one concurrent deployment
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  # ── Job 1: Run Scraper & Generate Data ────────────────────────────────
+  scrape:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.12
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: 'pip'
+
+      - name: Install Python dependencies
+        run: pip install -r scraper/requirements.txt
+
+      - name: Run scraper tests
+        run: python -m pytest scraper/tests/ -v --tb=short
+
+      - name: Run scraper to generate data
+        run: |
+          python -m scraper.main --output frontend/public/data/countries.json
+        # Continue even if scraping fails (fallback data will be used)
+        continue-on-error: true
+
+      - name: Verify data file exists
+        run: |
+          if [ ! -f frontend/public/data/countries.json ]; then
+            echo "ERROR: countries.json was not generated!"
+            exit 1
+          fi
+          echo "✅ Data file generated successfully"
+          cat frontend/public/data/countries.json | python -m json.tool | head -50
+
+      - name: Upload data artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: country-data
+          path: frontend/public/data/countries.json
+          retention-days: 30
+
+  # ── Job 2: Build & Test Frontend ──────────────────────────────────────
+  build:
+    needs: scrape
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Download data artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: country-data
+          path: frontend/public/data/
+
+      - name: Set up Node.js 22
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: 'npm'
+          cache-dependency-path: frontend/package-lock.json
+
+      - name: Install frontend dependencies
+        working-directory: frontend
+        run: npm ci
+
+      - name: Run frontend tests
+        working-directory: frontend
+        run: npm run test:ci
+
+      - name: Build frontend for production
+        working-directory: frontend
+        env:
+          GITHUB_PAGES: true
+        run: npm run build
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: frontend/dist
+
+  # ── Job 3: Deploy to GitHub Pages ─────────────────────────────────────
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+

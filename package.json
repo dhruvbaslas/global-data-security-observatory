@@ -1,0 +1,22 @@
+{
+  "name": "global-data-security-observatory",
+  "version": "1.0.0",
+  "description": "Compare data security policies across nations — scraped from official government sources",
+  "private": true,
+  "scripts": {
+    "scrape": "cd scraper && python main.py --output ../frontend/public/data/countries.json",
+    "scrape:no-cache": "cd scraper && python main.py --output ../frontend/public/data/countries.json --no-cache",
+    "dev": "cd frontend && npm run dev",
+    "build": "cd frontend && npm run build",
+    "preview": "cd frontend && npm run preview",
+    "test:scraper": "cd scraper && python -m pytest tests/ -v",
+    "test:frontend": "cd frontend && npm test",
+    "test": "echo 'Running all tests...' && cd scraper && python -m pytest tests/ -v && cd ../frontend && npm test",
+    "setup": "pip install -r scraper/requirements.txt && cd frontend && npm install",
+    "clean": "cd frontend && rm -rf dist node_modules && cd ../scraper && rm -rf cache __pycache__"
+  },
+  "keywords": ["data-security", "privacy", "gdpr", "scraper", "comparison"],
+  "author": "",
+  "license": "MIT"
+}
+

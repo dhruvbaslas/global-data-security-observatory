@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Security: Content Security Policy -->
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self';"
+    />
+    <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+    <meta http-equiv="X-Frame-Options" content="DENY" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+
+    <!-- SEO Meta Tags -->
+    <meta
+      name="description"
+      content="Global Data Security Observatory — Explore, compare, and analyze data protection policies across countries worldwide. Interactive dashboard with scoring, rankings, and insights."
+    />
+    <meta
+      name="keywords"
+      content="data security, data protection, GDPR, privacy laws, global compliance, data observatory"
+    />
+    <meta name="author" content="Global Data Security Observatory" />
+
+    <!-- Open Graph / Social Meta -->
+    <meta property="og:title" content="Global Data Security Observatory" />
+    <meta
+      property="og:description"
+      content="Explore and compare data protection policies across countries worldwide."
+    />
+    <meta property="og:type" content="website" />
+
+    <!-- Favicon: Shield emoji rendered as SVG data URI -->
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🛡️</text></svg>"
+    />
+
+    <title>Global Data Security Observatory</title>
+  </head>
+  <body>
+    <!-- 
+      Accessible skip-to-content link for keyboard users.
+      Visually hidden until focused.
+    -->
+    <noscript>
+      <p>You need JavaScript enabled to run this application.</p>
+    </noscript>
+
+    <!-- React root mount point -->
+    <div id="root"></div>
+
+    <!-- Main application entry point (ES module) -->
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
