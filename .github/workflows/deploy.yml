@@ -11,6 +11,7 @@ name: Deploy to GitHub Pages
 # 5. Deploys built artifacts to GitHub Pages
 #
 # Triggers: push to main, manual dispatch, weekly schedule (data refresh)
+# Runs natively on Node.js 24 with official Node 24 actions to eliminate deprecation notices
 # ============================================================================
 
 on:
@@ -32,16 +33,20 @@ concurrency:
   group: "pages"
   cancel-in-progress: false
 
+# Global environment settings to force JavaScript actions to modern Node 24
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: 'true'
+
 jobs:
   # ── Job 1: Run Scraper & Generate Data ────────────────────────────────
   scrape:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Set up Python 3.12
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v6
         with:
           python-version: '3.12'
           cache: 'pip'
@@ -68,7 +73,7 @@ jobs:
           cat frontend/public/data/countries.json | python -m json.tool | head -50
 
       - name: Upload data artifact
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: country-data
           path: frontend/public/data/countries.json
@@ -77,21 +82,21 @@ jobs:
   # ── Job 2: Build & Test Frontend ──────────────────────────────────────
   build:
     needs: scrape
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Download data artifact
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v7
         with:
           name: country-data
           path: frontend/public/data/
 
-      - name: Set up Node.js 22
-        uses: actions/setup-node@v4
+      - name: Set up Node.js 24
+        uses: actions/setup-node@v5
         with:
-          node-version: '22'
+          node-version: '24'
           cache: 'npm'
           cache-dependency-path: frontend/package-lock.json
 
@@ -110,22 +115,21 @@ jobs:
         run: npm run build
 
       - name: Setup Pages
-        uses: actions/configure-pages@v5
+        uses: actions/configure-pages@v6
 
       - name: Upload Pages artifact
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v5
         with:
           path: frontend/dist
 
   # ── Job 3: Deploy to GitHub Pages ─────────────────────────────────────
   deploy:
     needs: build
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v4
-
+        uses: actions/deploy-pages@v5

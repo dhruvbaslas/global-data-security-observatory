@@ -10,7 +10,7 @@
     "preview": "vite preview",
     "test": "vitest",
     "test:ci": "vitest run",
-    "test:e2e": "node test_clicks.cjs"
+    "test:e2e": "node verify_multidevice.cjs"
   },
   "dependencies": {
     "react": "^19.0.0",

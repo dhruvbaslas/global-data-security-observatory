@@ -170,3 +170,4 @@ generatePreview().catch((err) => {
   console.error('Error generating preview:', err);
   process.exit(1);
 });
+

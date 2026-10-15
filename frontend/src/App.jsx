@@ -11,7 +11,7 @@
  * - Modal dialog for adding new countries
  */
 
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useEffect } from 'react';
 import Header from './components/Header';
 import CountryFilter from './components/CountryFilter';
 import CountryCard from './components/CountryCard';
@@ -58,6 +58,48 @@ export default function App() {
 
   // Add Country modal visibility
   const [isAddModalOpen, setIsAddModalOpen] = useState(false);
+
+  // Deep linking: Initial URL search param ingestion
+  useEffect(() => {
+    try {
+      const params = new URLSearchParams(window.location.search);
+      const tab = params.get('tab');
+      if (tab === 'compare' || tab === 'comparison') {
+        setActiveView('comparison');
+        const a = params.get('a');
+        const b = params.get('b');
+        if (a || b) {
+          setComparePair({ a: a || 'US', b: b || 'FR' });
+        }
+      } else if (tab === 'bestOfBest' || tab === 'rankings') {
+        setActiveView('bestOfBest');
+      }
+      const q = params.get('q');
+      if (q) setSearchQuery(q);
+      const country = params.get('country');
+      if (country) setSelectedCountry(country);
+    } catch (_) {}
+  }, []);
+
+  // Synchronize URL search params with active state
+  useEffect(() => {
+    try {
+      const params = new URLSearchParams();
+      if (activeView === 'comparison') {
+        params.set('tab', 'compare');
+        if (comparePair.a) params.set('a', comparePair.a);
+        if (comparePair.b) params.set('b', comparePair.b);
+      } else if (activeView === 'bestOfBest') {
+        params.set('tab', 'bestOfBest');
+      } else {
+        if (selectedCountry !== 'ALL') params.set('country', selectedCountry);
+        if (searchQuery.trim()) params.set('q', searchQuery.trim());
+      }
+      const searchStr = params.toString();
+      const newUrl = `${window.location.pathname}${searchStr ? '?' + searchStr : ''}`;
+      window.history.replaceState(null, '', newUrl);
+    } catch (_) {}
+  }, [activeView, comparePair, selectedCountry, searchQuery]);
 
   // Transition from a country card directly to comparison
   const handleCompareWith = (code) => {

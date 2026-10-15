@@ -296,35 +296,51 @@ export default function ComparisonView({
     });
   };
 
-  // Social share triggers (downloads high-res image & opens composer)
+  // Rich formatted benchmark stats for social sharing
   const getShareText = () => {
-    const winnerName = comparison.overall.winner === 'A' ? countryA.name : countryB.name;
-    return `Comparing Data Security Policies: ${countryA.flag} ${countryA.name} (${scoreA}/10) vs ${countryB.flag} ${countryB.name} (${scoreB}/10). Leader: ${winnerName}! Check the benchmark:`;
+    const winnerName = comparison.overall.winner === 'tie' ? 'Benchmark Parity' : comparison.overall.winner === 'A' ? countryA.name : countryB.name;
+    const diff = Math.abs(scoreA - scoreB).toFixed(1);
+    const advantage = scoreA === scoreB ? 'Tie' : `+${diff} pts advantage`;
+    return `🛡️ Global Data Security Observatory | Sovereign Benchmark\n\n` +
+      `${countryA.flag} ${countryA.name}: ${scoreA}/10\n` +
+      `${countryB.flag} ${countryB.name}: ${scoreB}/10\n` +
+      `🏆 Leader: ${winnerName} (${advantage})\n` +
+      `🔀 Adequacy: ${adequacyResult?.status || 'Assessed'} (${adequacyResult?.badge || 'SCC / BCR'})\n\n` +
+      `Live interactive comparison & radar map:`;
+  };
+
+  const getShareUrl = () => {
+    if (typeof window === 'undefined') return '';
+    const base = window.location.origin + window.location.pathname;
+    return `${base}?tab=compare&a=${countryA.code}&b=${countryB.code}`;
   };
 
   const shareToTwitter = () => {
     downloadCardImage();
+    handleCopyImage();
     const text = encodeURIComponent(getShareText());
-    const url = encodeURIComponent(window.location.href);
+    const url = encodeURIComponent(getShareUrl());
     window.open(`https://twitter.com/intent/tweet?text=${text}&url=${url}`, '_blank', 'noopener,noreferrer');
-    setShareFeedback('📸 Image downloaded & Twitter opened! Attach the saved image to your tweet.');
-    setTimeout(() => setShareFeedback(''), 5000);
+    setShareFeedback('📋 Graphic copied & downloaded! In the tweet composer that just opened, press Ctrl+V to attach your graphic.');
+    setTimeout(() => setShareFeedback(''), 6500);
   };
 
   const shareToWhatsApp = () => {
     downloadCardImage();
-    const text = encodeURIComponent(`${getShareText()} ${window.location.href}`);
+    handleCopyImage();
+    const text = encodeURIComponent(`${getShareText()}\n${getShareUrl()}`);
     window.open(`https://api.whatsapp.com/send?text=${text}`, '_blank', 'noopener,noreferrer');
-    setShareFeedback('📸 Image downloaded & WhatsApp opened! Attach the image to your status or chat.');
-    setTimeout(() => setShareFeedback(''), 5000);
+    setShareFeedback('📋 Graphic copied & downloaded! Paste the graphic into your WhatsApp chat or status.');
+    setTimeout(() => setShareFeedback(''), 6500);
   };
 
   const shareToLinkedIn = () => {
     downloadCardImage();
-    const url = encodeURIComponent(window.location.href);
+    handleCopyImage();
+    const url = encodeURIComponent(getShareUrl());
     window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${url}`, '_blank', 'noopener,noreferrer');
-    setShareFeedback('📸 Image downloaded & LinkedIn opened! Attach the saved image to your post.');
-    setTimeout(() => setShareFeedback(''), 5000);
+    setShareFeedback('📋 Graphic copied & downloaded! Paste the graphic into your LinkedIn update.');
+    setTimeout(() => setShareFeedback(''), 6500);
   };
 
   return (

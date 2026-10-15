@@ -182,7 +182,7 @@ export default function CountryCard({
           className="btn btn-outline btn-radar-modal"
           onClick={() => setShowRadar(true)}
         >
-          🕸️ {t(lang, 'radar')}
+          📊 {t(lang, 'radar')}
         </button>
 
         {onCompareWith && (
