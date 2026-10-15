@@ -1,13 +1,10 @@
 {
-  "generated_at": "2026-10-15T14:48:00Z",
-  "total_sovereign_nations": 197,
+  "generated_at": "2026-10-15T10:08:15.464505+00:00",
   "countries": {
     "US": {
       "code": "US",
       "name": "United States",
       "flag": "🇺🇸",
-      "authority": "FTC / State Attorneys General",
-      "authority_url": "https://www.ftc.gov/legal-library/browse/rules/federal-trade-commission-act",
       "summary": "The United States relies on a patchwork of sector-specific federal laws and an expanding set of state-level comprehensive privacy statutes. There is no single federal omnibus data-protection law. The Federal Trade Commission (FTC) enforces data-protection obligations primarily under Section 5 of the FTC Act (unfair or deceptive practices). Major federal statutes include HIPAA (healthcare), GLBA (financial services), COPPA (children's data), FERPA (education), and the Fair Credit Reporting Act (FCRA). At the state level, the California Consumer Privacy Act / California Privacy Rights Act (CCPA/CPRA) is the most prominent, granting consumers rights to know, delete, and opt out of the sale of personal information. Virginia (VCDPA), Colorado (CPA), Connecticut (CTDPA), Utah (UCPA), Texas (TDPSA), Oregon, Montana, and several other states have enacted comprehensive privacy laws. The American Data Privacy and Protection Act (ADPPA) has been proposed at the federal level but has not been enacted.",
       "key_laws": [
         "FTC Act (Section 5)",
@@ -21,6 +18,8 @@
         "CPA (Colorado)",
         "CTDPA (Connecticut)"
       ],
+      "authority": "FTC / State Attorneys General",
+      "authority_url": "https://www.ftc.gov/legal-library/browse/rules/federal-trade-commission-act",
       "scores": {
         "policy_coverage": 7,
         "enforcement_strength": 7,
@@ -34,14 +33,13 @@
         "transparency": "High transparency overall: federal rulemaking processes are public (Federal Register, FOIA), the FTC publishes detailed case decisions and guidance, and most state AG offices publish enforcement reports. However, fragmentation makes it harder for businesses to navigate.",
         "update_frequency": "Active legislative environment: new state privacy laws pass every year, and the FTC continually updates guidance and pursues novel theories. Federal omnibus legislation remains stalled but sector-specific updates continue.",
         "international_alignment": "No EU adequacy decision. The EU-US Data Privacy Framework (DPF) provides a mechanism for certified companies, but it is narrower than an adequacy finding. The sectoral approach diverges significantly from the GDPR model adopted by most trading partners."
-      }
+      },
+      "last_updated": "2026-10-15T08:55:16.204267+00:00"
     },
     "IN": {
       "code": "IN",
       "name": "India",
       "flag": "🇮🇳",
-      "authority": "Data Protection Board of India (under MeitY)",
-      "authority_url": "https://www.meity.gov.in/",
       "summary": "India enacted the Digital Personal Data Protection Act (DPDPA) in August 2023, its first comprehensive data-protection statute. The law establishes consent-based processing, data-principal rights (access, correction, erasure, grievance redressal), obligations on data fiduciaries (including Significant Data Fiduciaries with enhanced duties), and a new Data Protection Board of India (DPBI) as the adjudicatory body. Penalties can reach ₹250 crore (~$30M) per violation. The government may notify certain countries to which cross-border transfers are restricted. Prior to the DPDPA, data protection was governed by Section 43A of the Information Technology Act, 2000 and the Sensitive Personal Data or Information (SPDI) Rules, 2011. Implementing rules for the DPDPA are expected to be finalised soon.",
       "key_laws": [
         "Digital Personal Data Protection Act, 2023 (DPDPA)",
@@ -49,6 +47,8 @@
         "SPDI Rules, 2011",
         "Aadhaar Act, 2016"
       ],
+      "authority": "Data Protection Board of India (under MeitY)",
+      "authority_url": "https://www.meity.gov.in/",
       "scores": {
         "policy_coverage": 6,
         "enforcement_strength": 5,
@@ -62,14 +62,13 @@
         "transparency": "The DPDPA mandates breach notification and consent management, improving transparency. However, the government retains broad exemption powers (Section 17), and the DPBI proceedings may not always be public. The legislative drafting process involved public consultation.",
         "update_frequency": "Very active: India moved from the 2019 Personal Data Protection Bill to the 2022 Digital Personal Data Protection Bill and finally enacted the DPDPA 2023. The implementing rules and additional sectoral guidelines are expected soon, indicating a rapidly evolving framework.",
         "international_alignment": "The DPDPA borrows concepts from the GDPR (consent, rights, DPO requirement) but diverges in several areas: no right to data portability, government exemptions, and a blacklist (rather than whitelist) model for cross-border transfers. No EU adequacy decision."
-      }
+      },
+      "last_updated": "2026-10-15T08:55:20.266412+00:00"
     },
     "FR": {
       "code": "FR",
       "name": "France",
       "flag": "🇫🇷",
-      "authority": "CNIL (Commission Nationale de l'Informatique et des Libertés)",
-      "authority_url": "https://www.cnil.fr/en",
       "summary": "France is one of the world's leading data-protection jurisdictions. The CNIL (Commission Nationale de l'Informatique et des Libertés) was established in 1978 under the 'Loi Informatique et Libertés', making France a pioneer in data protection. Today, France enforces the EU General Data Protection Regulation (GDPR), which directly applies across all EU member states. The CNIL is one of the most active GDPR enforcement authorities, having imposed record fines including €150 million on Google (2022), €60 million on Facebook (2022), and €40 million on Criteo (2023). France also participates in the European Data Protection Board (EDPB) and has been at the forefront of regulating AI, cookies, and cross-border data transfers through the GDPR framework.",
       "key_laws": [
         "EU General Data Protection Regulation (GDPR)",
@@ -78,6 +77,8 @@
         "EU Data Governance Act",
         "EU AI Act"
       ],
+      "authority": "CNIL (Commission Nationale de l'Informatique et des Libertés)",
+      "authority_url": "https://www.cnil.fr/en",
       "scores": {
         "policy_coverage": 9,
         "enforcement_strength": 9,
@@ -91,14 +92,13 @@
         "transparency": "High transparency: the CNIL publishes annual activity reports, detailed guidance documents, public deliberations, and maintains an open complaints process. GDPR requirements for Data Protection Impact Assessments (DPIAs) and Data Protection Officers (DPOs) further enhance organisational transparency.",
         "update_frequency": "The EU regulatory framework is continuously evolving: the GDPR itself is supplemented by new regulations (AI Act, Data Governance Act, Digital Services Act, Digital Markets Act), and the CNIL regularly updates its guidance on cookies, AI, biometrics, and international transfers.",
         "international_alignment": "As an EU member state, France benefits from the GDPR's global influence – the 'Brussels Effect'. The GDPR sets the de facto international standard, and France actively participates in the EDPB, Council of Europe Convention 108+, and OECD privacy guidelines. EU adequacy decisions facilitate data flows to approved third countries."
-      }
+      },
+      "last_updated": "2026-10-15T08:55:24.550608+00:00"
     },
     "GB": {
       "code": "GB",
       "name": "United Kingdom",
       "flag": "🇬🇧",
-      "authority": "ICO (Information Commissioner's Office)",
-      "authority_url": "https://ico.org.uk/",
       "summary": "The United Kingdom operates one of the most mature data-protection regimes globally. Post-Brexit, the UK adopted the UK General Data Protection Regulation (UK GDPR) – a domestic version of the EU GDPR – alongside the Data Protection Act 2018. The Information Commissioner's Office (ICO) is the independent supervisory authority with powers to investigate, issue enforcement notices, and fine up to £17.5 million or 4% of global turnover. The UK has secured an EU adequacy decision (June 2021, renewed/extended through a bridging mechanism), enabling continued data flows with the EEA. The government has proposed the Data Protection and Digital Information Bill (DPDI) to reform the framework, potentially diverging from the GDPR in areas like automated decision-making and data protection officers.",
       "key_laws": [
         "UK GDPR",
@@ -107,6 +107,8 @@
         "Data Protection and Digital Information Bill (proposed)",
         "Network and Information Systems Regulations 2018"
       ],
+      "authority": "ICO (Information Commissioner's Office)",
+      "authority_url": "https://ico.org.uk/",
       "scores": {
         "policy_coverage": 8,
         "enforcement_strength": 8,
@@ -120,14 +122,13 @@
         "transparency": "The ICO is widely regarded as one of the most transparent regulators: it publishes detailed enforcement notices, annual reports, statutory guidance, consultation responses, and a comprehensive public-facing website with toolkits for SMEs and individuals. The data-protection fee register is public.",
         "update_frequency": "The UK actively updates its framework – the DPDI Bill proposes significant reforms, the ICO regularly issues new codes of practice (e.g., Children's Code, AI guidance), and the government is exploring new approaches to international data transfers post-Brexit.",
         "international_alignment": "Strong alignment: the UK GDPR is substantially based on the EU GDPR, and the UK holds an EU adequacy decision. The UK has also established its own adequacy framework and data-bridge agreements. However, proposed DPDI reforms could risk the EU adequacy status if divergence becomes significant."
-      }
+      },
+      "last_updated": "2026-10-15T08:55:26.916864+00:00"
     },
     "JP": {
       "code": "JP",
       "name": "Japan",
       "flag": "🇯🇵",
-      "authority": "PPC (Personal Information Protection Commission)",
-      "authority_url": "https://www.ppc.go.jp/en/",
       "summary": "Japan's Act on the Protection of Personal Information (APPI) is one of Asia's most established data-protection frameworks. Originally enacted in 2003, the APPI was substantially amended in 2020 (effective April 2022) to strengthen individual rights, tighten cross-border transfer rules, introduce mandatory breach notification, and increase penalties. The Personal Information Protection Commission (PPC) is the independent supervisory authority. Japan and the EU have a mutual adequacy arrangement, creating the 'world's largest area of safe data flows'. Japan is also a founding member of the APEC Cross-Border Privacy Rules (CBPR) system and the Global CBPR Forum.",
       "key_laws": [
         "Act on the Protection of Personal Information (APPI)",
@@ -136,6 +137,8 @@
         "Telecommunications Business Act (privacy provisions)",
         "Act on Prevention of Unauthorized Computer Access"
       ],
+      "authority": "PPC (Personal Information Protection Commission)",
+      "authority_url": "https://www.ppc.go.jp/en/",
       "scores": {
         "policy_coverage": 7,
         "enforcement_strength": 6,
@@ -149,14 +152,13 @@
         "transparency": "The PPC publishes annual reports, guidance documents, Q&A resources, and international cooperation summaries. Japan's regulatory process is generally transparent, though some industry consultations are less public than EU equivalents.",
         "update_frequency": "The APPI mandates a review every three years. The major 2020 amendment reflected significant modernisation. The PPC regularly issues updated guidelines and has conducted public consultations on AI, cookies, and children's data.",
         "international_alignment": "Strong alignment: Japan holds a mutual adequacy arrangement with the EU (since 2019), is a founding member of the APEC CBPR system, and participates in the Global CBPR Forum, the OECD Privacy Guidelines, and bilateral data-flow agreements. The 2020 APPI amendments further align Japan with global standards."
-      }
+      },
+      "last_updated": "2026-10-15T08:55:29.055196+00:00"
     },
     "CN": {
       "code": "CN",
       "name": "China",
       "flag": "🇨🇳",
-      "authority": "CAC (Cyberspace Administration of China)",
-      "authority_url": "http://www.cac.gov.cn/",
       "summary": "China has rapidly built one of the world's most comprehensive data governance regimes through three landmark laws enacted in quick succession: the Cybersecurity Law (CSL, effective June 2017), the Data Security Law (DSL, effective September 2021), and the Personal Information Protection Law (PIPL, effective November 2021). The PIPL is China's first dedicated personal data-protection statute and shares structural similarities with the EU GDPR, including consent requirements, data-subject rights, data protection impact assessments, and extraterritorial scope. However, it includes distinctive provisions such as strict data localisation for critical information infrastructure operators (CIIOs), mandatory security assessments for cross-border data transfers, and broad state-access provisions. The Cyberspace Administration of China (CAC) is the primary regulator, supported by the Ministry of Public Security and sector-specific authorities.",
       "key_laws": [
         "Personal Information Protection Law (PIPL)",
@@ -166,6 +168,8 @@
         "Data Export Security Assessment Measures",
         "Civil Code (privacy provisions, Book IV)"
       ],
+      "authority": "CAC (Cyberspace Administration of China)",
+      "authority_url": "http://www.cac.gov.cn/",
       "scores": {
         "policy_coverage": 8,
         "enforcement_strength": 8,
@@ -179,21 +183,20 @@
         "transparency": "Regulatory processes are considerably less transparent than in Western democracies. Public consultations exist but are limited in scope and duration. Enforcement decisions are often not published in detail. The legal framework grants broad government access to data, and national-security exemptions are opaque.",
         "update_frequency": "Extremely active: China enacted three major laws in four years (2017-2021) and continuously issues implementing regulations, standard contracts, security-assessment guidelines, and sector-specific rules. The regulatory landscape evolves rapidly.",
         "international_alignment": "The PIPL borrows structural elements from the GDPR but diverges significantly in practice: strict data localisation, mandatory security assessments for outbound transfers, government data-access provisions, and no mutual adequacy arrangements with the EU or other major jurisdictions. China does not participate in the APEC CBPR system."
-      }
+      },
+      "last_updated": "2026-10-15T08:55:31.140122+00:00"
     },
     "AF": {
       "code": "AF",
       "name": "Afghanistan",
       "flag": "🇦🇫",
-      "region": "Asia",
-      "subregion": "Southern Asia",
-      "authority": "Ministry of Communications / Data Governance Body of Afghanistan",
-      "authority_url": "https://www.un.org/en/member-states/afghanistan",
       "summary": "Afghanistan maintains national data governance and cybersecurity provisions governing public and private processing within the Asia region.",
       "key_laws": [
         "Afghanistan Electronic Transactions & Cybersecurity Framework",
         "Constitutional Privacy & Digital Safeguards"
       ],
+      "authority": "Ministry of Communications / Data Governance Body of Afghanistan",
+      "authority_url": "https://www.un.org/en/member-states/afghanistan",
       "scores": {
         "policy_coverage": 5,
         "enforcement_strength": 4,
@@ -214,15 +217,13 @@
       "code": "AO",
       "name": "Angola",
       "flag": "🇦🇴",
-      "region": "Africa",
-      "subregion": "Middle Africa",
-      "authority": "Ministry of Communications / Data Governance Body of Angola",
-      "authority_url": "https://www.un.org/en/member-states/angola",
       "summary": "Angola maintains national data governance and cybersecurity provisions governing public and private processing within the Africa region.",
       "key_laws": [
         "Angola Electronic Transactions & Cybersecurity Framework",
         "Constitutional Privacy & Digital Safeguards"
       ],
+      "authority": "Ministry of Communications / Data Governance Body of Angola",
+      "authority_url": "https://www.un.org/en/member-states/angola",
       "scores": {
         "policy_coverage": 5,
         "enforcement_strength": 4,
@@ -243,15 +244,13 @@
       "code": "AL",
       "name": "Albania",
       "flag": "🇦🇱",
-      "region": "Europe",
-      "subregion": "Southeast Europe",
-      "authority": "Ministry of Communications / Data Governance Body of Albania",
-      "authority_url": "https://www.un.org/en/member-states/albania",
       "summary": "Albania maintains national data governance and cybersecurity provisions governing public and private processing within the Europe region.",
       "key_laws": [
         "Albania Electronic Transactions & Cybersecurity Framework",
         "Constitutional Privacy & Digital Safeguards"
       ],
+      "authority": "Ministry of Communications / Data Governance Body of Albania",
+      "authority_url": "https://www.un.org/en/member-states/albania",
       "scores": {
         "policy_coverage": 5,
         "enforcement_strength": 4,
@@ -272,15 +271,13 @@
       "code": "AD",
       "name": "Andorra",
       "flag": "🇦🇩",
-      "region": "Europe",
-      "subregion": "Southern Europe",
-      "authority": "Ministry of Communications / Data Governance Body of Andorra",
-      "authority_url": "https://www.un.org/en/member-states/andorra",
       "summary": "Andorra maintains national data governance and cybersecurity provisions governing public and private processing within the Europe region.",
       "key_laws": [
         "Andorra Electronic Transactions & Cybersecurity Framework",
         "Constitutional Privacy & Digital Safeguards"
       ],
+      "authority": "Ministry of Communications / Data Governance Body of Andorra",
+      "authority_url": "https://www.un.org/en/member-states/andorra",
       "scores": {
         "policy_coverage": 5,
         "enforcement_strength": 4,
@@ -301,14 +298,12 @@
       "code": "AE",
       "name": "United Arab Emirates",
       "flag": "🇦🇪",
-      "region": "Asia",
-      "subregion": "Western Asia",
-      "authority": "UAE Data Office",
-      "authority_url": "https://u.ae/",
       "summary": "United Arab Emirates enforces comprehensive data security and individual privacy laws administered by UAE Data Office across the jurisdiction.",
       "key_laws": [
         "Federal Decree-Law No. 45 of 2021 on Personal Data Protection"
       ],
+      "authority": "UAE Data Office",
+      "authority_url": "https://u.ae/",
       "scores": {
         "policy_coverage": 7,
         "enforcement_strength": 7,
@@ -329,14 +324,12 @@
       "code": "AR",
       "name": "Argentina",
       "flag": "🇦🇷",
-      "region": "Americas",
-      "subregion": "South America",
-      "authority": "AAIP (Agency of Access to Public Information)",
-      "authority_url": "https://www.argentina.gob.ar/aaip",
       "summary": "Argentina enforces comprehensive data security and individual privacy laws administered by AAIP (Agency of Access to Public Information) across the jurisdiction.",
       "key_laws": [
         "Personal Data Protection Act 25.326"
       ],
+      "authority": "AAIP (Agency of Access to Public Information)",
+      "authority_url": "https://www.argentina.gob.ar/aaip",
       "scores": {
         "policy_coverage": 7,
         "enforcement_strength": 6,
@@ -357,15 +350,13 @@
       "code": "AM",
       "name": "Armenia",
       "flag": "🇦🇲",
-      "region": "Asia",
-      "subregion": "Western Asia",
-      "authority": "Ministry of Communications / Data Governance Body of Armenia",
-      "authority_url": "https://www.un.org/en/member-states/armenia",
       "summary": "Armenia maintains national data governance and cybersecurity provisions governing public and private processing within the Asia region.",
       "key_laws": [
         "Armenia Electronic Transactions & Cybersecurity Framework",
         "Constitutional Privacy & Digital Safeguards"
       ],
+      "authority": "Ministry of Communications / Data Governance Body of Armenia",
+      "authority_url": "https://www.un.org/en/member-states/armenia",
       "scores": {
         "policy_coverage": 5,
         "enforcement_strength": 4,
@@ -386,15 +377,13 @@
       "code": "AG",
       "name": "Antigua and Barbuda",
       "flag": "🇦🇬",
-      "region": "Americas",
-      "subregion": "Caribbean",
-      "authority": "Ministry of Communications / Data Governance Body of Antigua and Barbuda",
-      "authority_url": "https://www.un.org/en/member-states/antigua-and-barbuda",
       "summary": "Antigua and Barbuda maintains national data governance and cybersecurity provisions governing public and private processing within the Americas region.",
       "key_laws": [
         "Antigua and Barbuda Electronic Transactions & Cybersecurity Framework",
         "Constitutional Privacy & Digital Safeguards"
       ],
+      "authority": "Ministry of Communications / Data Governance Body of Antigua and Barbuda",
+      "authority_url": "https://www.un.org/en/member-states/antigua-and-barbuda",
       "scores": {
         "policy_coverage": 5,
         "enforcement_strength": 4,
@@ -415,15 +404,13 @@
       "code": "AU",
       "name": "Australia",
       "flag": "🇦🇺",
-      "region": "Oceania",
-      "subregion": "Australia and New Zealand",
-      "authority": "OAIC (Office of the Australian Information Commissioner)",
-      "authority_url": "https://www.oaic.gov.au/",
       "summary": "Australia enforces comprehensive data security and individual privacy laws administered by OAIC (Office of the Australian Information Commissioner) across the jurisdiction.",
       "key_laws": [
         "Privacy Act 1988",
         "Australian Privacy Principles (APPs)"
       ],
+      "authority": "OAIC (Office of the Australian Information Commissioner)",
+      "authority_url": "https://www.oaic.gov.au/",
       "scores": {
         "policy_coverage": 8,
         "enforcement_strength": 7,
@@ -444,15 +431,13 @@
       "code": "AT",
       "name": "Austria",
       "flag": "🇦🇹",
-      "region": "Europe",
-      "subregion": "Central Europe",
-      "authority": "National Data Protection Authority of Austria",
-      "authority_url": "https://edpb.europa.eu/about-edpb/about-edpb/members_en",
       "summary": "Austria operates under the EU General Data Protection Regulation (GDPR) enforced by the national supervisory authority in close coordination with the European Data Protection Board (EDPB).",
       "key_laws": [
         "EU General Data Protection Regulation (GDPR)",
         "Austria Data Protection Statute"
       ],
+      "authority": "National Data Protection Authority of Austria",
+      "authority_url": "https://edpb.europa.eu/about-edpb/about-edpb/members_en",
       "scores": {
         "policy_coverage": 9,
         "enforcement_strength": 8,
@@ -473,15 +458,13 @@
       "code": "AZ",
       "name": "Azerbaijan",
       "flag": "🇦🇿",
-      "region": "Asia",
-      "subregion": "Western Asia",
-      "authority": "Ministry of Communications / Data Governance Body of Azerbaijan",
-      "authority_url": "https://www.un.org/en/member-states/azerbaijan",
       "summary": "Azerbaijan maintains national data governance and cybersecurity provisions governing public and private processing within the Asia region.",
       "key_laws": [
         "Azerbaijan Electronic Transactions & Cybersecurity Framework",
         "Constitutional Privacy & Digital Safeguards"
       ],
+      "authority": "Ministry of Communications / Data Governance Body of Azerbaijan",
+      "authority_url": "https://www.un.org/en/member-states/azerbaijan",
       "scores": {
         "policy_coverage": 5,
         "enforcement_strength": 4,
@@ -502,15 +485,13 @@
       "code": "BI",
       "name": "Burundi",
       "flag": "🇧🇮",
-      "region": "Africa",
-      "subregion": "Eastern Africa",
-      "authority": "Ministry of Communications / Data Governance Body of Burundi",
-      "authority_url": "https://www.un.org/en/member-states/burundi",
       "summary": "Burundi maintains national data governance and cybersecurity provisions governing public and private processing within the Africa region.",
       "key_laws": [
         "Burundi Electronic Transactions & Cybersecurity Framework",
         "Constitutional Privacy & Digital Safeguards"
       ],
+      "authority": "Ministry of Communications / Data Governance Body of Burundi",
+      "authority_url": "https://www.un.org/en/member-states/burundi",
       "scores": {
         "policy_coverage": 5,
         "enforcement_strength": 4,
@@ -531,15 +512,13 @@
       "code": "BE",
       "name": "Belgium",
       "flag": "🇧🇪",
-      "region": "Europe",
-      "subregion": "Western Europe",
-      "authority": "National Data Protection Authority of Belgium",
-      "authority_url": "https://edpb.europa.eu/about-edpb/about-edpb/members_en",
       "summary": "Belgium operates under the EU General Data Protection Regulation (GDPR) enforced by the national supervisory authority in close coordination with the European Data Protection Board (EDPB).",
       "key_laws": [
         "EU General Data Protection Regulation (GDPR)",
         "Belgium Data Protection Statute"
       ],
+      "authority": "National Data Protection Authority of Belgium",
+      "authority_url": "https://edpb.europa.eu/about-edpb/about-edpb/members_en",
       "scores": {
         "policy_coverage": 9,
         "enforcement_strength": 8,
@@ -560,15 +539,13 @@
       "code": "BJ",
       "name": "Benin",
       "flag": "🇧🇯",
-      "region": "Africa",
-      "subregion": "Western Africa",
-      "authority": "Ministry of Communications / Data Governance Body of Benin",
-      "authority_url": "https://www.un.org/en/member-states/benin",
       "summary": "Benin maintains national data governance and cybersecurity provisions governing public and private processing within the Africa region.",
       "key_laws": [
         "Benin Electronic Transactions & Cybersecurity Framework",
         "Constitutional Privacy & Digital Safeguards"
       ],
+      "authority": "Ministry of Communications / Data Governance Body of Benin",
+      "authority_url": "https://www.un.org/en/member-states/benin",
       "scores": {
         "policy_coverage": 5,
         "enforcement_strength": 4,
@@ -589,15 +566,13 @@
       "code": "BF",
       "name": "Burkina Faso",
       "flag": "🇧🇫",
-      "region": "Africa",
-      "subregion": "Western Africa",
-      "authority": "Ministry of Communications / Data Governance Body of Burkina Faso",
-      "authority_url": "https://www.un.org/en/member-states/burkina-faso",
       "summary": "Burkina Faso maintains national data governance and cybersecurity provisions governing public and private processing within the Africa region.",
       "key_laws": [
         "Burkina Faso Electronic Transactions & Cybersecurity Framework",
         "Constitutional Privacy & Digital Safeguards"
       ],
+      "authority": "Ministry of Communications / Data Governance Body of Burkina Faso",
+      "authority_url": "https://www.un.org/en/member-states/burkina-faso",
       "scores": {
         "policy_coverage": 5,
         "enforcement_strength": 4,
@@ -618,15 +593,13 @@
       "code": "BD",
       "name": "Bangladesh",
       "flag": "🇧🇩",
-      "region": "Asia",
-      "subregion": "Southern Asia",
-      "authority": "Ministry of Communications / Data Governance Body of Bangladesh",
-      "authority_url": "https://www.un.org/en/member-states/bangladesh",
       "summary": "Bangladesh maintains national data governance and cybersecurity provisions governing public and private processing within the Asia region.",
       "key_laws": [
         "Bangladesh Electronic Transactions & Cybersecurity Framework",
         "Constitutional Privacy & Digital Safeguards"
       ],
+      "authority": "Ministry of Communications / Data Governance Body of Bangladesh",
+      "authority_url": "https://www.un.org/en/member-states/bangladesh",
       "scores": {
         "policy_coverage": 5,
         "enforcement_strength": 4,
@@ -647,15 +620,13 @@
       "code": "BG",
       "name": "Bulgaria",
       "flag": "🇧🇬",
-      "region": "Europe",
-      "subregion": "Southeast Europe",
-      "authority": "National Data Protection Authority of Bulgaria",
-      "authority_url": "https://edpb.europa.eu/about-edpb/about-edpb/members_en",
       "summary": "Bulgaria operates under the EU General Data Protection Regulation (GDPR) enforced by the national supervisory authority in close coordination with the European Data Protection Board (EDPB).",
       "key_laws": [
         "EU General Data Protection Regulation (GDPR)",
         "Bulgaria Data Protection Statute"
       ],
+      "authority": "National Data Protection Authority of Bulgaria",
+      "authority_url": "https://edpb.europa.eu/about-edpb/about-edpb/members_en",
       "scores": {
         "policy_coverage": 9,
         "enforcement_strength": 8,
@@ -676,15 +647,13 @@
       "code": "BH",
       "name": "Bahrain",
       "flag": "🇧🇭",
-      "region": "Asia",
-      "subregion": "Western Asia",
-      "authority": "Ministry of Communications / Data Governance Body of Bahrain",
-      "authority_url": "https://www.un.org/en/member-states/bahrain",
       "summary": "Bahrain maintains national data governance and cybersecurity provisions governing public and private processing within the Asia region.",
       "key_laws": [
         "Bahrain Electronic Transactions & Cybersecurity Framework",
         "Constitutional Privacy & Digital Safeguards"
       ],
+      "authority": "Ministry of Communications / Data Governance Body of Bahrain",
+      "authority_url": "https://www.un.org/en/member-states/bahrain",
       "scores": {
         "policy_coverage": 5,
         "enforcement_strength": 4,
@@ -705,15 +674,13 @@
       "code": "BS",
       "name": "Bahamas",
       "flag": "🇧🇸",
-      "region": "Americas",
-      "subregion": "Caribbean",
-      "authority": "Ministry of Communications / Data Governance Body of Bahamas",
-      "authority_url": "https://www.un.org/en/member-states/bahamas",
       "summary": "Bahamas maintains national data governance and cybersecurity provisions governing public and private processing within the Americas region.",
       "key_laws": [
         "Bahamas Electronic Transactions & Cybersecurity Framework",
         "Constitutional Privacy & Digital Safeguards"
       ],
+      "authority": "Ministry of Communications / Data Governance Body of Bahamas",
+      "authority_url": "https://www.un.org/en/member-states/bahamas",
       "scores": {
         "policy_coverage": 5,
         "enforcement_strength": 4,
@@ -734,15 +701,13 @@
       "code": "BA",
       "name": "Bosnia and Herzegovina",
       "flag": "🇧🇦",
-      "region": "Europe",
-      "subregion": "Southeast Europe",
-      "authority": "Ministry of Communications / Data Governance Body of Bosnia and Herzegovina",
-      "authority_url": "https://www.un.org/en/member-states/bosnia-and-herzegovina",
       "summary": "Bosnia and Herzegovina maintains national data governance and cybersecurity provisions governing public and private processing within the Europe region.",
       "key_laws": [
         "Bosnia and Herzegovina Electronic Transactions & Cybersecurity Framework",
         "Constitutional Privacy & Digital Safeguards"
       ],
+      "authority": "Ministry of Communications / Data Governance Body of Bosnia and Herzegovina",
+      "authority_url": "https://www.un.org/en/member-states/bosnia-and-herzegovina",
       "scores": {
         "policy_coverage": 5,
         "enforcement_strength": 4,
@@ -763,15 +728,13 @@
       "code": "BY",
       "name": "Belarus",
       "flag": "🇧🇾",
-      "region": "Europe",
-      "subregion": "Eastern Europe",
-      "authority": "Ministry of Communications / Data Governance Body of Belarus",
-      "authority_url": "https://www.un.org/en/member-states/belarus",
       "summary": "Belarus maintains national data governance and cybersecurity provisions governing public and private processing within the Europe region.",
       "key_laws": [
         "Belarus Electronic Transactions & Cybersecurity Framework",
         "Constitutional Privacy & Digital Safeguards"
       ],
+      "authority": "Ministry of Communications / Data Governance Body of Belarus",
+      "authority_url": "https://www.un.org/en/member-states/belarus",
       "scores": {
         "policy_coverage": 5,
         "enforcement_strength": 4,
@@ -792,15 +755,13 @@
       "code": "BZ",
       "name": "Belize",
       "flag": "🇧🇿",
-      "region": "Americas",
-      "subregion": "Central America",
-      "authority": "Ministry of Communications / Data Governance Body of Belize",
-      "authority_url": "https://www.un.org/en/member-states/belize",
       "summary": "Belize maintains national data governance and cybersecurity provisions governing public and private processing within the Americas region.",
       "key_laws": [
         "Belize Electronic Transactions & Cybersecurity Framework",
         "Constitutional Privacy & Digital Safeguards"
       ],
+      "authority": "Ministry of Communications / Data Governance Body of Belize",
+      "authority_url": "https://www.un.org/en/member-states/belize",
       "scores": {
         "policy_coverage": 5,
         "enforcement_strength": 4,
@@ -821,15 +782,13 @@
       "code": "BO",
       "name": "Bolivia",
       "flag": "🇧🇴",
-      "region": "Americas",
-      "subregion": "South America",
-      "authority": "Ministry of Communications / Data Governance Body of Bolivia",
-      "authority_url": "https://www.un.org/en/member-states/bolivia",
       "summary": "Bolivia maintains national data governance and cybersecurity provisions governing public and private processing within the Americas region.",
       "key_laws": [
         "Bolivia Electronic Transactions & Cybersecurity Framework",
         "Constitutional Privacy & Digital Safeguards"
       ],
+      "authority": "Ministry of Communications / Data Governance Body of Bolivia",
+      "authority_url": "https://www.un.org/en/member-states/bolivia",
       "scores": {
         "policy_coverage": 5,
         "enforcement_strength": 4,
@@ -850,14 +809,12 @@
       "code": "BR",
       "name": "Brazil",
       "flag": "🇧🇷",
-      "region": "Americas",
-      "subregion": "South America",
-      "authority": "ANPD (National Data Protection Authority)",
-      "authority_url": "https://www.gov.br/anpd/pt-br",
       "summary": "Brazil enforces comprehensive data security and individual privacy laws administered by ANPD (National Data Protection Authority) across the jurisdiction.",
       "key_laws": [
         "LGPD (General Data Protection Law 13.709/2018)"
       ],
+      "authority": "ANPD (National Data Protection Authority)",
+      "authority_url": "https://www.gov.br/anpd/pt-br",
       "scores": {
         "policy_coverage": 8,
         "enforcement_strength": 7,
@@ -878,15 +835,13 @@
       "code": "BB",
       "name": "Barbados",
       "flag": "🇧🇧",
-      "region": "Americas",
-      "subregion": "Caribbean",
-      "authority": "Ministry of Communications / Data Governance Body of Barbados",
-      "authority_url": "https://www.un.org/en/member-states/barbados",
       "summary": "Barbados maintains national data governance and cybersecurity provisions governing public and private processing within the Americas region.",
       "key_laws": [
         "Barbados Electronic Transactions & Cybersecurity Framework",
         "Constitutional Privacy & Digital Safeguards"
       ],
+      "authority": "Ministry of Communications / Data Governance Body of Barbados",
+      "authority_url": "https://www.un.org/en/member-states/barbados",
       "scores": {
         "policy_coverage": 5,
         "enforcement_strength": 4,
@@ -907,15 +862,13 @@
       "code": "BN",
       "name": "Brunei",
       "flag": "🇧🇳",
-      "region": "Asia",
-      "subregion": "South-Eastern Asia",
-      "authority": "Ministry of Communications / Data Governance Body of Brunei",
-      "authority_url": "https://www.un.org/en/member-states/brunei",
       "summary": "Brunei maintains national data governance and cybersecurity provisions governing public and private processing within the Asia region.",
       "key_laws": [
         "Brunei Electronic Transactions & Cybersecurity Framework",
         "Constitutional Privacy & Digital Safeguards"
       ],
+      "authority": "Ministry of Communications / Data Governance Body of Brunei",
+      "authority_url": "https://www.un.org/en/member-states/brunei",
       "scores": {
         "policy_coverage": 5,
         "enforcement_strength": 4,
@@ -936,15 +889,13 @@
       "code": "BT",
       "name": "Bhutan",
       "flag": "🇧🇹",
-      "region": "Asia",
-      "subregion": "Southern Asia",
-      "authority": "Ministry of Communications / Data Governance Body of Bhutan",
-      "authority_url": "https://www.un.org/en/member-states/bhutan",
       "summary": "Bhutan maintains national data governance and cybersecurity provisions governing public and private processing within the Asia region.",
       "key_laws": [
         "Bhutan Electronic Transactions & Cybersecurity Framework",
         "Constitutional Privacy & Digital Safeguards"
       ],
+      "authority": "Ministry of Communications / Data Governance Body of Bhutan",
+      "authority_url": "https://www.un.org/en/member-states/bhutan",
       "scores": {
         "policy_coverage": 5,
         "enforcement_strength": 4,
@@ -965,15 +916,13 @@
       "code": "BW",
       "name": "Botswana",
       "flag": "🇧🇼",
-      "region": "Africa",
-      "subregion": "Southern Africa",
-      "authority": "Ministry of Communications / Data Governance Body of Botswana",
-      "authority_url": "https://www.un.org/en/member-states/botswana",
       "summary": "Botswana maintains national data governance and cybersecurity provisions governing public and private processing within the Africa region.",
       "key_laws": [
         "Botswana Electronic Transactions & Cybersecurity Framework",
         "Constitutional Privacy & Digital Safeguards"
       ],
+      "authority": "Ministry of Communications / Data Governance Body of Botswana",
+      "authority_url": "https://www.un.org/en/member-states/botswana",
       "scores": {
         "policy_coverage": 5,
         "enforcement_strength": 4,
@@ -994,15 +943,13 @@
       "code": "CF",
       "name": "Central African Republic",
       "flag": "🇨🇫",
-      "region": "Africa",
-      "subregion": "Middle Africa",
-      "authority": "Ministry of Communications / Data Governance Body of Central African Republic",
-      "authority_url": "https://www.un.org/en/member-states/central-african-republic",
       "summary": "Central African Republic maintains national data governance and cybersecurity provisions governing public and private processing within the Africa region.",
       "key_laws": [
         "Central African Republic Electronic Transactions & Cybersecurity Framework",
         "Constitutional Privacy & Digital Safeguards"
       ],
+      "authority": "Ministry of Communications / Data Governance Body of Central African Republic",
+      "authority_url": "https://www.un.org/en/member-states/central-african-republic",
       "scores": {
         "policy_coverage": 5,
         "enforcement_strength": 4,
@@ -1023,15 +970,13 @@
       "code": "CA",
       "name": "Canada",
       "flag": "🇨🇦",
-      "region": "Americas",
-      "subregion": "North America",
-      "authority": "OPC (Office of the Privacy Commissioner of Canada)",
-      "authority_url": "https://www.priv.gc.ca/",
       "summary": "Canada enforces comprehensive data security and individual privacy laws administered by OPC (Office of the Privacy Commissioner of Canada) across the jurisdiction.",
       "key_laws": [
         "PIPEDA",
         "Privacy Act"
       ],
+      "authority": "OPC (Office of the Privacy Commissioner of Canada)",
+      "authority_url": "https://www.priv.gc.ca/",
       "scores": {
         "policy_coverage": 8,
         "enforcement_strength": 7,
@@ -1052,14 +997,12 @@
       "code": "CH",
       "name": "Switzerland",
       "flag": "🇨🇭",
-      "region": "Europe",
-      "subregion": "Western Europe",
-      "authority": "FDPIC (Federal Data Protection and Information Commissioner)",
-      "authority_url": "https://www.edoeb.admin.ch/",
       "summary": "Switzerland enforces comprehensive data security and individual privacy laws administered by FDPIC (Federal Data Protection and Information Commissioner) across the jurisdiction.",
       "key_laws": [
         "FADP (revised Federal Act on Data Protection)"
       ],
+      "authority": "FDPIC (Federal Data Protection and Information Commissioner)",
+      "authority_url": "https://www.edoeb.admin.ch/",
       "scores": {
         "policy_coverage": 9,
         "enforcement_strength": 8,
@@ -1080,14 +1023,12 @@
       "code": "CL",
       "name": "Chile",
       "flag": "🇨🇱",
-      "region": "Americas",
-      "subregion": "South America",
-      "authority": "Transparency Council (CPLT)",
-      "authority_url": "https://www.consejotransparencia.cl/",
       "summary": "Chile enforces comprehensive data security and individual privacy laws administered by Transparency Council (CPLT) across the jurisdiction.",
       "key_laws": [
         "Law No. 19.628 on Privacy Protection"
       ],
+      "authority": "Transparency Council (CPLT)",
+      "authority_url": "https://www.consejotransparencia.cl/",
       "scores": {
         "policy_coverage": 6,
         "enforcement_strength": 5,
@@ -1108,15 +1049,13 @@
       "code": "CI",
       "name": "Ivory Coast",
       "flag": "🇨🇮",
-      "region": "Africa",
-      "subregion": "Western Africa",
-      "authority": "Ministry of Communications / Data Governance Body of Ivory Coast",
-      "authority_url": "https://www.un.org/en/member-states/ivory-coast",
       "summary": "Ivory Coast maintains national data governance and cybersecurity provisions governing public and private processing within the Africa region.",
       "key_laws": [
         "Ivory Coast Electronic Transactions & Cybersecurity Framework",
         "Constitutional Privacy & Digital Safeguards"
       ],
+      "authority": "Ministry of Communications / Data Governance Body of Ivory Coast",
+      "authority_url": "https://www.un.org/en/member-states/ivory-coast",
       "scores": {
         "policy_coverage": 5,
         "enforcement_strength": 4,
@@ -1137,15 +1076,13 @@
       "code": "CM",
       "name": "Cameroon",
       "flag": "🇨🇲",
-      "region": "Africa",
-      "subregion": "Middle Africa",
-      "authority": "Ministry of Communications / Data Governance Body of Cameroon",
-      "authority_url": "https://www.un.org/en/member-states/cameroon",
       "summary": "Cameroon maintains national data governance and cybersecurity provisions governing public and private processing within the Africa region.",
       "key_laws": [
         "Cameroon Electronic Transactions & Cybersecurity Framework",
         "Constitutional Privacy & Digital Safeguards"
       ],
+      "authority": "Ministry of Communications / Data Governance Body of Cameroon",
+      "authority_url": "https://www.un.org/en/member-states/cameroon",
       "scores": {
         "policy_coverage": 5,
         "enforcement_strength": 4,
@@ -1166,15 +1103,13 @@
       "code": "CD",
       "name": "DR Congo",
       "flag": "🇨🇩",
-      "region": "Africa",
-      "subregion": "Middle Africa",
-      "authority": "Ministry of Communications / Data Governance Body of DR Congo",
-      "authority_url": "https://www.un.org/en/member-states/dr-congo",
       "summary": "DR Congo maintains national data governance and cybersecurity provisions governing public and private processing within the Africa region.",
       "key_laws": [
         "DR Congo Electronic Transactions & Cybersecurity Framework",
         "Constitutional Privacy & Digital Safeguards"
       ],
+      "authority": "Ministry of Communications / Data Governance Body of DR Congo",
+      "authority_url": "https://www.un.org/en/member-states/dr-congo",
       "scores": {
         "policy_coverage": 5,
         "enforcement_strength": 4,
@@ -1195,15 +1130,13 @@
       "code": "CG",
       "name": "Congo",
       "flag": "🇨🇬",
-      "region": "Africa",
-      "subregion": "Middle Africa",
-      "authority": "Ministry of Communications / Data Governance Body of Congo",
-      "authority_url": "https://www.un.org/en/member-states/congo",
       "summary": "Congo maintains national data governance and cybersecurity provisions governing public and private processing within the Africa region.",
       "key_laws": [
         "Congo Electronic Transactions & Cybersecurity Framework",
         "Constitutional Privacy & Digital Safeguards"
       ],
+      "authority": "Ministry of Communications / Data Governance Body of Congo",
+      "authority_url": "https://www.un.org/en/member-states/congo",
       "scores": {
         "policy_coverage": 5,
         "enforcement_strength": 4,
@@ -1224,14 +1157,12 @@
       "code": "CO",
       "name": "Colombia",
       "flag": "🇨🇴",
-      "region": "Americas",
-      "subregion": "South America",
-      "authority": "SIC (Superintendence of Industry and Commerce)",
-      "authority_url": "https://www.sic.gov.co/",
       "summary": "Colombia enforces comprehensive data security and individual privacy laws administered by SIC (Superintendence of Industry and Commerce) across the jurisdiction.",
       "key_laws": [
         "Statutory Law 1581 of 2012"
       ],
+      "authority": "SIC (Superintendence of Industry and Commerce)",
+      "authority_url": "https://www.sic.gov.co/",
       "scores": {
         "policy_coverage": 7,
         "enforcement_strength": 7,
@@ -1252,15 +1183,13 @@
       "code": "KM",
       "name": "Comoros",
       "flag": "🇰🇲",
-      "region": "Africa",
-      "subregion": "Eastern Africa",
-      "authority": "Ministry of Communications / Data Governance Body of Comoros",
-      "authority_url": "https://www.un.org/en/member-states/comoros",
       "summary": "Comoros maintains national data governance and cybersecurity provisions governing public and private processing within the Africa region.",
       "key_laws": [
         "Comoros Electronic Transactions & Cybersecurity Framework",
         "Constitutional Privacy & Digital Safeguards"
       ],
+      "authority": "Ministry of Communications / Data Governance Body of Comoros",
+      "authority_url": "https://www.un.org/en/member-states/comoros",
       "scores": {
         "policy_coverage": 5,
         "enforcement_strength": 4,
@@ -1281,15 +1210,13 @@
       "code": "CV",
       "name": "Cape Verde",
       "flag": "🇨🇻",
-      "region": "Africa",
-      "subregion": "Western Africa",
-      "authority": "Ministry of Communications / Data Governance Body of Cape Verde",
-      "authority_url": "https://www.un.org/en/member-states/cape-verde",
       "summary": "Cape Verde maintains national data governance and cybersecurity provisions governing public and private processing within the Africa region.",
       "key_laws": [
         "Cape Verde Electronic Transactions & Cybersecurity Framework",
         "Constitutional Privacy & Digital Safeguards"
       ],
+      "authority": "Ministry of Communications / Data Governance Body of Cape Verde",
+      "authority_url": "https://www.un.org/en/member-states/cape-verde",
       "scores": {
         "policy_coverage": 5,
         "enforcement_strength": 4,
@@ -1310,15 +1237,13 @@
       "code": "CR",
       "name": "Costa Rica",
       "flag": "🇨🇷",
-      "region": "Americas",
-      "subregion": "Central America",
-      "authority": "Ministry of Communications / Data Governance Body of Costa Rica",
-      "authority_url": "https://www.un.org/en/member-states/costa-rica",
       "summary": "Costa Rica maintains national data governance and cybersecurity provisions governing public and private processing within the Americas region.",
       "key_laws": [
         "Costa Rica Electronic Transactions & Cybersecurity Framework",
         "Constitutional Privacy & Digital Safeguards"
       ],
+      "authority": "Ministry of Communications / Data Governance Body of Costa Rica",
+      "authority_url": "https://www.un.org/en/member-states/costa-rica",
       "scores": {
         "policy_coverage": 5,
         "enforcement_strength": 4,
@@ -1339,15 +1264,13 @@
       "code": "CU",
       "name": "Cuba",
       "flag": "🇨🇺",
-      "region": "Americas",
-      "subregion": "Caribbean",
-      "authority": "Ministry of Communications / Data Governance Body of Cuba",
-      "authority_url": "https://www.un.org/en/member-states/cuba",
       "summary": "Cuba maintains national data governance and cybersecurity provisions governing public and private processing within the Americas region.",
       "key_laws": [
         "Cuba Electronic Transactions & Cybersecurity Framework",
         "Constitutional Privacy & Digital Safeguards"
       ],
+      "authority": "Ministry of Communications / Data Governance Body of Cuba",
+      "authority_url": "https://www.un.org/en/member-states/cuba",
       "scores": {
         "policy_coverage": 5,
         "enforcement_strength": 4,
@@ -1368,15 +1291,13 @@
       "code": "CY",
       "name": "Cyprus",
       "flag": "🇨🇾",
-      "region": "Europe",
-      "subregion": "Southern Europe",
-      "authority": "National Data Protection Authority of Cyprus",
-      "authority_url": "https://edpb.europa.eu/about-edpb/about-edpb/members_en",
       "summary": "Cyprus operates under the EU General Data Protection Regulation (GDPR) enforced by the national supervisory authority in close coordination with the European Data Protection Board (EDPB).",
       "key_laws": [
         "EU General Data Protection Regulation (GDPR)",
         "Cyprus Data Protection Statute"
       ],
+      "authority": "National Data Protection Authority of Cyprus",
+      "authority_url": "https://edpb.europa.eu/about-edpb/about-edpb/members_en",
       "scores": {
         "policy_coverage": 9,
         "enforcement_strength": 8,
@@ -1397,15 +1318,13 @@
       "code": "CZ",
       "name": "Czechia",
       "flag": "🇨🇿",
-      "region": "Europe",
-      "subregion": "Central Europe",
-      "authority": "National Data Protection Authority of Czechia",
-      "authority_url": "https://edpb.europa.eu/about-edpb/about-edpb/members_en",
       "summary": "Czechia operates under the EU General Data Protection Regulation (GDPR) enforced by the national supervisory authority in close coordination with the European Data Protection Board (EDPB).",
       "key_laws": [
         "EU General Data Protection Regulation (GDPR)",
         "Czechia Data Protection Statute"
       ],
+      "authority": "National Data Protection Authority of Czechia",
+      "authority_url": "https://edpb.europa.eu/about-edpb/about-edpb/members_en",
       "scores": {
         "policy_coverage": 9,
         "enforcement_strength": 8,
@@ -1426,15 +1345,13 @@
       "code": "DE",
       "name": "Germany",
       "flag": "🇩🇪",
-      "region": "Europe",
-      "subregion": "Western Europe",
-      "authority": "BfDI (Federal Commissioner for Data Protection)",
-      "authority_url": "https://www.bfdi.bund.de/",
       "summary": "Germany operates under the EU General Data Protection Regulation (GDPR) enforced by the national supervisory authority in close coordination with the European Data Protection Board (EDPB).",
       "key_laws": [
         "EU GDPR",
         "BDSG (Federal Data Protection Act)"
       ],
+      "authority": "BfDI (Federal Commissioner for Data Protection)",
+      "authority_url": "https://www.bfdi.bund.de/",
       "scores": {
         "policy_coverage": 9,
         "enforcement_strength": 9,
@@ -1455,15 +1372,13 @@
       "code": "DJ",
       "name": "Djibouti",
       "flag": "🇩🇯",
-      "region": "Africa",
-      "subregion": "Eastern Africa",
-      "authority": "Ministry of Communications / Data Governance Body of Djibouti",
-      "authority_url": "https://www.un.org/en/member-states/djibouti",
       "summary": "Djibouti maintains national data governance and cybersecurity provisions governing public and private processing within the Africa region.",
       "key_laws": [
         "Djibouti Electronic Transactions & Cybersecurity Framework",
         "Constitutional Privacy & Digital Safeguards"
       ],
+      "authority": "Ministry of Communications / Data Governance Body of Djibouti",
+      "authority_url": "https://www.un.org/en/member-states/djibouti",
       "scores": {
         "policy_coverage": 5,
         "enforcement_strength": 4,
@@ -1484,15 +1399,13 @@
       "code": "DM",
       "name": "Dominica",
       "flag": "🇩🇲",
-      "region": "Americas",
-      "subregion": "Caribbean",
-      "authority": "Ministry of Communications / Data Governance Body of Dominica",
-      "authority_url": "https://www.un.org/en/member-states/dominica",
       "summary": "Dominica maintains national data governance and cybersecurity provisions governing public and private processing within the Americas region.",
       "key_laws": [
         "Dominica Electronic Transactions & Cybersecurity Framework",
         "Constitutional Privacy & Digital Safeguards"
       ],
+      "authority": "Ministry of Communications / Data Governance Body of Dominica",
+      "authority_url": "https://www.un.org/en/member-states/dominica",
       "scores": {
         "policy_coverage": 5,
         "enforcement_strength": 4,
@@ -1513,15 +1426,13 @@
       "code": "DK",
       "name": "Denmark",
       "flag": "🇩🇰",
-      "region": "Europe",
-      "subregion": "Northern Europe",
-      "authority": "National Data Protection Authority of Denmark",
-      "authority_url": "https://edpb.europa.eu/about-edpb/about-edpb/members_en",
       "summary": "Denmark operates under the EU General Data Protection Regulation (GDPR) enforced by the national supervisory authority in close coordination with the European Data Protection Board (EDPB).",
       "key_laws": [
         "EU General Data Protection Regulation (GDPR)",
         "Denmark Data Protection Statute"
       ],
+      "authority": "National Data Protection Authority of Denmark",
+      "authority_url": "https://edpb.europa.eu/about-edpb/about-edpb/members_en",
       "scores": {
         "policy_coverage": 9,
         "enforcement_strength": 8,
@@ -1542,15 +1453,13 @@
       "code": "DO",
       "name": "Dominican Republic",
       "flag": "🇩🇴",
-      "region": "Americas",
-      "subregion": "Caribbean",
-      "authority": "Ministry of Communications / Data Governance Body of Dominican Republic",
-      "authority_url": "https://www.un.org/en/member-states/dominican-republic",
       "summary": "Dominican Republic maintains national data governance and cybersecurity provisions governing public and private processing within the Americas region.",
       "key_laws": [
         "Dominican Republic Electronic Transactions & Cybersecurity Framework",
         "Constitutional Privacy & Digital Safeguards"
       ],
+      "authority": "Ministry of Communications / Data Governance Body of Dominican Republic",
+      "authority_url": "https://www.un.org/en/member-states/dominican-republic",
       "scores": {
         "policy_coverage": 5,
         "enforcement_strength": 4,
@@ -1571,15 +1480,13 @@
       "code": "DZ",
       "name": "Algeria",
       "flag": "🇩🇿",
-      "region": "Africa",
-      "subregion": "Northern Africa",
-      "authority": "Ministry of Communications / Data Governance Body of Algeria",
-      "authority_url": "https://www.un.org/en/member-states/algeria",
       "summary": "Algeria maintains national data governance and cybersecurity provisions governing public and private processing within the Africa region.",
       "key_laws": [
         "Algeria Electronic Transactions & Cybersecurity Framework",
         "Constitutional Privacy & Digital Safeguards"
       ],
+      "authority": "Ministry of Communications / Data Governance Body of Algeria",
+      "authority_url": "https://www.un.org/en/member-states/algeria",
       "scores": {
         "policy_coverage": 5,
         "enforcement_strength": 4,
@@ -1600,15 +1507,13 @@
       "code": "EC",
       "name": "Ecuador",
       "flag": "🇪🇨",
-      "region": "Americas",
-      "subregion": "South America",
-      "authority": "Ministry of Communications / Data Governance Body of Ecuador",
-      "authority_url": "https://www.un.org/en/member-states/ecuador",
       "summary": "Ecuador maintains national data governance and cybersecurity provisions governing public and private processing within the Americas region.",
       "key_laws": [
         "Ecuador Electronic Transactions & Cybersecurity Framework",
         "Constitutional Privacy & Digital Safeguards"
       ],
+      "authority": "Ministry of Communications / Data Governance Body of Ecuador",
+      "authority_url": "https://www.un.org/en/member-states/ecuador",
       "scores": {
         "policy_coverage": 5,
         "enforcement_strength": 4,
@@ -1629,14 +1534,12 @@
       "code": "EG",
       "name": "Egypt",
       "flag": "🇪🇬",
-      "region": "Africa",
-      "subregion": "Northern Africa",
-      "authority": "Data Protection Center (Ministry of CIT)",
-      "authority_url": "https://mcit.gov.eg/",
       "summary": "Egypt enforces comprehensive data security and individual privacy laws administered by Data Protection Center (Ministry of CIT) across the jurisdiction.",
       "key_laws": [
         "Personal Data Protection Law No. 151 of 2020"
       ],
+      "authority": "Data Protection Center (Ministry of CIT)",
+      "authority_url": "https://mcit.gov.eg/",
       "scores": {
         "policy_coverage": 6,
         "enforcement_strength": 6,
@@ -1657,15 +1560,13 @@
       "code": "ER",
       "name": "Eritrea",
       "flag": "🇪🇷",
-      "region": "Africa",
-      "subregion": "Eastern Africa",
-      "authority": "Ministry of Communications / Data Governance Body of Eritrea",
-      "authority_url": "https://www.un.org/en/member-states/eritrea",
       "summary": "Eritrea maintains national data governance and cybersecurity provisions governing public and private processing within the Africa region.",
       "key_laws": [
         "Eritrea Electronic Transactions & Cybersecurity Framework",
         "Constitutional Privacy & Digital Safeguards"
       ],
+      "authority": "Ministry of Communications / Data Governance Body of Eritrea",
+      "authority_url": "https://www.un.org/en/member-states/eritrea",
       "scores": {
         "policy_coverage": 5,
         "enforcement_strength": 4,
@@ -1686,15 +1587,13 @@
       "code": "ES",
       "name": "Spain",
       "flag": "🇪🇸",
-      "region": "Europe",
-      "subregion": "Southern Europe",
-      "authority": "National Data Protection Authority of Spain",
-      "authority_url": "https://edpb.europa.eu/about-edpb/about-edpb/members_en",
       "summary": "Spain operates under the EU General Data Protection Regulation (GDPR) enforced by the national supervisory authority in close coordination with the European Data Protection Board (EDPB).",
       "key_laws": [
         "EU General Data Protection Regulation (GDPR)",
         "Spain Data Protection Statute"
       ],
+      "authority": "National Data Protection Authority of Spain",
+      "authority_url": "https://edpb.europa.eu/about-edpb/about-edpb/members_en",
       "scores": {
         "policy_coverage": 9,
         "enforcement_strength": 8,
@@ -1715,15 +1614,13 @@
       "code": "EE",
       "name": "Estonia",
       "flag": "🇪🇪",
-      "region": "Europe",
-      "subregion": "Northern Europe",
-      "authority": "National Data Protection Authority of Estonia",
-      "authority_url": "https://edpb.europa.eu/about-edpb/about-edpb/members_en",
       "summary": "Estonia operates under the EU General Data Protection Regulation (GDPR) enforced by the national supervisory authority in close coordination with the European Data Protection Board (EDPB).",
       "key_laws": [
         "EU General Data Protection Regulation (GDPR)",
         "Estonia Data Protection Statute"
       ],
+      "authority": "National Data Protection Authority of Estonia",
+      "authority_url": "https://edpb.europa.eu/about-edpb/about-edpb/members_en",
       "scores": {
         "policy_coverage": 9,
         "enforcement_strength": 8,
@@ -1744,15 +1641,13 @@
       "code": "ET",
       "name": "Ethiopia",
       "flag": "🇪🇹",
-      "region": "Africa",
-      "subregion": "Eastern Africa",
-      "authority": "Ministry of Communications / Data Governance Body of Ethiopia",
-      "authority_url": "https://www.un.org/en/member-states/ethiopia",
       "summary": "Ethiopia maintains national data governance and cybersecurity provisions governing public and private processing within the Africa region.",
       "key_laws": [
         "Ethiopia Electronic Transactions & Cybersecurity Framework",
         "Constitutional Privacy & Digital Safeguards"
       ],
+      "authority": "Ministry of Communications / Data Governance Body of Ethiopia",
+      "authority_url": "https://www.un.org/en/member-states/ethiopia",
       "scores": {
         "policy_coverage": 5,
         "enforcement_strength": 4,
@@ -1773,15 +1668,13 @@
       "code": "FI",
       "name": "Finland",
       "flag": "🇫🇮",
-      "region": "Europe",
-      "subregion": "Northern Europe",
-      "authority": "National Data Protection Authority of Finland",
-      "authority_url": "https://edpb.europa.eu/about-edpb/about-edpb/members_en",
       "summary": "Finland operates under the EU General Data Protection Regulation (GDPR) enforced by the national supervisory authority in close coordination with the European Data Protection Board (EDPB).",
       "key_laws": [
         "EU General Data Protection Regulation (GDPR)",
         "Finland Data Protection Statute"
       ],
+      "authority": "National Data Protection Authority of Finland",
+      "authority_url": "https://edpb.europa.eu/about-edpb/about-edpb/members_en",
       "scores": {
         "policy_coverage": 9,
         "enforcement_strength": 8,
@@ -1802,15 +1695,13 @@
       "code": "FJ",
       "name": "Fiji",
       "flag": "🇫🇯",
-      "region": "Oceania",
-      "subregion": "Melanesia",
-      "authority": "Ministry of Communications / Data Governance Body of Fiji",
-      "authority_url": "https://www.un.org/en/member-states/fiji",
       "summary": "Fiji maintains national data governance and cybersecurity provisions governing public and private processing within the Oceania region.",
       "key_laws": [
         "Fiji Electronic Transactions & Cybersecurity Framework",
         "Constitutional Privacy & Digital Safeguards"
       ],
+      "authority": "Ministry of Communications / Data Governance Body of Fiji",
+      "authority_url": "https://www.un.org/en/member-states/fiji",
       "scores": {
         "policy_coverage": 5,
         "enforcement_strength": 4,
@@ -1831,15 +1722,13 @@
       "code": "FM",
       "name": "Micronesia",
       "flag": "🇫🇲",
-      "region": "Oceania",
-      "subregion": "Micronesia",
-      "authority": "Ministry of Communications / Data Governance Body of Micronesia",
-      "authority_url": "https://www.un.org/en/member-states/micronesia",
       "summary": "Micronesia maintains national data governance and cybersecurity provisions governing public and private processing within the Oceania region.",
       "key_laws": [
         "Micronesia Electronic Transactions & Cybersecurity Framework",
         "Constitutional Privacy & Digital Safeguards"
       ],
+      "authority": "Ministry of Communications / Data Governance Body of Micronesia",
+      "authority_url": "https://www.un.org/en/member-states/micronesia",
       "scores": {
         "policy_coverage": 5,
         "enforcement_strength": 4,
@@ -1860,15 +1749,13 @@
       "code": "GA",
       "name": "Gabon",
       "flag": "🇬🇦",
-      "region": "Africa",
-      "subregion": "Middle Africa",
-      "authority": "Ministry of Communications / Data Governance Body of Gabon",
-      "authority_url": "https://www.un.org/en/member-states/gabon",
       "summary": "Gabon maintains national data governance and cybersecurity provisions governing public and private processing within the Africa region.",
       "key_laws": [
         "Gabon Electronic Transactions & Cybersecurity Framework",
         "Constitutional Privacy & Digital Safeguards"
       ],
+      "authority": "Ministry of Communications / Data Governance Body of Gabon",
+      "authority_url": "https://www.un.org/en/member-states/gabon",
       "scores": {
         "policy_coverage": 5,
         "enforcement_strength": 4,
@@ -1889,15 +1776,13 @@
       "code": "GE",
       "name": "Georgia",
       "flag": "🇬🇪",
-      "region": "Asia",
-      "subregion": "Western Asia",
-      "authority": "Ministry of Communications / Data Governance Body of Georgia",
-      "authority_url": "https://www.un.org/en/member-states/georgia",
       "summary": "Georgia maintains national data governance and cybersecurity provisions governing public and private processing within the Asia region.",
       "key_laws": [
         "Georgia Electronic Transactions & Cybersecurity Framework",
         "Constitutional Privacy & Digital Safeguards"
       ],
+      "authority": "Ministry of Communications / Data Governance Body of Georgia",
+      "authority_url": "https://www.un.org/en/member-states/georgia",
       "scores": {
         "policy_coverage": 5,
         "enforcement_strength": 4,
@@ -1918,15 +1803,13 @@
       "code": "GH",
       "name": "Ghana",
       "flag": "🇬🇭",
-      "region": "Africa",
-      "subregion": "Western Africa",
-      "authority": "Ministry of Communications / Data Governance Body of Ghana",
-      "authority_url": "https://www.un.org/en/member-states/ghana",
       "summary": "Ghana maintains national data governance and cybersecurity provisions governing public and private processing within the Africa region.",
       "key_laws": [
         "Ghana Electronic Transactions & Cybersecurity Framework",
         "Constitutional Privacy & Digital Safeguards"
       ],
+      "authority": "Ministry of Communications / Data Governance Body of Ghana",
+      "authority_url": "https://www.un.org/en/member-states/ghana",
       "scores": {
         "policy_coverage": 5,
         "enforcement_strength": 4,
@@ -1947,15 +1830,13 @@
       "code": "GN",
       "name": "Guinea",
       "flag": "🇬🇳",
-      "region": "Africa",
-      "subregion": "Western Africa",
-      "authority": "Ministry of Communications / Data Governance Body of Guinea",
-      "authority_url": "https://www.un.org/en/member-states/guinea",
       "summary": "Guinea maintains national data governance and cybersecurity provisions governing public and private processing within the Africa region.",
       "key_laws": [
         "Guinea Electronic Transactions & Cybersecurity Framework",
         "Constitutional Privacy & Digital Safeguards"
       ],
+      "authority": "Ministry of Communications / Data Governance Body of Guinea",
+      "authority_url": "https://www.un.org/en/member-states/guinea",
       "scores": {
         "policy_coverage": 5,
         "enforcement_strength": 4,
@@ -1976,15 +1857,13 @@
       "code": "GM",
       "name": "Gambia",
       "flag": "🇬🇲",
-      "region": "Africa",
-      "subregion": "Western Africa",
-      "authority": "Ministry of Communications / Data Governance Body of Gambia",
-      "authority_url": "https://www.un.org/en/member-states/gambia",
       "summary": "Gambia maintains national data governance and cybersecurity provisions governing public and private processing within the Africa region.",
       "key_laws": [
         "Gambia Electronic Transactions & Cybersecurity Framework",
         "Constitutional Privacy & Digital Safeguards"
       ],
+      "authority": "Ministry of Communications / Data Governance Body of Gambia",
+      "authority_url": "https://www.un.org/en/member-states/gambia",
       "scores": {
         "policy_coverage": 5,
         "enforcement_strength": 4,
@@ -2005,15 +1884,13 @@
       "code": "GW",
       "name": "Guinea-Bissau",
       "flag": "🇬🇼",
-      "region": "Africa",
-      "subregion": "Western Africa",
-      "authority": "Ministry of Communications / Data Governance Body of Guinea-Bissau",
-      "authority_url": "https://www.un.org/en/member-states/guinea-bissau",
       "summary": "Guinea-Bissau maintains national data governance and cybersecurity provisions governing public and private processing within the Africa region.",
       "key_laws": [
         "Guinea-Bissau Electronic Transactions & Cybersecurity Framework",
         "Constitutional Privacy & Digital Safeguards"
       ],
+      "authority": "Ministry of Communications / Data Governance Body of Guinea-Bissau",
+      "authority_url": "https://www.un.org/en/member-states/guinea-bissau",
       "scores": {
         "policy_coverage": 5,
         "enforcement_strength": 4,
@@ -2034,15 +1911,13 @@
       "code": "GQ",
       "name": "Equatorial Guinea",
       "flag": "🇬🇶",
-      "region": "Africa",
-      "subregion": "Middle Africa",
-      "authority": "Ministry of Communications / Data Governance Body of Equatorial Guinea",
-      "authority_url": "https://www.un.org/en/member-states/equatorial-guinea",
       "summary": "Equatorial Guinea maintains national data governance and cybersecurity provisions governing public and private processing within the Africa region.",
       "key_laws": [
         "Equatorial Guinea Electronic Transactions & Cybersecurity Framework",
         "Constitutional Privacy & Digital Safeguards"
       ],
+      "authority": "Ministry of Communications / Data Governance Body of Equatorial Guinea",
+      "authority_url": "https://www.un.org/en/member-states/equatorial-guinea",
       "scores": {
         "policy_coverage": 5,
         "enforcement_strength": 4,
@@ -2063,15 +1938,13 @@
       "code": "GR",
       "name": "Greece",
       "flag": "🇬🇷",
-      "region": "Europe",
-      "subregion": "Southern Europe",
-      "authority": "National Data Protection Authority of Greece",
-      "authority_url": "https://edpb.europa.eu/about-edpb/about-edpb/members_en",
       "summary": "Greece operates under the EU General Data Protection Regulation (GDPR) enforced by the national supervisory authority in close coordination with the European Data Protection Board (EDPB).",
       "key_laws": [
         "EU General Data Protection Regulation (GDPR)",
         "Greece Data Protection Statute"
       ],
+      "authority": "National Data Protection Authority of Greece",
+      "authority_url": "https://edpb.europa.eu/about-edpb/about-edpb/members_en",
       "scores": {
         "policy_coverage": 9,
         "enforcement_strength": 8,
@@ -2092,15 +1965,13 @@
       "code": "GD",
       "name": "Grenada",
       "flag": "🇬🇩",
-      "region": "Americas",
-      "subregion": "Caribbean",
-      "authority": "Ministry of Communications / Data Governance Body of Grenada",
-      "authority_url": "https://www.un.org/en/member-states/grenada",
       "summary": "Grenada maintains national data governance and cybersecurity provisions governing public and private processing within the Americas region.",
       "key_laws": [
         "Grenada Electronic Transactions & Cybersecurity Framework",
         "Constitutional Privacy & Digital Safeguards"
       ],
+      "authority": "Ministry of Communications / Data Governance Body of Grenada",
+      "authority_url": "https://www.un.org/en/member-states/grenada",
       "scores": {
         "policy_coverage": 5,
         "enforcement_strength": 4,
@@ -2121,15 +1992,13 @@
       "code": "GT",
       "name": "Guatemala",
       "flag": "🇬🇹",
-      "region": "Americas",
-      "subregion": "Central America",
-      "authority": "Ministry of Communications / Data Governance Body of Guatemala",
-      "authority_url": "https://www.un.org/en/member-states/guatemala",
       "summary": "Guatemala maintains national data governance and cybersecurity provisions governing public and private processing within the Americas region.",
       "key_laws": [
         "Guatemala Electronic Transactions & Cybersecurity Framework",
         "Constitutional Privacy & Digital Safeguards"
       ],
+      "authority": "Ministry of Communications / Data Governance Body of Guatemala",
+      "authority_url": "https://www.un.org/en/member-states/guatemala",
       "scores": {
         "policy_coverage": 5,
         "enforcement_strength": 4,
@@ -2150,15 +2019,13 @@
       "code": "GY",
       "name": "Guyana",
       "flag": "🇬🇾",
-      "region": "Americas",
-      "subregion": "South America",
-      "authority": "Ministry of Communications / Data Governance Body of Guyana",
-      "authority_url": "https://www.un.org/en/member-states/guyana",
       "summary": "Guyana maintains national data governance and cybersecurity provisions governing public and private processing within the Americas region.",
       "key_laws": [
         "Guyana Electronic Transactions & Cybersecurity Framework",
         "Constitutional Privacy & Digital Safeguards"
       ],
+      "authority": "Ministry of Communications / Data Governance Body of Guyana",
+      "authority_url": "https://www.un.org/en/member-states/guyana",
       "scores": {
         "policy_coverage": 5,
         "enforcement_strength": 4,
@@ -2179,15 +2046,13 @@
       "code": "HN",
       "name": "Honduras",
       "flag": "🇭🇳",
-      "region": "Americas",
-      "subregion": "Central America",
-      "authority": "Ministry of Communications / Data Governance Body of Honduras",
-      "authority_url": "https://www.un.org/en/member-states/honduras",
       "summary": "Honduras maintains national data governance and cybersecurity provisions governing public and private processing within the Americas region.",
       "key_laws": [
         "Honduras Electronic Transactions & Cybersecurity Framework",
         "Constitutional Privacy & Digital Safeguards"
       ],
+      "authority": "Ministry of Communications / Data Governance Body of Honduras",
+      "authority_url": "https://www.un.org/en/member-states/honduras",
       "scores": {
         "policy_coverage": 5,
         "enforcement_strength": 4,
@@ -2208,15 +2073,13 @@
       "code": "HR",
       "name": "Croatia",
       "flag": "🇭🇷",
-      "region": "Europe",
-      "subregion": "Southeast Europe",
-      "authority": "National Data Protection Authority of Croatia",
-      "authority_url": "https://edpb.europa.eu/about-edpb/about-edpb/members_en",
       "summary": "Croatia operates under the EU General Data Protection Regulation (GDPR) enforced by the national supervisory authority in close coordination with the European Data Protection Board (EDPB).",
       "key_laws": [
         "EU General Data Protection Regulation (GDPR)",
         "Croatia Data Protection Statute"
       ],
+      "authority": "National Data Protection Authority of Croatia",
+      "authority_url": "https://edpb.europa.eu/about-edpb/about-edpb/members_en",
       "scores": {
         "policy_coverage": 9,
         "enforcement_strength": 8,
@@ -2237,15 +2100,13 @@
       "code": "HT",
       "name": "Haiti",
       "flag": "🇭🇹",
-      "region": "Americas",
-      "subregion": "Caribbean",
-      "authority": "Ministry of Communications / Data Governance Body of Haiti",
-      "authority_url": "https://www.un.org/en/member-states/haiti",
       "summary": "Haiti maintains national data governance and cybersecurity provisions governing public and private processing within the Americas region.",
       "key_laws": [
         "Haiti Electronic Transactions & Cybersecurity Framework",
         "Constitutional Privacy & Digital Safeguards"
       ],
+      "authority": "Ministry of Communications / Data Governance Body of Haiti",
+      "authority_url": "https://www.un.org/en/member-states/haiti",
       "scores": {
         "policy_coverage": 5,
         "enforcement_strength": 4,
@@ -2266,15 +2127,13 @@
       "code": "HU",
       "name": "Hungary",
       "flag": "🇭🇺",
-      "region": "Europe",
-      "subregion": "Central Europe",
-      "authority": "National Data Protection Authority of Hungary",
-      "authority_url": "https://edpb.europa.eu/about-edpb/about-edpb/members_en",
       "summary": "Hungary operates under the EU General Data Protection Regulation (GDPR) enforced by the national supervisory authority in close coordination with the European Data Protection Board (EDPB).",
       "key_laws": [
         "EU General Data Protection Regulation (GDPR)",
         "Hungary Data Protection Statute"
       ],
+      "authority": "National Data Protection Authority of Hungary",
+      "authority_url": "https://edpb.europa.eu/about-edpb/about-edpb/members_en",
       "scores": {
         "policy_coverage": 9,
         "enforcement_strength": 8,
@@ -2295,14 +2154,12 @@
       "code": "ID",
       "name": "Indonesia",
       "flag": "🇮🇩",
-      "region": "Asia",
-      "subregion": "South-Eastern Asia",
-      "authority": "Ministry of Communication and Informatics (Kominfo)",
-      "authority_url": "https://www.kominfo.go.id/",
       "summary": "Indonesia enforces comprehensive data security and individual privacy laws administered by Ministry of Communication and Informatics (Kominfo) across the jurisdiction.",
       "key_laws": [
         "PDP Law (Law No. 27 of 2022)"
       ],
+      "authority": "Ministry of Communication and Informatics (Kominfo)",
+      "authority_url": "https://www.kominfo.go.id/",
       "scores": {
         "policy_coverage": 7,
         "enforcement_strength": 6,
@@ -2323,15 +2180,13 @@
       "code": "IE",
       "name": "Ireland",
       "flag": "🇮🇪",
-      "region": "Europe",
-      "subregion": "Northern Europe",
-      "authority": "National Data Protection Authority of Ireland",
-      "authority_url": "https://edpb.europa.eu/about-edpb/about-edpb/members_en",
       "summary": "Ireland operates under the EU General Data Protection Regulation (GDPR) enforced by the national supervisory authority in close coordination with the European Data Protection Board (EDPB).",
       "key_laws": [
         "EU General Data Protection Regulation (GDPR)",
         "Ireland Data Protection Statute"
       ],
+      "authority": "National Data Protection Authority of Ireland",
+      "authority_url": "https://edpb.europa.eu/about-edpb/about-edpb/members_en",
       "scores": {
         "policy_coverage": 9,
         "enforcement_strength": 8,
@@ -2352,15 +2207,13 @@
       "code": "IR",
       "name": "Iran",
       "flag": "🇮🇷",
-      "region": "Asia",
-      "subregion": "Southern Asia",
-      "authority": "Ministry of Communications / Data Governance Body of Iran",
-      "authority_url": "https://www.un.org/en/member-states/iran",
       "summary": "Iran maintains national data governance and cybersecurity provisions governing public and private processing within the Asia region.",
       "key_laws": [
         "Iran Electronic Transactions & Cybersecurity Framework",
         "Constitutional Privacy & Digital Safeguards"
       ],
+      "authority": "Ministry of Communications / Data Governance Body of Iran",
+      "authority_url": "https://www.un.org/en/member-states/iran",
       "scores": {
         "policy_coverage": 5,
         "enforcement_strength": 4,
@@ -2381,15 +2234,13 @@
       "code": "IQ",
       "name": "Iraq",
       "flag": "🇮🇶",
-      "region": "Asia",
-      "subregion": "Western Asia",
-      "authority": "Ministry of Communications / Data Governance Body of Iraq",
-      "authority_url": "https://www.un.org/en/member-states/iraq",
       "summary": "Iraq maintains national data governance and cybersecurity provisions governing public and private processing within the Asia region.",
       "key_laws": [
         "Iraq Electronic Transactions & Cybersecurity Framework",
         "Constitutional Privacy & Digital Safeguards"
       ],
+      "authority": "Ministry of Communications / Data Governance Body of Iraq",
+      "authority_url": "https://www.un.org/en/member-states/iraq",
       "scores": {
         "policy_coverage": 5,
         "enforcement_strength": 4,
@@ -2410,15 +2261,13 @@
       "code": "IS",
       "name": "Iceland",
       "flag": "🇮🇸",
-      "region": "Europe",
-      "subregion": "Northern Europe",
-      "authority": "National Data Protection Authority of Iceland",
-      "authority_url": "https://edpb.europa.eu/about-edpb/about-edpb/members_en",
       "summary": "Iceland operates under the EU General Data Protection Regulation (GDPR) enforced by the national supervisory authority in close coordination with the European Data Protection Board (EDPB).",
       "key_laws": [
         "EU General Data Protection Regulation (GDPR)",
         "Iceland Data Protection Statute"
       ],
+      "authority": "National Data Protection Authority of Iceland",
+      "authority_url": "https://edpb.europa.eu/about-edpb/about-edpb/members_en",
       "scores": {
         "policy_coverage": 9,
         "enforcement_strength": 8,
@@ -2439,14 +2288,12 @@
       "code": "IL",
       "name": "Israel",
       "flag": "🇮🇱",
-      "region": "Asia",
-      "subregion": "Western Asia",
-      "authority": "PPA (Privacy Protection Authority)",
-      "authority_url": "https://www.gov.il/en/departments/the_privacy_protection_authority",
       "summary": "Israel enforces comprehensive data security and individual privacy laws administered by PPA (Privacy Protection Authority) across the jurisdiction.",
       "key_laws": [
         "Protection of Privacy Law 5741-1981"
       ],
+      "authority": "PPA (Privacy Protection Authority)",
+      "authority_url": "https://www.gov.il/en/departments/the_privacy_protection_authority",
       "scores": {
         "policy_coverage": 7,
         "enforcement_strength": 7,
@@ -2467,15 +2314,13 @@
       "code": "IT",
       "name": "Italy",
       "flag": "🇮🇹",
-      "region": "Europe",
-      "subregion": "Southern Europe",
-      "authority": "National Data Protection Authority of Italy",
-      "authority_url": "https://edpb.europa.eu/about-edpb/about-edpb/members_en",
       "summary": "Italy operates under the EU General Data Protection Regulation (GDPR) enforced by the national supervisory authority in close coordination with the European Data Protection Board (EDPB).",
       "key_laws": [
         "EU General Data Protection Regulation (GDPR)",
         "Italy Data Protection Statute"
       ],
+      "authority": "National Data Protection Authority of Italy",
+      "authority_url": "https://edpb.europa.eu/about-edpb/about-edpb/members_en",
       "scores": {
         "policy_coverage": 9,
         "enforcement_strength": 8,
@@ -2496,15 +2341,13 @@
       "code": "JM",
       "name": "Jamaica",
       "flag": "🇯🇲",
-      "region": "Americas",
-      "subregion": "Caribbean",
-      "authority": "Ministry of Communications / Data Governance Body of Jamaica",
-      "authority_url": "https://www.un.org/en/member-states/jamaica",
       "summary": "Jamaica maintains national data governance and cybersecurity provisions governing public and private processing within the Americas region.",
       "key_laws": [
         "Jamaica Electronic Transactions & Cybersecurity Framework",
         "Constitutional Privacy & Digital Safeguards"
       ],
+      "authority": "Ministry of Communications / Data Governance Body of Jamaica",
+      "authority_url": "https://www.un.org/en/member-states/jamaica",
       "scores": {
         "policy_coverage": 5,
         "enforcement_strength": 4,
@@ -2525,15 +2368,13 @@
       "code": "JO",
       "name": "Jordan",
       "flag": "🇯🇴",
-      "region": "Asia",
-      "subregion": "Western Asia",
-      "authority": "Ministry of Communications / Data Governance Body of Jordan",
-      "authority_url": "https://www.un.org/en/member-states/jordan",
       "summary": "Jordan maintains national data governance and cybersecurity provisions governing public and private processing within the Asia region.",
       "key_laws": [
         "Jordan Electronic Transactions & Cybersecurity Framework",
         "Constitutional Privacy & Digital Safeguards"
       ],
+      "authority": "Ministry of Communications / Data Governance Body of Jordan",
+      "authority_url": "https://www.un.org/en/member-states/jordan",
       "scores": {
         "policy_coverage": 5,
         "enforcement_strength": 4,
@@ -2554,15 +2395,13 @@
       "code": "KZ",
       "name": "Kazakhstan",
       "flag": "🇰🇿",
-      "region": "Asia",
-      "subregion": "Central Asia",
-      "authority": "Ministry of Communications / Data Governance Body of Kazakhstan",
-      "authority_url": "https://www.un.org/en/member-states/kazakhstan",
       "summary": "Kazakhstan maintains national data governance and cybersecurity provisions governing public and private processing within the Asia region.",
       "key_laws": [
         "Kazakhstan Electronic Transactions & Cybersecurity Framework",
         "Constitutional Privacy & Digital Safeguards"
       ],
+      "authority": "Ministry of Communications / Data Governance Body of Kazakhstan",
+      "authority_url": "https://www.un.org/en/member-states/kazakhstan",
       "scores": {
         "policy_coverage": 5,
         "enforcement_strength": 4,
@@ -2583,14 +2422,12 @@
       "code": "KE",
       "name": "Kenya",
       "flag": "🇰🇪",
-      "region": "Africa",
-      "subregion": "Eastern Africa",
-      "authority": "ODPC (Office of the Data Protection Commissioner)",
-      "authority_url": "https://www.odpc.go.ke/",
       "summary": "Kenya enforces comprehensive data security and individual privacy laws administered by ODPC (Office of the Data Protection Commissioner) across the jurisdiction.",
       "key_laws": [
         "Data Protection Act 2019"
       ],
+      "authority": "ODPC (Office of the Data Protection Commissioner)",
+      "authority_url": "https://www.odpc.go.ke/",
       "scores": {
         "policy_coverage": 7,
         "enforcement_strength": 6,
@@ -2611,15 +2448,13 @@
       "code": "KG",
       "name": "Kyrgyzstan",
       "flag": "🇰🇬",
-      "region": "Asia",
-      "subregion": "Central Asia",
-      "authority": "Ministry of Communications / Data Governance Body of Kyrgyzstan",
-      "authority_url": "https://www.un.org/en/member-states/kyrgyzstan",
       "summary": "Kyrgyzstan maintains national data governance and cybersecurity provisions governing public and private processing within the Asia region.",
       "key_laws": [
         "Kyrgyzstan Electronic Transactions & Cybersecurity Framework",
         "Constitutional Privacy & Digital Safeguards"
       ],
+      "authority": "Ministry of Communications / Data Governance Body of Kyrgyzstan",
+      "authority_url": "https://www.un.org/en/member-states/kyrgyzstan",
       "scores": {
         "policy_coverage": 5,
         "enforcement_strength": 4,
@@ -2640,15 +2475,13 @@
       "code": "KH",
       "name": "Cambodia",
       "flag": "🇰🇭",
-      "region": "Asia",
-      "subregion": "South-Eastern Asia",
-      "authority": "Ministry of Communications / Data Governance Body of Cambodia",
-      "authority_url": "https://www.un.org/en/member-states/cambodia",
       "summary": "Cambodia maintains national data governance and cybersecurity provisions governing public and private processing within the Asia region.",
       "key_laws": [
         "Cambodia Electronic Transactions & Cybersecurity Framework",
         "Constitutional Privacy & Digital Safeguards"
       ],
+      "authority": "Ministry of Communications / Data Governance Body of Cambodia",
+      "authority_url": "https://www.un.org/en/member-states/cambodia",
       "scores": {
         "policy_coverage": 5,
         "enforcement_strength": 4,
@@ -2669,15 +2502,13 @@
       "code": "KI",
       "name": "Kiribati",
       "flag": "🇰🇮",
-      "region": "Oceania",
-      "subregion": "Micronesia",
-      "authority": "Ministry of Communications / Data Governance Body of Kiribati",
-      "authority_url": "https://www.un.org/en/member-states/kiribati",
       "summary": "Kiribati maintains national data governance and cybersecurity provisions governing public and private processing within the Oceania region.",
       "key_laws": [
         "Kiribati Electronic Transactions & Cybersecurity Framework",
         "Constitutional Privacy & Digital Safeguards"
       ],
+      "authority": "Ministry of Communications / Data Governance Body of Kiribati",
+      "authority_url": "https://www.un.org/en/member-states/kiribati",
       "scores": {
         "policy_coverage": 5,
         "enforcement_strength": 4,
@@ -2698,15 +2529,13 @@
       "code": "KN",
       "name": "Saint Kitts and Nevis",
       "flag": "🇰🇳",
-      "region": "Americas",
-      "subregion": "Caribbean",
-      "authority": "Ministry of Communications / Data Governance Body of Saint Kitts and Nevis",
-      "authority_url": "https://www.un.org/en/member-states/saint-kitts-and-nevis",
       "summary": "Saint Kitts and Nevis maintains national data governance and cybersecurity provisions governing public and private processing within the Americas region.",
       "key_laws": [
         "Saint Kitts and Nevis Electronic Transactions & Cybersecurity Framework",
         "Constitutional Privacy & Digital Safeguards"
       ],
+      "authority": "Ministry of Communications / Data Governance Body of Saint Kitts and Nevis",
+      "authority_url": "https://www.un.org/en/member-states/saint-kitts-and-nevis",
       "scores": {
         "policy_coverage": 5,
         "enforcement_strength": 4,
@@ -2727,14 +2556,12 @@
       "code": "KR",
       "name": "South Korea",
       "flag": "🇰🇷",
-      "region": "Asia",
-      "subregion": "Eastern Asia",
-      "authority": "PIPC (Personal Information Protection Commission)",
-      "authority_url": "https://www.pipc.go.kr/",
       "summary": "South Korea enforces comprehensive data security and individual privacy laws administered by PIPC (Personal Information Protection Commission) across the jurisdiction.",
       "key_laws": [
         "PIPA (Personal Information Protection Act)"
       ],
+      "authority": "PIPC (Personal Information Protection Commission)",
+      "authority_url": "https://www.pipc.go.kr/",
       "scores": {
         "policy_coverage": 9,
         "enforcement_strength": 8,
@@ -2755,15 +2582,13 @@
       "code": "XK",
       "name": "Kosovo",
       "flag": "🇽🇰",
-      "region": "Europe",
-      "subregion": "Southeast Europe",
-      "authority": "Ministry of Communications / Data Governance Body of Kosovo",
-      "authority_url": "https://www.un.org/en/member-states/kosovo",
       "summary": "Kosovo maintains national data governance and cybersecurity provisions governing public and private processing within the Europe region.",
       "key_laws": [
         "Kosovo Electronic Transactions & Cybersecurity Framework",
         "Constitutional Privacy & Digital Safeguards"
       ],
+      "authority": "Ministry of Communications / Data Governance Body of Kosovo",
+      "authority_url": "https://www.un.org/en/member-states/kosovo",
       "scores": {
         "policy_coverage": 5,
         "enforcement_strength": 4,
@@ -2784,15 +2609,13 @@
       "code": "KW",
       "name": "Kuwait",
       "flag": "🇰🇼",
-      "region": "Asia",
-      "subregion": "Western Asia",
-      "authority": "Ministry of Communications / Data Governance Body of Kuwait",
-      "authority_url": "https://www.un.org/en/member-states/kuwait",
       "summary": "Kuwait maintains national data governance and cybersecurity provisions governing public and private processing within the Asia region.",
       "key_laws": [
         "Kuwait Electronic Transactions & Cybersecurity Framework",
         "Constitutional Privacy & Digital Safeguards"
       ],
+      "authority": "Ministry of Communications / Data Governance Body of Kuwait",
+      "authority_url": "https://www.un.org/en/member-states/kuwait",
       "scores": {
         "policy_coverage": 5,
         "enforcement_strength": 4,
@@ -2813,15 +2636,13 @@
       "code": "LA",
       "name": "Laos",
       "flag": "🇱🇦",
-      "region": "Asia",
-      "subregion": "South-Eastern Asia",
-      "authority": "Ministry of Communications / Data Governance Body of Laos",
-      "authority_url": "https://www.un.org/en/member-states/laos",
       "summary": "Laos maintains national data governance and cybersecurity provisions governing public and private processing within the Asia region.",
       "key_laws": [
         "Laos Electronic Transactions & Cybersecurity Framework",
         "Constitutional Privacy & Digital Safeguards"
       ],
+      "authority": "Ministry of Communications / Data Governance Body of Laos",
+      "authority_url": "https://www.un.org/en/member-states/laos",
       "scores": {
         "policy_coverage": 5,
         "enforcement_strength": 4,
@@ -2842,15 +2663,13 @@
       "code": "LB",
       "name": "Lebanon",
       "flag": "🇱🇧",
-      "region": "Asia",
-      "subregion": "Western Asia",
-      "authority": "Ministry of Communications / Data Governance Body of Lebanon",
-      "authority_url": "https://www.un.org/en/member-states/lebanon",
       "summary": "Lebanon maintains national data governance and cybersecurity provisions governing public and private processing within the Asia region.",
       "key_laws": [
         "Lebanon Electronic Transactions & Cybersecurity Framework",
         "Constitutional Privacy & Digital Safeguards"
       ],
+      "authority": "Ministry of Communications / Data Governance Body of Lebanon",
+      "authority_url": "https://www.un.org/en/member-states/lebanon",
       "scores": {
         "policy_coverage": 5,
         "enforcement_strength": 4,
@@ -2871,15 +2690,13 @@
       "code": "LR",
       "name": "Liberia",
       "flag": "🇱🇷",
-      "region": "Africa",
-      "subregion": "Western Africa",
-      "authority": "Ministry of Communications / Data Governance Body of Liberia",
-      "authority_url": "https://www.un.org/en/member-states/liberia",
       "summary": "Liberia maintains national data governance and cybersecurity provisions governing public and private processing within the Africa region.",
       "key_laws": [
         "Liberia Electronic Transactions & Cybersecurity Framework",
         "Constitutional Privacy & Digital Safeguards"
       ],
+      "authority": "Ministry of Communications / Data Governance Body of Liberia",
+      "authority_url": "https://www.un.org/en/member-states/liberia",
       "scores": {
         "policy_coverage": 5,
         "enforcement_strength": 4,
@@ -2900,15 +2717,13 @@
       "code": "LY",
       "name": "Libya",
       "flag": "🇱🇾",
-      "region": "Africa",
-      "subregion": "Northern Africa",
-      "authority": "Ministry of Communications / Data Governance Body of Libya",
-      "authority_url": "https://www.un.org/en/member-states/libya",
       "summary": "Libya maintains national data governance and cybersecurity provisions governing public and private processing within the Africa region.",
       "key_laws": [
         "Libya Electronic Transactions & Cybersecurity Framework",
         "Constitutional Privacy & Digital Safeguards"
       ],
+      "authority": "Ministry of Communications / Data Governance Body of Libya",
+      "authority_url": "https://www.un.org/en/member-states/libya",
       "scores": {
         "policy_coverage": 5,
         "enforcement_strength": 4,
@@ -2929,15 +2744,13 @@
       "code": "LC",
       "name": "Saint Lucia",
       "flag": "🇱🇨",
-      "region": "Americas",
-      "subregion": "Caribbean",
-      "authority": "Ministry of Communications / Data Governance Body of Saint Lucia",
-      "authority_url": "https://www.un.org/en/member-states/saint-lucia",
       "summary": "Saint Lucia maintains national data governance and cybersecurity provisions governing public and private processing within the Americas region.",
       "key_laws": [
         "Saint Lucia Electronic Transactions & Cybersecurity Framework",
         "Constitutional Privacy & Digital Safeguards"
       ],
+      "authority": "Ministry of Communications / Data Governance Body of Saint Lucia",
+      "authority_url": "https://www.un.org/en/member-states/saint-lucia",
       "scores": {
         "policy_coverage": 5,
         "enforcement_strength": 4,
@@ -2958,15 +2771,13 @@
       "code": "LI",
       "name": "Liechtenstein",
       "flag": "🇱🇮",
-      "region": "Europe",
-      "subregion": "Western Europe",
-      "authority": "National Data Protection Authority of Liechtenstein",
-      "authority_url": "https://edpb.europa.eu/about-edpb/about-edpb/members_en",
       "summary": "Liechtenstein operates under the EU General Data Protection Regulation (GDPR) enforced by the national supervisory authority in close coordination with the European Data Protection Board (EDPB).",
       "key_laws": [
         "EU General Data Protection Regulation (GDPR)",
         "Liechtenstein Data Protection Statute"
       ],
+      "authority": "National Data Protection Authority of Liechtenstein",
+      "authority_url": "https://edpb.europa.eu/about-edpb/about-edpb/members_en",
       "scores": {
         "policy_coverage": 9,
         "enforcement_strength": 8,
@@ -2987,15 +2798,13 @@
       "code": "LK",
       "name": "Sri Lanka",
       "flag": "🇱🇰",
-      "region": "Asia",
-      "subregion": "Southern Asia",
-      "authority": "Ministry of Communications / Data Governance Body of Sri Lanka",
-      "authority_url": "https://www.un.org/en/member-states/sri-lanka",
       "summary": "Sri Lanka maintains national data governance and cybersecurity provisions governing public and private processing within the Asia region.",
       "key_laws": [
         "Sri Lanka Electronic Transactions & Cybersecurity Framework",
         "Constitutional Privacy & Digital Safeguards"
       ],
+      "authority": "Ministry of Communications / Data Governance Body of Sri Lanka",
+      "authority_url": "https://www.un.org/en/member-states/sri-lanka",
       "scores": {
         "policy_coverage": 5,
         "enforcement_strength": 4,
@@ -3016,15 +2825,13 @@
       "code": "LS",
       "name": "Lesotho",
       "flag": "🇱🇸",
-      "region": "Africa",
-      "subregion": "Southern Africa",
-      "authority": "Ministry of Communications / Data Governance Body of Lesotho",
-      "authority_url": "https://www.un.org/en/member-states/lesotho",
       "summary": "Lesotho maintains national data governance and cybersecurity provisions governing public and private processing within the Africa region.",
       "key_laws": [
         "Lesotho Electronic Transactions & Cybersecurity Framework",
         "Constitutional Privacy & Digital Safeguards"
       ],
+      "authority": "Ministry of Communications / Data Governance Body of Lesotho",
+      "authority_url": "https://www.un.org/en/member-states/lesotho",
       "scores": {
         "policy_coverage": 5,
         "enforcement_strength": 4,
@@ -3045,15 +2852,13 @@
       "code": "LT",
       "name": "Lithuania",
       "flag": "🇱🇹",
-      "region": "Europe",
-      "subregion": "Northern Europe",
-      "authority": "National Data Protection Authority of Lithuania",
-      "authority_url": "https://edpb.europa.eu/about-edpb/about-edpb/members_en",
       "summary": "Lithuania operates under the EU General Data Protection Regulation (GDPR) enforced by the national supervisory authority in close coordination with the European Data Protection Board (EDPB).",
       "key_laws": [
         "EU General Data Protection Regulation (GDPR)",
         "Lithuania Data Protection Statute"
       ],
+      "authority": "National Data Protection Authority of Lithuania",
+      "authority_url": "https://edpb.europa.eu/about-edpb/about-edpb/members_en",
       "scores": {
         "policy_coverage": 9,
         "enforcement_strength": 8,
@@ -3074,15 +2879,13 @@
       "code": "LU",
       "name": "Luxembourg",
       "flag": "🇱🇺",
-      "region": "Europe",
-      "subregion": "Western Europe",
-      "authority": "National Data Protection Authority of Luxembourg",
-      "authority_url": "https://edpb.europa.eu/about-edpb/about-edpb/members_en",
       "summary": "Luxembourg operates under the EU General Data Protection Regulation (GDPR) enforced by the national supervisory authority in close coordination with the European Data Protection Board (EDPB).",
       "key_laws": [
         "EU General Data Protection Regulation (GDPR)",
         "Luxembourg Data Protection Statute"
       ],
+      "authority": "National Data Protection Authority of Luxembourg",
+      "authority_url": "https://edpb.europa.eu/about-edpb/about-edpb/members_en",
       "scores": {
         "policy_coverage": 9,
         "enforcement_strength": 8,
@@ -3103,15 +2906,13 @@
       "code": "LV",
       "name": "Latvia",
       "flag": "🇱🇻",
-      "region": "Europe",
-      "subregion": "Northern Europe",
-      "authority": "National Data Protection Authority of Latvia",
-      "authority_url": "https://edpb.europa.eu/about-edpb/about-edpb/members_en",
       "summary": "Latvia operates under the EU General Data Protection Regulation (GDPR) enforced by the national supervisory authority in close coordination with the European Data Protection Board (EDPB).",
       "key_laws": [
         "EU General Data Protection Regulation (GDPR)",
         "Latvia Data Protection Statute"
       ],
+      "authority": "National Data Protection Authority of Latvia",
+      "authority_url": "https://edpb.europa.eu/about-edpb/about-edpb/members_en",
       "scores": {
         "policy_coverage": 9,
         "enforcement_strength": 8,
@@ -3132,15 +2933,13 @@
       "code": "MA",
       "name": "Morocco",
       "flag": "🇲🇦",
-      "region": "Africa",
-      "subregion": "Northern Africa",
-      "authority": "Ministry of Communications / Data Governance Body of Morocco",
-      "authority_url": "https://www.un.org/en/member-states/morocco",
       "summary": "Morocco maintains national data governance and cybersecurity provisions governing public and private processing within the Africa region.",
       "key_laws": [
         "Morocco Electronic Transactions & Cybersecurity Framework",
         "Constitutional Privacy & Digital Safeguards"
       ],
+      "authority": "Ministry of Communications / Data Governance Body of Morocco",
+      "authority_url": "https://www.un.org/en/member-states/morocco",
       "scores": {
         "policy_coverage": 5,
         "enforcement_strength": 4,
@@ -3161,15 +2960,13 @@
       "code": "MC",
       "name": "Monaco",
       "flag": "🇲🇨",
-      "region": "Europe",
-      "subregion": "Western Europe",
-      "authority": "Ministry of Communications / Data Governance Body of Monaco",
-      "authority_url": "https://www.un.org/en/member-states/monaco",
       "summary": "Monaco maintains national data governance and cybersecurity provisions governing public and private processing within the Europe region.",
       "key_laws": [
         "Monaco Electronic Transactions & Cybersecurity Framework",
         "Constitutional Privacy & Digital Safeguards"
       ],
+      "authority": "Ministry of Communications / Data Governance Body of Monaco",
+      "authority_url": "https://www.un.org/en/member-states/monaco",
       "scores": {
         "policy_coverage": 5,
         "enforcement_strength": 4,
@@ -3190,15 +2987,13 @@
       "code": "MD",
       "name": "Moldova",
       "flag": "🇲🇩",
-      "region": "Europe",
-      "subregion": "Eastern Europe",
-      "authority": "Ministry of Communications / Data Governance Body of Moldova",
-      "authority_url": "https://www.un.org/en/member-states/moldova",
       "summary": "Moldova maintains national data governance and cybersecurity provisions governing public and private processing within the Europe region.",
       "key_laws": [
         "Moldova Electronic Transactions & Cybersecurity Framework",
         "Constitutional Privacy & Digital Safeguards"
       ],
+      "authority": "Ministry of Communications / Data Governance Body of Moldova",
+      "authority_url": "https://www.un.org/en/member-states/moldova",
       "scores": {
         "policy_coverage": 5,
         "enforcement_strength": 4,
@@ -3219,15 +3014,13 @@
       "code": "MG",
       "name": "Madagascar",
       "flag": "🇲🇬",
-      "region": "Africa",
-      "subregion": "Eastern Africa",
-      "authority": "Ministry of Communications / Data Governance Body of Madagascar",
-      "authority_url": "https://www.un.org/en/member-states/madagascar",
       "summary": "Madagascar maintains national data governance and cybersecurity provisions governing public and private processing within the Africa region.",
       "key_laws": [
         "Madagascar Electronic Transactions & Cybersecurity Framework",
         "Constitutional Privacy & Digital Safeguards"
       ],
+      "authority": "Ministry of Communications / Data Governance Body of Madagascar",
+      "authority_url": "https://www.un.org/en/member-states/madagascar",
       "scores": {
         "policy_coverage": 5,
         "enforcement_strength": 4,
@@ -3248,15 +3041,13 @@
       "code": "MV",
       "name": "Maldives",
       "flag": "🇲🇻",
-      "region": "Asia",
-      "subregion": "Southern Asia",
-      "authority": "Ministry of Communications / Data Governance Body of Maldives",
-      "authority_url": "https://www.un.org/en/member-states/maldives",
       "summary": "Maldives maintains national data governance and cybersecurity provisions governing public and private processing within the Asia region.",
       "key_laws": [
         "Maldives Electronic Transactions & Cybersecurity Framework",
         "Constitutional Privacy & Digital Safeguards"
       ],
+      "authority": "Ministry of Communications / Data Governance Body of Maldives",
+      "authority_url": "https://www.un.org/en/member-states/maldives",
       "scores": {
         "policy_coverage": 5,
         "enforcement_strength": 4,
@@ -3277,14 +3068,12 @@
       "code": "MX",
       "name": "Mexico",
       "flag": "🇲🇽",
-      "region": "Americas",
-      "subregion": "North America",
-      "authority": "INAI (National Institute for Transparency and Access to Info)",
-      "authority_url": "https://home.inai.org.mx/",
       "summary": "Mexico enforces comprehensive data security and individual privacy laws administered by INAI (National Institute for Transparency and Access to Info) across the jurisdiction.",
       "key_laws": [
         "Federal Law on Protection of Personal Data"
       ],
+      "authority": "INAI (National Institute for Transparency and Access to Info)",
+      "authority_url": "https://home.inai.org.mx/",
       "scores": {
         "policy_coverage": 8,
         "enforcement_strength": 7,
@@ -3305,15 +3094,13 @@
       "code": "MH",
       "name": "Marshall Islands",
       "flag": "🇲🇭",
-      "region": "Oceania",
-      "subregion": "Micronesia",
-      "authority": "Ministry of Communications / Data Governance Body of Marshall Islands",
-      "authority_url": "https://www.un.org/en/member-states/marshall-islands",
       "summary": "Marshall Islands maintains national data governance and cybersecurity provisions governing public and private processing within the Oceania region.",
       "key_laws": [
         "Marshall Islands Electronic Transactions & Cybersecurity Framework",
         "Constitutional Privacy & Digital Safeguards"
       ],
+      "authority": "Ministry of Communications / Data Governance Body of Marshall Islands",
+      "authority_url": "https://www.un.org/en/member-states/marshall-islands",
       "scores": {
         "policy_coverage": 5,
         "enforcement_strength": 4,
@@ -3334,15 +3121,13 @@
       "code": "MK",
       "name": "North Macedonia",
       "flag": "🇲🇰",
-      "region": "Europe",
-      "subregion": "Southeast Europe",
-      "authority": "Ministry of Communications / Data Governance Body of North Macedonia",
-      "authority_url": "https://www.un.org/en/member-states/north-macedonia",
       "summary": "North Macedonia maintains national data governance and cybersecurity provisions governing public and private processing within the Europe region.",
       "key_laws": [
         "North Macedonia Electronic Transactions & Cybersecurity Framework",
         "Constitutional Privacy & Digital Safeguards"
       ],
+      "authority": "Ministry of Communications / Data Governance Body of North Macedonia",
+      "authority_url": "https://www.un.org/en/member-states/north-macedonia",
       "scores": {
         "policy_coverage": 5,
         "enforcement_strength": 4,
@@ -3363,15 +3148,13 @@
       "code": "ML",
       "name": "Mali",
       "flag": "🇲🇱",
-      "region": "Africa",
-      "subregion": "Western Africa",
-      "authority": "Ministry of Communications / Data Governance Body of Mali",
-      "authority_url": "https://www.un.org/en/member-states/mali",
       "summary": "Mali maintains national data governance and cybersecurity provisions governing public and private processing within the Africa region.",
       "key_laws": [
         "Mali Electronic Transactions & Cybersecurity Framework",
         "Constitutional Privacy & Digital Safeguards"
       ],
+      "authority": "Ministry of Communications / Data Governance Body of Mali",
+      "authority_url": "https://www.un.org/en/member-states/mali",
       "scores": {
         "policy_coverage": 5,
         "enforcement_strength": 4,
@@ -3392,15 +3175,13 @@
       "code": "MT",
       "name": "Malta",
       "flag": "🇲🇹",
-      "region": "Europe",
-      "subregion": "Southern Europe",
-      "authority": "National Data Protection Authority of Malta",
-      "authority_url": "https://edpb.europa.eu/about-edpb/about-edpb/members_en",
       "summary": "Malta operates under the EU General Data Protection Regulation (GDPR) enforced by the national supervisory authority in close coordination with the European Data Protection Board (EDPB).",
       "key_laws": [
         "EU General Data Protection Regulation (GDPR)",
         "Malta Data Protection Statute"
       ],
+      "authority": "National Data Protection Authority of Malta",
+      "authority_url": "https://edpb.europa.eu/about-edpb/about-edpb/members_en",
       "scores": {
         "policy_coverage": 9,
         "enforcement_strength": 8,
@@ -3421,15 +3202,13 @@
       "code": "MM",
       "name": "Myanmar",
       "flag": "🇲🇲",
-      "region": "Asia",
-      "subregion": "South-Eastern Asia",
-      "authority": "Ministry of Communications / Data Governance Body of Myanmar",
-      "authority_url": "https://www.un.org/en/member-states/myanmar",
       "summary": "Myanmar maintains national data governance and cybersecurity provisions governing public and private processing within the Asia region.",
       "key_laws": [
         "Myanmar Electronic Transactions & Cybersecurity Framework",
         "Constitutional Privacy & Digital Safeguards"
       ],
+      "authority": "Ministry of Communications / Data Governance Body of Myanmar",
+      "authority_url": "https://www.un.org/en/member-states/myanmar",
       "scores": {
         "policy_coverage": 5,
         "enforcement_strength": 4,
@@ -3450,15 +3229,13 @@
       "code": "ME",
       "name": "Montenegro",
       "flag": "🇲🇪",
-      "region": "Europe",
-      "subregion": "Southeast Europe",
-      "authority": "Ministry of Communications / Data Governance Body of Montenegro",
-      "authority_url": "https://www.un.org/en/member-states/montenegro",
       "summary": "Montenegro maintains national data governance and cybersecurity provisions governing public and private processing within the Europe region.",
       "key_laws": [
         "Montenegro Electronic Transactions & Cybersecurity Framework",
         "Constitutional Privacy & Digital Safeguards"
       ],
+      "authority": "Ministry of Communications / Data Governance Body of Montenegro",
+      "authority_url": "https://www.un.org/en/member-states/montenegro",
       "scores": {
         "policy_coverage": 5,
         "enforcement_strength": 4,
@@ -3479,15 +3256,13 @@
       "code": "MN",
       "name": "Mongolia",
       "flag": "🇲🇳",
-      "region": "Asia",
-      "subregion": "Eastern Asia",
-      "authority": "Ministry of Communications / Data Governance Body of Mongolia",
-      "authority_url": "https://www.un.org/en/member-states/mongolia",
       "summary": "Mongolia maintains national data governance and cybersecurity provisions governing public and private processing within the Asia region.",
       "key_laws": [
         "Mongolia Electronic Transactions & Cybersecurity Framework",
         "Constitutional Privacy & Digital Safeguards"
       ],
+      "authority": "Ministry of Communications / Data Governance Body of Mongolia",
+      "authority_url": "https://www.un.org/en/member-states/mongolia",
       "scores": {
         "policy_coverage": 5,
         "enforcement_strength": 4,
@@ -3508,15 +3283,13 @@
       "code": "MZ",
       "name": "Mozambique",
       "flag": "🇲🇿",
-      "region": "Africa",
-      "subregion": "Eastern Africa",
-      "authority": "Ministry of Communications / Data Governance Body of Mozambique",
-      "authority_url": "https://www.un.org/en/member-states/mozambique",
       "summary": "Mozambique maintains national data governance and cybersecurity provisions governing public and private processing within the Africa region.",
       "key_laws": [
         "Mozambique Electronic Transactions & Cybersecurity Framework",
         "Constitutional Privacy & Digital Safeguards"
       ],
+      "authority": "Ministry of Communications / Data Governance Body of Mozambique",
+      "authority_url": "https://www.un.org/en/member-states/mozambique",
       "scores": {
         "policy_coverage": 5,
         "enforcement_strength": 4,
@@ -3537,15 +3310,13 @@
       "code": "MR",
       "name": "Mauritania",
       "flag": "🇲🇷",
-      "region": "Africa",
-      "subregion": "Western Africa",
-      "authority": "Ministry of Communications / Data Governance Body of Mauritania",
-      "authority_url": "https://www.un.org/en/member-states/mauritania",
       "summary": "Mauritania maintains national data governance and cybersecurity provisions governing public and private processing within the Africa region.",
       "key_laws": [
         "Mauritania Electronic Transactions & Cybersecurity Framework",
         "Constitutional Privacy & Digital Safeguards"
       ],
+      "authority": "Ministry of Communications / Data Governance Body of Mauritania",
+      "authority_url": "https://www.un.org/en/member-states/mauritania",
       "scores": {
         "policy_coverage": 5,
         "enforcement_strength": 4,
@@ -3566,15 +3337,13 @@
       "code": "MU",
       "name": "Mauritius",
       "flag": "🇲🇺",
-      "region": "Africa",
-      "subregion": "Eastern Africa",
-      "authority": "Ministry of Communications / Data Governance Body of Mauritius",
-      "authority_url": "https://www.un.org/en/member-states/mauritius",
       "summary": "Mauritius maintains national data governance and cybersecurity provisions governing public and private processing within the Africa region.",
       "key_laws": [
         "Mauritius Electronic Transactions & Cybersecurity Framework",
         "Constitutional Privacy & Digital Safeguards"
       ],
+      "authority": "Ministry of Communications / Data Governance Body of Mauritius",
+      "authority_url": "https://www.un.org/en/member-states/mauritius",
       "scores": {
         "policy_coverage": 5,
         "enforcement_strength": 4,
@@ -3595,15 +3364,13 @@
       "code": "MW",
       "name": "Malawi",
       "flag": "🇲🇼",
-      "region": "Africa",
-      "subregion": "Eastern Africa",
-      "authority": "Ministry of Communications / Data Governance Body of Malawi",
-      "authority_url": "https://www.un.org/en/member-states/malawi",
       "summary": "Malawi maintains national data governance and cybersecurity provisions governing public and private processing within the Africa region.",
       "key_laws": [
         "Malawi Electronic Transactions & Cybersecurity Framework",
         "Constitutional Privacy & Digital Safeguards"
       ],
+      "authority": "Ministry of Communications / Data Governance Body of Malawi",
+      "authority_url": "https://www.un.org/en/member-states/malawi",
       "scores": {
         "policy_coverage": 5,
         "enforcement_strength": 4,
@@ -3624,14 +3391,12 @@
       "code": "MY",
       "name": "Malaysia",
       "flag": "🇲🇾",
-      "region": "Asia",
-      "subregion": "South-Eastern Asia",
-      "authority": "PDPD (Personal Data Protection Department)",
-      "authority_url": "https://www.pdp.gov.my/",
       "summary": "Malaysia enforces comprehensive data security and individual privacy laws administered by PDPD (Personal Data Protection Department) across the jurisdiction.",
       "key_laws": [
         "Personal Data Protection Act 2010 (PDPA)"
       ],
+      "authority": "PDPD (Personal Data Protection Department)",
+      "authority_url": "https://www.pdp.gov.my/",
       "scores": {
         "policy_coverage": 6,
         "enforcement_strength": 6,
@@ -3652,15 +3417,13 @@
       "code": "NA",
       "name": "Namibia",
       "flag": "🇳🇦",
-      "region": "Africa",
-      "subregion": "Southern Africa",
-      "authority": "Ministry of Communications / Data Governance Body of Namibia",
-      "authority_url": "https://www.un.org/en/member-states/namibia",
       "summary": "Namibia maintains national data governance and cybersecurity provisions governing public and private processing within the Africa region.",
       "key_laws": [
         "Namibia Electronic Transactions & Cybersecurity Framework",
         "Constitutional Privacy & Digital Safeguards"
       ],
+      "authority": "Ministry of Communications / Data Governance Body of Namibia",
+      "authority_url": "https://www.un.org/en/member-states/namibia",
       "scores": {
         "policy_coverage": 5,
         "enforcement_strength": 4,
@@ -3681,15 +3444,13 @@
       "code": "NE",
       "name": "Niger",
       "flag": "🇳🇪",
-      "region": "Africa",
-      "subregion": "Western Africa",
-      "authority": "Ministry of Communications / Data Governance Body of Niger",
-      "authority_url": "https://www.un.org/en/member-states/niger",
       "summary": "Niger maintains national data governance and cybersecurity provisions governing public and private processing within the Africa region.",
       "key_laws": [
         "Niger Electronic Transactions & Cybersecurity Framework",
         "Constitutional Privacy & Digital Safeguards"
       ],
+      "authority": "Ministry of Communications / Data Governance Body of Niger",
+      "authority_url": "https://www.un.org/en/member-states/niger",
       "scores": {
         "policy_coverage": 5,
         "enforcement_strength": 4,
@@ -3710,14 +3471,12 @@
       "code": "NG",
       "name": "Nigeria",
       "flag": "🇳🇬",
-      "region": "Africa",
-      "subregion": "Western Africa",
-      "authority": "NDPC (Nigeria Data Protection Commission)",
-      "authority_url": "https://ndpc.gov.ng/",
       "summary": "Nigeria enforces comprehensive data security and individual privacy laws administered by NDPC (Nigeria Data Protection Commission) across the jurisdiction.",
       "key_laws": [
         "NDPA (Nigeria Data Protection Act 2023)"
       ],
+      "authority": "NDPC (Nigeria Data Protection Commission)",
+      "authority_url": "https://ndpc.gov.ng/",
       "scores": {
         "policy_coverage": 7,
         "enforcement_strength": 6,
@@ -3738,15 +3497,13 @@
       "code": "NI",
       "name": "Nicaragua",
       "flag": "🇳🇮",
-      "region": "Americas",
-      "subregion": "Central America",
-      "authority": "Ministry of Communications / Data Governance Body of Nicaragua",
-      "authority_url": "https://www.un.org/en/member-states/nicaragua",
       "summary": "Nicaragua maintains national data governance and cybersecurity provisions governing public and private processing within the Americas region.",
       "key_laws": [
         "Nicaragua Electronic Transactions & Cybersecurity Framework",
         "Constitutional Privacy & Digital Safeguards"
       ],
+      "authority": "Ministry of Communications / Data Governance Body of Nicaragua",
+      "authority_url": "https://www.un.org/en/member-states/nicaragua",
       "scores": {
         "policy_coverage": 5,
         "enforcement_strength": 4,
@@ -3767,15 +3524,13 @@
       "code": "NL",
       "name": "Netherlands",
       "flag": "🇳🇱",
-      "region": "Europe",
-      "subregion": "Western Europe",
-      "authority": "National Data Protection Authority of Netherlands",
-      "authority_url": "https://edpb.europa.eu/about-edpb/about-edpb/members_en",
       "summary": "Netherlands operates under the EU General Data Protection Regulation (GDPR) enforced by the national supervisory authority in close coordination with the European Data Protection Board (EDPB).",
       "key_laws": [
         "EU General Data Protection Regulation (GDPR)",
         "Netherlands Data Protection Statute"
       ],
+      "authority": "National Data Protection Authority of Netherlands",
+      "authority_url": "https://edpb.europa.eu/about-edpb/about-edpb/members_en",
       "scores": {
         "policy_coverage": 9,
         "enforcement_strength": 8,
@@ -3796,15 +3551,13 @@
       "code": "NO",
       "name": "Norway",
       "flag": "🇳🇴",
-      "region": "Europe",
-      "subregion": "Northern Europe",
-      "authority": "National Data Protection Authority of Norway",
-      "authority_url": "https://edpb.europa.eu/about-edpb/about-edpb/members_en",
       "summary": "Norway operates under the EU General Data Protection Regulation (GDPR) enforced by the national supervisory authority in close coordination with the European Data Protection Board (EDPB).",
       "key_laws": [
         "EU General Data Protection Regulation (GDPR)",
         "Norway Data Protection Statute"
       ],
+      "authority": "National Data Protection Authority of Norway",
+      "authority_url": "https://edpb.europa.eu/about-edpb/about-edpb/members_en",
       "scores": {
         "policy_coverage": 9,
         "enforcement_strength": 8,
@@ -3825,15 +3578,13 @@
       "code": "NP",
       "name": "Nepal",
       "flag": "🇳🇵",
-      "region": "Asia",
-      "subregion": "Southern Asia",
-      "authority": "Ministry of Communications / Data Governance Body of Nepal",
-      "authority_url": "https://www.un.org/en/member-states/nepal",
       "summary": "Nepal maintains national data governance and cybersecurity provisions governing public and private processing within the Asia region.",
       "key_laws": [
         "Nepal Electronic Transactions & Cybersecurity Framework",
         "Constitutional Privacy & Digital Safeguards"
       ],
+      "authority": "Ministry of Communications / Data Governance Body of Nepal",
+      "authority_url": "https://www.un.org/en/member-states/nepal",
       "scores": {
         "policy_coverage": 5,
         "enforcement_strength": 4,
@@ -3854,15 +3605,13 @@
       "code": "NR",
       "name": "Nauru",
       "flag": "🇳🇷",
-      "region": "Oceania",
-      "subregion": "Micronesia",
-      "authority": "Ministry of Communications / Data Governance Body of Nauru",
-      "authority_url": "https://www.un.org/en/member-states/nauru",
       "summary": "Nauru maintains national data governance and cybersecurity provisions governing public and private processing within the Oceania region.",
       "key_laws": [
         "Nauru Electronic Transactions & Cybersecurity Framework",
         "Constitutional Privacy & Digital Safeguards"
       ],
+      "authority": "Ministry of Communications / Data Governance Body of Nauru",
+      "authority_url": "https://www.un.org/en/member-states/nauru",
       "scores": {
         "policy_coverage": 5,
         "enforcement_strength": 4,
@@ -3883,14 +3632,12 @@
       "code": "NZ",
       "name": "New Zealand",
       "flag": "🇳🇿",
-      "region": "Oceania",
-      "subregion": "Australia and New Zealand",
-      "authority": "Office of the Privacy Commissioner New Zealand",
-      "authority_url": "https://www.privacy.org.nz/",
       "summary": "New Zealand enforces comprehensive data security and individual privacy laws administered by Office of the Privacy Commissioner New Zealand across the jurisdiction.",
       "key_laws": [
         "Privacy Act 2020"
       ],
+      "authority": "Office of the Privacy Commissioner New Zealand",
+      "authority_url": "https://www.privacy.org.nz/",
       "scores": {
         "policy_coverage": 8,
         "enforcement_strength": 7,
@@ -3911,15 +3658,13 @@
       "code": "OM",
       "name": "Oman",
       "flag": "🇴🇲",
-      "region": "Asia",
-      "subregion": "Western Asia",
-      "authority": "Ministry of Communications / Data Governance Body of Oman",
-      "authority_url": "https://www.un.org/en/member-states/oman",
       "summary": "Oman maintains national data governance and cybersecurity provisions governing public and private processing within the Asia region.",
       "key_laws": [
         "Oman Electronic Transactions & Cybersecurity Framework",
         "Constitutional Privacy & Digital Safeguards"
       ],
+      "authority": "Ministry of Communications / Data Governance Body of Oman",
+      "authority_url": "https://www.un.org/en/member-states/oman",
       "scores": {
         "policy_coverage": 5,
         "enforcement_strength": 4,
@@ -3940,15 +3685,13 @@
       "code": "PK",
       "name": "Pakistan",
       "flag": "🇵🇰",
-      "region": "Asia",
-      "subregion": "Southern Asia",
-      "authority": "Ministry of Communications / Data Governance Body of Pakistan",
-      "authority_url": "https://www.un.org/en/member-states/pakistan",
       "summary": "Pakistan maintains national data governance and cybersecurity provisions governing public and private processing within the Asia region.",
       "key_laws": [
         "Pakistan Electronic Transactions & Cybersecurity Framework",
         "Constitutional Privacy & Digital Safeguards"
       ],
+      "authority": "Ministry of Communications / Data Governance Body of Pakistan",
+      "authority_url": "https://www.un.org/en/member-states/pakistan",
       "scores": {
         "policy_coverage": 5,
         "enforcement_strength": 4,
@@ -3969,15 +3712,13 @@
       "code": "PA",
       "name": "Panama",
       "flag": "🇵🇦",
-      "region": "Americas",
-      "subregion": "Central America",
-      "authority": "Ministry of Communications / Data Governance Body of Panama",
-      "authority_url": "https://www.un.org/en/member-states/panama",
       "summary": "Panama maintains national data governance and cybersecurity provisions governing public and private processing within the Americas region.",
       "key_laws": [
         "Panama Electronic Transactions & Cybersecurity Framework",
         "Constitutional Privacy & Digital Safeguards"
       ],
+      "authority": "Ministry of Communications / Data Governance Body of Panama",
+      "authority_url": "https://www.un.org/en/member-states/panama",
       "scores": {
         "policy_coverage": 5,
         "enforcement_strength": 4,
@@ -3998,14 +3739,12 @@
       "code": "PE",
       "name": "Peru",
       "flag": "🇵🇪",
-      "region": "Americas",
-      "subregion": "South America",
-      "authority": "National Authority for Personal Data Protection (ANPD)",
-      "authority_url": "https://www.gob.pe/minjus",
       "summary": "Peru enforces comprehensive data security and individual privacy laws administered by National Authority for Personal Data Protection (ANPD) across the jurisdiction.",
       "key_laws": [
         "Personal Data Protection Law No. 29733"
       ],
+      "authority": "National Authority for Personal Data Protection (ANPD)",
+      "authority_url": "https://www.gob.pe/minjus",
       "scores": {
         "policy_coverage": 6,
         "enforcement_strength": 6,
@@ -4026,14 +3765,12 @@
       "code": "PH",
       "name": "Philippines",
       "flag": "🇵🇭",
-      "region": "Asia",
-      "subregion": "South-Eastern Asia",
-      "authority": "NPC (National Privacy Commission)",
-      "authority_url": "https://privacy.gov.ph/",
       "summary": "Philippines enforces comprehensive data security and individual privacy laws administered by NPC (National Privacy Commission) across the jurisdiction.",
       "key_laws": [
         "Data Privacy Act of 2012 (RA 10173)"
       ],
+      "authority": "NPC (National Privacy Commission)",
+      "authority_url": "https://privacy.gov.ph/",
       "scores": {
         "policy_coverage": 7,
         "enforcement_strength": 7,
@@ -4054,15 +3791,13 @@
       "code": "PW",
       "name": "Palau",
       "flag": "🇵🇼",
-      "region": "Oceania",
-      "subregion": "Micronesia",
-      "authority": "Ministry of Communications / Data Governance Body of Palau",
-      "authority_url": "https://www.un.org/en/member-states/palau",
       "summary": "Palau maintains national data governance and cybersecurity provisions governing public and private processing within the Oceania region.",
       "key_laws": [
         "Palau Electronic Transactions & Cybersecurity Framework",
         "Constitutional Privacy & Digital Safeguards"
       ],
+      "authority": "Ministry of Communications / Data Governance Body of Palau",
+      "authority_url": "https://www.un.org/en/member-states/palau",
       "scores": {
         "policy_coverage": 5,
         "enforcement_strength": 4,
@@ -4083,15 +3818,13 @@
       "code": "PG",
       "name": "Papua New Guinea",
       "flag": "🇵🇬",
-      "region": "Oceania",
-      "subregion": "Melanesia",
-      "authority": "Ministry of Communications / Data Governance Body of Papua New Guinea",
-      "authority_url": "https://www.un.org/en/member-states/papua-new-guinea",
       "summary": "Papua New Guinea maintains national data governance and cybersecurity provisions governing public and private processing within the Oceania region.",
       "key_laws": [
         "Papua New Guinea Electronic Transactions & Cybersecurity Framework",
         "Constitutional Privacy & Digital Safeguards"
       ],
+      "authority": "Ministry of Communications / Data Governance Body of Papua New Guinea",
+      "authority_url": "https://www.un.org/en/member-states/papua-new-guinea",
       "scores": {
         "policy_coverage": 5,
         "enforcement_strength": 4,
@@ -4112,15 +3845,13 @@
       "code": "PL",
       "name": "Poland",
       "flag": "🇵🇱",
-      "region": "Europe",
-      "subregion": "Central Europe",
-      "authority": "National Data Protection Authority of Poland",
-      "authority_url": "https://edpb.europa.eu/about-edpb/about-edpb/members_en",
       "summary": "Poland operates under the EU General Data Protection Regulation (GDPR) enforced by the national supervisory authority in close coordination with the European Data Protection Board (EDPB).",
       "key_laws": [
         "EU General Data Protection Regulation (GDPR)",
         "Poland Data Protection Statute"
       ],
+      "authority": "National Data Protection Authority of Poland",
+      "authority_url": "https://edpb.europa.eu/about-edpb/about-edpb/members_en",
       "scores": {
         "policy_coverage": 9,
         "enforcement_strength": 8,
@@ -4141,15 +3872,13 @@
       "code": "KP",
       "name": "North Korea",
       "flag": "🇰🇵",
-      "region": "Asia",
-      "subregion": "Eastern Asia",
-      "authority": "Ministry of Communications / Data Governance Body of North Korea",
-      "authority_url": "https://www.un.org/en/member-states/north-korea",
       "summary": "North Korea maintains national data governance and cybersecurity provisions governing public and private processing within the Asia region.",
       "key_laws": [
         "North Korea Electronic Transactions & Cybersecurity Framework",
         "Constitutional Privacy & Digital Safeguards"
       ],
+      "authority": "Ministry of Communications / Data Governance Body of North Korea",
+      "authority_url": "https://www.un.org/en/member-states/north-korea",
       "scores": {
         "policy_coverage": 5,
         "enforcement_strength": 4,
@@ -4170,15 +3899,13 @@
       "code": "PT",
       "name": "Portugal",
       "flag": "🇵🇹",
-      "region": "Europe",
-      "subregion": "Southern Europe",
-      "authority": "National Data Protection Authority of Portugal",
-      "authority_url": "https://edpb.europa.eu/about-edpb/about-edpb/members_en",
       "summary": "Portugal operates under the EU General Data Protection Regulation (GDPR) enforced by the national supervisory authority in close coordination with the European Data Protection Board (EDPB).",
       "key_laws": [
         "EU General Data Protection Regulation (GDPR)",
         "Portugal Data Protection Statute"
       ],
+      "authority": "National Data Protection Authority of Portugal",
+      "authority_url": "https://edpb.europa.eu/about-edpb/about-edpb/members_en",
       "scores": {
         "policy_coverage": 9,
         "enforcement_strength": 8,
@@ -4199,15 +3926,13 @@
       "code": "PY",
       "name": "Paraguay",
       "flag": "🇵🇾",
-      "region": "Americas",
-      "subregion": "South America",
-      "authority": "Ministry of Communications / Data Governance Body of Paraguay",
-      "authority_url": "https://www.un.org/en/member-states/paraguay",
       "summary": "Paraguay maintains national data governance and cybersecurity provisions governing public and private processing within the Americas region.",
       "key_laws": [
         "Paraguay Electronic Transactions & Cybersecurity Framework",
         "Constitutional Privacy & Digital Safeguards"
       ],
+      "authority": "Ministry of Communications / Data Governance Body of Paraguay",
+      "authority_url": "https://www.un.org/en/member-states/paraguay",
       "scores": {
         "policy_coverage": 5,
         "enforcement_strength": 4,
@@ -4228,15 +3953,13 @@
       "code": "PS",
       "name": "Palestine",
       "flag": "🇵🇸",
-      "region": "Asia",
-      "subregion": "Western Asia",
-      "authority": "Ministry of Communications / Data Governance Body of Palestine",
-      "authority_url": "https://www.un.org/en/member-states/palestine",
       "summary": "Palestine maintains national data governance and cybersecurity provisions governing public and private processing within the Asia region.",
       "key_laws": [
         "Palestine Electronic Transactions & Cybersecurity Framework",
         "Constitutional Privacy & Digital Safeguards"
       ],
+      "authority": "Ministry of Communications / Data Governance Body of Palestine",
+      "authority_url": "https://www.un.org/en/member-states/palestine",
       "scores": {
         "policy_coverage": 5,
         "enforcement_strength": 4,
@@ -4257,15 +3980,13 @@
       "code": "QA",
       "name": "Qatar",
       "flag": "🇶🇦",
-      "region": "Asia",
-      "subregion": "Western Asia",
-      "authority": "Ministry of Communications / Data Governance Body of Qatar",
-      "authority_url": "https://www.un.org/en/member-states/qatar",
       "summary": "Qatar maintains national data governance and cybersecurity provisions governing public and private processing within the Asia region.",
       "key_laws": [
         "Qatar Electronic Transactions & Cybersecurity Framework",
         "Constitutional Privacy & Digital Safeguards"
       ],
+      "authority": "Ministry of Communications / Data Governance Body of Qatar",
+      "authority_url": "https://www.un.org/en/member-states/qatar",
       "scores": {
         "policy_coverage": 5,
         "enforcement_strength": 4,
@@ -4286,15 +4007,13 @@
       "code": "RO",
       "name": "Romania",
       "flag": "🇷🇴",
-      "region": "Europe",
-      "subregion": "Southeast Europe",
-      "authority": "National Data Protection Authority of Romania",
-      "authority_url": "https://edpb.europa.eu/about-edpb/about-edpb/members_en",
       "summary": "Romania operates under the EU General Data Protection Regulation (GDPR) enforced by the national supervisory authority in close coordination with the European Data Protection Board (EDPB).",
       "key_laws": [
         "EU General Data Protection Regulation (GDPR)",
         "Romania Data Protection Statute"
       ],
+      "authority": "National Data Protection Authority of Romania",
+      "authority_url": "https://edpb.europa.eu/about-edpb/about-edpb/members_en",
       "scores": {
         "policy_coverage": 9,
         "enforcement_strength": 8,
@@ -4315,15 +4034,13 @@
       "code": "RU",
       "name": "Russia",
       "flag": "🇷🇺",
-      "region": "Europe",
-      "subregion": "Eastern Europe",
-      "authority": "Ministry of Communications / Data Governance Body of Russia",
-      "authority_url": "https://www.un.org/en/member-states/russia",
       "summary": "Russia maintains national data governance and cybersecurity provisions governing public and private processing within the Europe region.",
       "key_laws": [
         "Russia Electronic Transactions & Cybersecurity Framework",
         "Constitutional Privacy & Digital Safeguards"
       ],
+      "authority": "Ministry of Communications / Data Governance Body of Russia",
+      "authority_url": "https://www.un.org/en/member-states/russia",
       "scores": {
         "policy_coverage": 5,
         "enforcement_strength": 4,
@@ -4344,15 +4061,13 @@
       "code": "RW",
       "name": "Rwanda",
       "flag": "🇷🇼",
-      "region": "Africa",
-      "subregion": "Eastern Africa",
-      "authority": "Ministry of Communications / Data Governance Body of Rwanda",
-      "authority_url": "https://www.un.org/en/member-states/rwanda",
       "summary": "Rwanda maintains national data governance and cybersecurity provisions governing public and private processing within the Africa region.",
       "key_laws": [
         "Rwanda Electronic Transactions & Cybersecurity Framework",
         "Constitutional Privacy & Digital Safeguards"
       ],
+      "authority": "Ministry of Communications / Data Governance Body of Rwanda",
+      "authority_url": "https://www.un.org/en/member-states/rwanda",
       "scores": {
         "policy_coverage": 5,
         "enforcement_strength": 4,
@@ -4373,14 +4088,12 @@
       "code": "SA",
       "name": "Saudi Arabia",
       "flag": "🇸🇦",
-      "region": "Asia",
-      "subregion": "Western Asia",
-      "authority": "SDAIA (Saudi Data & AI Authority)",
-      "authority_url": "https://sdaia.gov.sa/",
       "summary": "Saudi Arabia enforces comprehensive data security and individual privacy laws administered by SDAIA (Saudi Data & AI Authority) across the jurisdiction.",
       "key_laws": [
         "PDPL (Personal Data Protection Law)"
       ],
+      "authority": "SDAIA (Saudi Data & AI Authority)",
+      "authority_url": "https://sdaia.gov.sa/",
       "scores": {
         "policy_coverage": 7,
         "enforcement_strength": 7,
@@ -4401,15 +4114,13 @@
       "code": "SD",
       "name": "Sudan",
       "flag": "🇸🇩",
-      "region": "Africa",
-      "subregion": "Northern Africa",
-      "authority": "Ministry of Communications / Data Governance Body of Sudan",
-      "authority_url": "https://www.un.org/en/member-states/sudan",
       "summary": "Sudan maintains national data governance and cybersecurity provisions governing public and private processing within the Africa region.",
       "key_laws": [
         "Sudan Electronic Transactions & Cybersecurity Framework",
         "Constitutional Privacy & Digital Safeguards"
       ],
+      "authority": "Ministry of Communications / Data Governance Body of Sudan",
+      "authority_url": "https://www.un.org/en/member-states/sudan",
       "scores": {
         "policy_coverage": 5,
         "enforcement_strength": 4,
@@ -4430,15 +4141,13 @@
       "code": "SN",
       "name": "Senegal",
       "flag": "🇸🇳",
-      "region": "Africa",
-      "subregion": "Western Africa",
-      "authority": "Ministry of Communications / Data Governance Body of Senegal",
-      "authority_url": "https://www.un.org/en/member-states/senegal",
       "summary": "Senegal maintains national data governance and cybersecurity provisions governing public and private processing within the Africa region.",
       "key_laws": [
         "Senegal Electronic Transactions & Cybersecurity Framework",
         "Constitutional Privacy & Digital Safeguards"
       ],
+      "authority": "Ministry of Communications / Data Governance Body of Senegal",
+      "authority_url": "https://www.un.org/en/member-states/senegal",
       "scores": {
         "policy_coverage": 5,
         "enforcement_strength": 4,
@@ -4459,14 +4168,12 @@
       "code": "SG",
       "name": "Singapore",
       "flag": "🇸🇬",
-      "region": "Asia",
-      "subregion": "South-Eastern Asia",
-      "authority": "PDPC (Personal Data Protection Commission)",
-      "authority_url": "https://www.pdpc.gov.sg/",
       "summary": "Singapore enforces comprehensive data security and individual privacy laws administered by PDPC (Personal Data Protection Commission) across the jurisdiction.",
       "key_laws": [
         "PDPA (Personal Data Protection Act 2012)"
       ],
+      "authority": "PDPC (Personal Data Protection Commission)",
+      "authority_url": "https://www.pdpc.gov.sg/",
       "scores": {
         "policy_coverage": 8,
         "enforcement_strength": 8,
@@ -4487,15 +4194,13 @@
       "code": "SB",
       "name": "Solomon Islands",
       "flag": "🇸🇧",
-      "region": "Oceania",
-      "subregion": "Melanesia",
-      "authority": "Ministry of Communications / Data Governance Body of Solomon Islands",
-      "authority_url": "https://www.un.org/en/member-states/solomon-islands",
       "summary": "Solomon Islands maintains national data governance and cybersecurity provisions governing public and private processing within the Oceania region.",
       "key_laws": [
         "Solomon Islands Electronic Transactions & Cybersecurity Framework",
         "Constitutional Privacy & Digital Safeguards"
       ],
+      "authority": "Ministry of Communications / Data Governance Body of Solomon Islands",
+      "authority_url": "https://www.un.org/en/member-states/solomon-islands",
       "scores": {
         "policy_coverage": 5,
         "enforcement_strength": 4,
@@ -4516,15 +4221,13 @@
       "code": "SL",
       "name": "Sierra Leone",
       "flag": "🇸🇱",
-      "region": "Africa",
-      "subregion": "Western Africa",
-      "authority": "Ministry of Communications / Data Governance Body of Sierra Leone",
-      "authority_url": "https://www.un.org/en/member-states/sierra-leone",
       "summary": "Sierra Leone maintains national data governance and cybersecurity provisions governing public and private processing within the Africa region.",
       "key_laws": [
         "Sierra Leone Electronic Transactions & Cybersecurity Framework",
         "Constitutional Privacy & Digital Safeguards"
       ],
+      "authority": "Ministry of Communications / Data Governance Body of Sierra Leone",
+      "authority_url": "https://www.un.org/en/member-states/sierra-leone",
       "scores": {
         "policy_coverage": 5,
         "enforcement_strength": 4,
@@ -4545,15 +4248,13 @@
       "code": "SV",
       "name": "El Salvador",
       "flag": "🇸🇻",
-      "region": "Americas",
-      "subregion": "Central America",
-      "authority": "Ministry of Communications / Data Governance Body of El Salvador",
-      "authority_url": "https://www.un.org/en/member-states/el-salvador",
       "summary": "El Salvador maintains national data governance and cybersecurity provisions governing public and private processing within the Americas region.",
       "key_laws": [
         "El Salvador Electronic Transactions & Cybersecurity Framework",
         "Constitutional Privacy & Digital Safeguards"
       ],
+      "authority": "Ministry of Communications / Data Governance Body of El Salvador",
+      "authority_url": "https://www.un.org/en/member-states/el-salvador",
       "scores": {
         "policy_coverage": 5,
         "enforcement_strength": 4,
@@ -4574,15 +4275,13 @@
       "code": "SM",
       "name": "San Marino",
       "flag": "🇸🇲",
-      "region": "Europe",
-      "subregion": "Southern Europe",
-      "authority": "Ministry of Communications / Data Governance Body of San Marino",
-      "authority_url": "https://www.un.org/en/member-states/san-marino",
       "summary": "San Marino maintains national data governance and cybersecurity provisions governing public and private processing within the Europe region.",
       "key_laws": [
         "San Marino Electronic Transactions & Cybersecurity Framework",
         "Constitutional Privacy & Digital Safeguards"
       ],
+      "authority": "Ministry of Communications / Data Governance Body of San Marino",
+      "authority_url": "https://www.un.org/en/member-states/san-marino",
       "scores": {
         "policy_coverage": 5,
         "enforcement_strength": 4,
@@ -4603,15 +4302,13 @@
       "code": "SO",
       "name": "Somalia",
       "flag": "🇸🇴",
-      "region": "Africa",
-      "subregion": "Eastern Africa",
-      "authority": "Ministry of Communications / Data Governance Body of Somalia",
-      "authority_url": "https://www.un.org/en/member-states/somalia",
       "summary": "Somalia maintains national data governance and cybersecurity provisions governing public and private processing within the Africa region.",
       "key_laws": [
         "Somalia Electronic Transactions & Cybersecurity Framework",
         "Constitutional Privacy & Digital Safeguards"
       ],
+      "authority": "Ministry of Communications / Data Governance Body of Somalia",
+      "authority_url": "https://www.un.org/en/member-states/somalia",
       "scores": {
         "policy_coverage": 5,
         "enforcement_strength": 4,
@@ -4632,15 +4329,13 @@
       "code": "RS",
       "name": "Serbia",
       "flag": "🇷🇸",
-      "region": "Europe",
-      "subregion": "Southeast Europe",
-      "authority": "Ministry of Communications / Data Governance Body of Serbia",
-      "authority_url": "https://www.un.org/en/member-states/serbia",
       "summary": "Serbia maintains national data governance and cybersecurity provisions governing public and private processing within the Europe region.",
       "key_laws": [
         "Serbia Electronic Transactions & Cybersecurity Framework",
         "Constitutional Privacy & Digital Safeguards"
       ],
+      "authority": "Ministry of Communications / Data Governance Body of Serbia",
+      "authority_url": "https://www.un.org/en/member-states/serbia",
       "scores": {
         "policy_coverage": 5,
         "enforcement_strength": 4,
@@ -4661,15 +4356,13 @@
       "code": "SS",
       "name": "South Sudan",
       "flag": "🇸🇸",
-      "region": "Africa",
-      "subregion": "Middle Africa",
-      "authority": "Ministry of Communications / Data Governance Body of South Sudan",
-      "authority_url": "https://www.un.org/en/member-states/south-sudan",
       "summary": "South Sudan maintains national data governance and cybersecurity provisions governing public and private processing within the Africa region.",
       "key_laws": [
         "South Sudan Electronic Transactions & Cybersecurity Framework",
         "Constitutional Privacy & Digital Safeguards"
       ],
+      "authority": "Ministry of Communications / Data Governance Body of South Sudan",
+      "authority_url": "https://www.un.org/en/member-states/south-sudan",
       "scores": {
         "policy_coverage": 5,
         "enforcement_strength": 4,
@@ -4690,15 +4383,13 @@
       "code": "ST",
       "name": "São Tomé and Príncipe",
       "flag": "🇸🇹",
-      "region": "Africa",
-      "subregion": "Middle Africa",
-      "authority": "Ministry of Communications / Data Governance Body of São Tomé and Príncipe",
-      "authority_url": "https://www.un.org/en/member-states/são-tomé-and-príncipe",
       "summary": "São Tomé and Príncipe maintains national data governance and cybersecurity provisions governing public and private processing within the Africa region.",
       "key_laws": [
         "São Tomé and Príncipe Electronic Transactions & Cybersecurity Framework",
         "Constitutional Privacy & Digital Safeguards"
       ],
+      "authority": "Ministry of Communications / Data Governance Body of São Tomé and Príncipe",
+      "authority_url": "https://www.un.org/en/member-states/são-tomé-and-príncipe",
       "scores": {
         "policy_coverage": 5,
         "enforcement_strength": 4,
@@ -4719,15 +4410,13 @@
       "code": "SR",
       "name": "Suriname",
       "flag": "🇸🇷",
-      "region": "Americas",
-      "subregion": "South America",
-      "authority": "Ministry of Communications / Data Governance Body of Suriname",
-      "authority_url": "https://www.un.org/en/member-states/suriname",
       "summary": "Suriname maintains national data governance and cybersecurity provisions governing public and private processing within the Americas region.",
       "key_laws": [
         "Suriname Electronic Transactions & Cybersecurity Framework",
         "Constitutional Privacy & Digital Safeguards"
       ],
+      "authority": "Ministry of Communications / Data Governance Body of Suriname",
+      "authority_url": "https://www.un.org/en/member-states/suriname",
       "scores": {
         "policy_coverage": 5,
         "enforcement_strength": 4,
@@ -4748,15 +4437,13 @@
       "code": "SK",
       "name": "Slovakia",
       "flag": "🇸🇰",
-      "region": "Europe",
-      "subregion": "Central Europe",
-      "authority": "National Data Protection Authority of Slovakia",
-      "authority_url": "https://edpb.europa.eu/about-edpb/about-edpb/members_en",
       "summary": "Slovakia operates under the EU General Data Protection Regulation (GDPR) enforced by the national supervisory authority in close coordination with the European Data Protection Board (EDPB).",
       "key_laws": [
         "EU General Data Protection Regulation (GDPR)",
         "Slovakia Data Protection Statute"
       ],
+      "authority": "National Data Protection Authority of Slovakia",
+      "authority_url": "https://edpb.europa.eu/about-edpb/about-edpb/members_en",
       "scores": {
         "policy_coverage": 9,
         "enforcement_strength": 8,
@@ -4777,15 +4464,13 @@
       "code": "SI",
       "name": "Slovenia",
       "flag": "🇸🇮",
-      "region": "Europe",
-      "subregion": "Central Europe",
-      "authority": "National Data Protection Authority of Slovenia",
-      "authority_url": "https://edpb.europa.eu/about-edpb/about-edpb/members_en",
       "summary": "Slovenia operates under the EU General Data Protection Regulation (GDPR) enforced by the national supervisory authority in close coordination with the European Data Protection Board (EDPB).",
       "key_laws": [
         "EU General Data Protection Regulation (GDPR)",
         "Slovenia Data Protection Statute"
       ],
+      "authority": "National Data Protection Authority of Slovenia",
+      "authority_url": "https://edpb.europa.eu/about-edpb/about-edpb/members_en",
       "scores": {
         "policy_coverage": 9,
         "enforcement_strength": 8,
@@ -4806,15 +4491,13 @@
       "code": "SE",
       "name": "Sweden",
       "flag": "🇸🇪",
-      "region": "Europe",
-      "subregion": "Northern Europe",
-      "authority": "National Data Protection Authority of Sweden",
-      "authority_url": "https://edpb.europa.eu/about-edpb/about-edpb/members_en",
       "summary": "Sweden operates under the EU General Data Protection Regulation (GDPR) enforced by the national supervisory authority in close coordination with the European Data Protection Board (EDPB).",
       "key_laws": [
         "EU General Data Protection Regulation (GDPR)",
         "Sweden Data Protection Statute"
       ],
+      "authority": "National Data Protection Authority of Sweden",
+      "authority_url": "https://edpb.europa.eu/about-edpb/about-edpb/members_en",
       "scores": {
         "policy_coverage": 9,
         "enforcement_strength": 8,
@@ -4835,15 +4518,13 @@
       "code": "SZ",
       "name": "Eswatini",
       "flag": "🇸🇿",
-      "region": "Africa",
-      "subregion": "Southern Africa",
-      "authority": "Ministry of Communications / Data Governance Body of Eswatini",
-      "authority_url": "https://www.un.org/en/member-states/eswatini",
       "summary": "Eswatini maintains national data governance and cybersecurity provisions governing public and private processing within the Africa region.",
       "key_laws": [
         "Eswatini Electronic Transactions & Cybersecurity Framework",
         "Constitutional Privacy & Digital Safeguards"
       ],
+      "authority": "Ministry of Communications / Data Governance Body of Eswatini",
+      "authority_url": "https://www.un.org/en/member-states/eswatini",
       "scores": {
         "policy_coverage": 5,
         "enforcement_strength": 4,
@@ -4864,15 +4545,13 @@
       "code": "SC",
       "name": "Seychelles",
       "flag": "🇸🇨",
-      "region": "Africa",
-      "subregion": "Eastern Africa",
-      "authority": "Ministry of Communications / Data Governance Body of Seychelles",
-      "authority_url": "https://www.un.org/en/member-states/seychelles",
       "summary": "Seychelles maintains national data governance and cybersecurity provisions governing public and private processing within the Africa region.",
       "key_laws": [
         "Seychelles Electronic Transactions & Cybersecurity Framework",
         "Constitutional Privacy & Digital Safeguards"
       ],
+      "authority": "Ministry of Communications / Data Governance Body of Seychelles",
+      "authority_url": "https://www.un.org/en/member-states/seychelles",
       "scores": {
         "policy_coverage": 5,
         "enforcement_strength": 4,
@@ -4893,15 +4572,13 @@
       "code": "SY",
       "name": "Syria",
       "flag": "🇸🇾",
-      "region": "Asia",
-      "subregion": "Western Asia",
-      "authority": "Ministry of Communications / Data Governance Body of Syria",
-      "authority_url": "https://www.un.org/en/member-states/syria",
       "summary": "Syria maintains national data governance and cybersecurity provisions governing public and private processing within the Asia region.",
       "key_laws": [
         "Syria Electronic Transactions & Cybersecurity Framework",
         "Constitutional Privacy & Digital Safeguards"
       ],
+      "authority": "Ministry of Communications / Data Governance Body of Syria",
+      "authority_url": "https://www.un.org/en/member-states/syria",
       "scores": {
         "policy_coverage": 5,
         "enforcement_strength": 4,
@@ -4922,15 +4599,13 @@
       "code": "TD",
       "name": "Chad",
       "flag": "🇹🇩",
-      "region": "Africa",
-      "subregion": "Middle Africa",
-      "authority": "Ministry of Communications / Data Governance Body of Chad",
-      "authority_url": "https://www.un.org/en/member-states/chad",
       "summary": "Chad maintains national data governance and cybersecurity provisions governing public and private processing within the Africa region.",
       "key_laws": [
         "Chad Electronic Transactions & Cybersecurity Framework",
         "Constitutional Privacy & Digital Safeguards"
       ],
+      "authority": "Ministry of Communications / Data Governance Body of Chad",
+      "authority_url": "https://www.un.org/en/member-states/chad",
       "scores": {
         "policy_coverage": 5,
         "enforcement_strength": 4,
@@ -4951,15 +4626,13 @@
       "code": "TG",
       "name": "Togo",
       "flag": "🇹🇬",
-      "region": "Africa",
-      "subregion": "Western Africa",
-      "authority": "Ministry of Communications / Data Governance Body of Togo",
-      "authority_url": "https://www.un.org/en/member-states/togo",
       "summary": "Togo maintains national data governance and cybersecurity provisions governing public and private processing within the Africa region.",
       "key_laws": [
         "Togo Electronic Transactions & Cybersecurity Framework",
         "Constitutional Privacy & Digital Safeguards"
       ],
+      "authority": "Ministry of Communications / Data Governance Body of Togo",
+      "authority_url": "https://www.un.org/en/member-states/togo",
       "scores": {
         "policy_coverage": 5,
         "enforcement_strength": 4,
@@ -4980,14 +4653,12 @@
       "code": "TH",
       "name": "Thailand",
       "flag": "🇹🇭",
-      "region": "Asia",
-      "subregion": "South-Eastern Asia",
-      "authority": "PDPC (Personal Data Protection Committee Thailand)",
-      "authority_url": "https://www.pdpcthailand.com/",
       "summary": "Thailand enforces comprehensive data security and individual privacy laws administered by PDPC (Personal Data Protection Committee Thailand) across the jurisdiction.",
       "key_laws": [
         "PDPA (Personal Data Protection Act 2019)"
       ],
+      "authority": "PDPC (Personal Data Protection Committee Thailand)",
+      "authority_url": "https://www.pdpcthailand.com/",
       "scores": {
         "policy_coverage": 7,
         "enforcement_strength": 6,
@@ -5008,15 +4679,13 @@
       "code": "TJ",
       "name": "Tajikistan",
       "flag": "🇹🇯",
-      "region": "Asia",
-      "subregion": "Central Asia",
-      "authority": "Ministry of Communications / Data Governance Body of Tajikistan",
-      "authority_url": "https://www.un.org/en/member-states/tajikistan",
       "summary": "Tajikistan maintains national data governance and cybersecurity provisions governing public and private processing within the Asia region.",
       "key_laws": [
         "Tajikistan Electronic Transactions & Cybersecurity Framework",
         "Constitutional Privacy & Digital Safeguards"
       ],
+      "authority": "Ministry of Communications / Data Governance Body of Tajikistan",
+      "authority_url": "https://www.un.org/en/member-states/tajikistan",
       "scores": {
         "policy_coverage": 5,
         "enforcement_strength": 4,
@@ -5037,15 +4706,13 @@
       "code": "TM",
       "name": "Turkmenistan",
       "flag": "🇹🇲",
-      "region": "Asia",
-      "subregion": "Central Asia",
-      "authority": "Ministry of Communications / Data Governance Body of Turkmenistan",
-      "authority_url": "https://www.un.org/en/member-states/turkmenistan",
       "summary": "Turkmenistan maintains national data governance and cybersecurity provisions governing public and private processing within the Asia region.",
       "key_laws": [
         "Turkmenistan Electronic Transactions & Cybersecurity Framework",
         "Constitutional Privacy & Digital Safeguards"
       ],
+      "authority": "Ministry of Communications / Data Governance Body of Turkmenistan",
+      "authority_url": "https://www.un.org/en/member-states/turkmenistan",
       "scores": {
         "policy_coverage": 5,
         "enforcement_strength": 4,
@@ -5066,15 +4733,13 @@
       "code": "TL",
       "name": "Timor-Leste",
       "flag": "🇹🇱",
-      "region": "Asia",
-      "subregion": "South-Eastern Asia",
-      "authority": "Ministry of Communications / Data Governance Body of Timor-Leste",
-      "authority_url": "https://www.un.org/en/member-states/timor-leste",
       "summary": "Timor-Leste maintains national data governance and cybersecurity provisions governing public and private processing within the Asia region.",
       "key_laws": [
         "Timor-Leste Electronic Transactions & Cybersecurity Framework",
         "Constitutional Privacy & Digital Safeguards"
       ],
+      "authority": "Ministry of Communications / Data Governance Body of Timor-Leste",
+      "authority_url": "https://www.un.org/en/member-states/timor-leste",
       "scores": {
         "policy_coverage": 5,
         "enforcement_strength": 4,
@@ -5095,15 +4760,13 @@
       "code": "TO",
       "name": "Tonga",
       "flag": "🇹🇴",
-      "region": "Oceania",
-      "subregion": "Polynesia",
-      "authority": "Ministry of Communications / Data Governance Body of Tonga",
-      "authority_url": "https://www.un.org/en/member-states/tonga",
       "summary": "Tonga maintains national data governance and cybersecurity provisions governing public and private processing within the Oceania region.",
       "key_laws": [
         "Tonga Electronic Transactions & Cybersecurity Framework",
         "Constitutional Privacy & Digital Safeguards"
       ],
+      "authority": "Ministry of Communications / Data Governance Body of Tonga",
+      "authority_url": "https://www.un.org/en/member-states/tonga",
       "scores": {
         "policy_coverage": 5,
         "enforcement_strength": 4,
@@ -5124,15 +4787,13 @@
       "code": "TT",
       "name": "Trinidad and Tobago",
       "flag": "🇹🇹",
-      "region": "Americas",
-      "subregion": "Caribbean",
-      "authority": "Ministry of Communications / Data Governance Body of Trinidad and Tobago",
-      "authority_url": "https://www.un.org/en/member-states/trinidad-and-tobago",
       "summary": "Trinidad and Tobago maintains national data governance and cybersecurity provisions governing public and private processing within the Americas region.",
       "key_laws": [
         "Trinidad and Tobago Electronic Transactions & Cybersecurity Framework",
         "Constitutional Privacy & Digital Safeguards"
       ],
+      "authority": "Ministry of Communications / Data Governance Body of Trinidad and Tobago",
+      "authority_url": "https://www.un.org/en/member-states/trinidad-and-tobago",
       "scores": {
         "policy_coverage": 5,
         "enforcement_strength": 4,
@@ -5153,15 +4814,13 @@
       "code": "TN",
       "name": "Tunisia",
       "flag": "🇹🇳",
-      "region": "Africa",
-      "subregion": "Northern Africa",
-      "authority": "Ministry of Communications / Data Governance Body of Tunisia",
-      "authority_url": "https://www.un.org/en/member-states/tunisia",
       "summary": "Tunisia maintains national data governance and cybersecurity provisions governing public and private processing within the Africa region.",
       "key_laws": [
         "Tunisia Electronic Transactions & Cybersecurity Framework",
         "Constitutional Privacy & Digital Safeguards"
       ],
+      "authority": "Ministry of Communications / Data Governance Body of Tunisia",
+      "authority_url": "https://www.un.org/en/member-states/tunisia",
       "scores": {
         "policy_coverage": 5,
         "enforcement_strength": 4,
@@ -5182,14 +4841,12 @@
       "code": "TR",
       "name": "Türkiye",
       "flag": "🇹🇷",
-      "region": "Asia",
-      "subregion": "Western Asia",
-      "authority": "KVKK (Personal Data Protection Authority)",
-      "authority_url": "https://www.kvkk.gov.tr/",
       "summary": "Türkiye enforces comprehensive data security and individual privacy laws administered by KVKK (Personal Data Protection Authority) across the jurisdiction.",
       "key_laws": [
         "Law on the Protection of Personal Data No. 6698"
       ],
+      "authority": "KVKK (Personal Data Protection Authority)",
+      "authority_url": "https://www.kvkk.gov.tr/",
       "scores": {
         "policy_coverage": 7,
         "enforcement_strength": 7,
@@ -5210,15 +4867,13 @@
       "code": "TV",
       "name": "Tuvalu",
       "flag": "🇹🇻",
-      "region": "Oceania",
-      "subregion": "Polynesia",
-      "authority": "Ministry of Communications / Data Governance Body of Tuvalu",
-      "authority_url": "https://www.un.org/en/member-states/tuvalu",
       "summary": "Tuvalu maintains national data governance and cybersecurity provisions governing public and private processing within the Oceania region.",
       "key_laws": [
         "Tuvalu Electronic Transactions & Cybersecurity Framework",
         "Constitutional Privacy & Digital Safeguards"
       ],
+      "authority": "Ministry of Communications / Data Governance Body of Tuvalu",
+      "authority_url": "https://www.un.org/en/member-states/tuvalu",
       "scores": {
         "policy_coverage": 5,
         "enforcement_strength": 4,
@@ -5239,15 +4894,13 @@
       "code": "TW",
       "name": "Taiwan",
       "flag": "🇹🇼",
-      "region": "Asia",
-      "subregion": "Eastern Asia",
-      "authority": "Ministry of Communications / Data Governance Body of Taiwan",
-      "authority_url": "https://www.un.org/en/member-states/taiwan",
       "summary": "Taiwan maintains national data governance and cybersecurity provisions governing public and private processing within the Asia region.",
       "key_laws": [
         "Taiwan Electronic Transactions & Cybersecurity Framework",
         "Constitutional Privacy & Digital Safeguards"
       ],
+      "authority": "Ministry of Communications / Data Governance Body of Taiwan",
+      "authority_url": "https://www.un.org/en/member-states/taiwan",
       "scores": {
         "policy_coverage": 5,
         "enforcement_strength": 4,
@@ -5268,15 +4921,13 @@
       "code": "TZ",
       "name": "Tanzania",
       "flag": "🇹🇿",
-      "region": "Africa",
-      "subregion": "Eastern Africa",
-      "authority": "Ministry of Communications / Data Governance Body of Tanzania",
-      "authority_url": "https://www.un.org/en/member-states/tanzania",
       "summary": "Tanzania maintains national data governance and cybersecurity provisions governing public and private processing within the Africa region.",
       "key_laws": [
         "Tanzania Electronic Transactions & Cybersecurity Framework",
         "Constitutional Privacy & Digital Safeguards"
       ],
+      "authority": "Ministry of Communications / Data Governance Body of Tanzania",
+      "authority_url": "https://www.un.org/en/member-states/tanzania",
       "scores": {
         "policy_coverage": 5,
         "enforcement_strength": 4,
@@ -5297,15 +4948,13 @@
       "code": "UG",
       "name": "Uganda",
       "flag": "🇺🇬",
-      "region": "Africa",
-      "subregion": "Eastern Africa",
-      "authority": "Ministry of Communications / Data Governance Body of Uganda",
-      "authority_url": "https://www.un.org/en/member-states/uganda",
       "summary": "Uganda maintains national data governance and cybersecurity provisions governing public and private processing within the Africa region.",
       "key_laws": [
         "Uganda Electronic Transactions & Cybersecurity Framework",
         "Constitutional Privacy & Digital Safeguards"
       ],
+      "authority": "Ministry of Communications / Data Governance Body of Uganda",
+      "authority_url": "https://www.un.org/en/member-states/uganda",
       "scores": {
         "policy_coverage": 5,
         "enforcement_strength": 4,
@@ -5326,15 +4975,13 @@
       "code": "UA",
       "name": "Ukraine",
       "flag": "🇺🇦",
-      "region": "Europe",
-      "subregion": "Eastern Europe",
-      "authority": "Ministry of Communications / Data Governance Body of Ukraine",
-      "authority_url": "https://www.un.org/en/member-states/ukraine",
       "summary": "Ukraine maintains national data governance and cybersecurity provisions governing public and private processing within the Europe region.",
       "key_laws": [
         "Ukraine Electronic Transactions & Cybersecurity Framework",
         "Constitutional Privacy & Digital Safeguards"
       ],
+      "authority": "Ministry of Communications / Data Governance Body of Ukraine",
+      "authority_url": "https://www.un.org/en/member-states/ukraine",
       "scores": {
         "policy_coverage": 5,
         "enforcement_strength": 4,
@@ -5355,15 +5002,13 @@
       "code": "UY",
       "name": "Uruguay",
       "flag": "🇺🇾",
-      "region": "Americas",
-      "subregion": "South America",
-      "authority": "Ministry of Communications / Data Governance Body of Uruguay",
-      "authority_url": "https://www.un.org/en/member-states/uruguay",
       "summary": "Uruguay maintains national data governance and cybersecurity provisions governing public and private processing within the Americas region.",
       "key_laws": [
         "Uruguay Electronic Transactions & Cybersecurity Framework",
         "Constitutional Privacy & Digital Safeguards"
       ],
+      "authority": "Ministry of Communications / Data Governance Body of Uruguay",
+      "authority_url": "https://www.un.org/en/member-states/uruguay",
       "scores": {
         "policy_coverage": 5,
         "enforcement_strength": 4,
@@ -5384,15 +5029,13 @@
       "code": "UZ",
       "name": "Uzbekistan",
       "flag": "🇺🇿",
-      "region": "Asia",
-      "subregion": "Central Asia",
-      "authority": "Ministry of Communications / Data Governance Body of Uzbekistan",
-      "authority_url": "https://www.un.org/en/member-states/uzbekistan",
       "summary": "Uzbekistan maintains national data governance and cybersecurity provisions governing public and private processing within the Asia region.",
       "key_laws": [
         "Uzbekistan Electronic Transactions & Cybersecurity Framework",
         "Constitutional Privacy & Digital Safeguards"
       ],
+      "authority": "Ministry of Communications / Data Governance Body of Uzbekistan",
+      "authority_url": "https://www.un.org/en/member-states/uzbekistan",
       "scores": {
         "policy_coverage": 5,
         "enforcement_strength": 4,
@@ -5413,15 +5056,13 @@
       "code": "VA",
       "name": "Vatican City",
       "flag": "🇻🇦",
-      "region": "Europe",
-      "subregion": "Southern Europe",
-      "authority": "Ministry of Communications / Data Governance Body of Vatican City",
-      "authority_url": "https://www.un.org/en/member-states/vatican-city",
       "summary": "Vatican City maintains national data governance and cybersecurity provisions governing public and private processing within the Europe region.",
       "key_laws": [
         "Vatican City Electronic Transactions & Cybersecurity Framework",
         "Constitutional Privacy & Digital Safeguards"
       ],
+      "authority": "Ministry of Communications / Data Governance Body of Vatican City",
+      "authority_url": "https://www.un.org/en/member-states/vatican-city",
       "scores": {
         "policy_coverage": 5,
         "enforcement_strength": 4,
@@ -5442,15 +5083,13 @@
       "code": "VC",
       "name": "Saint Vincent and the Grenadines",
       "flag": "🇻🇨",
-      "region": "Americas",
-      "subregion": "Caribbean",
-      "authority": "Ministry of Communications / Data Governance Body of Saint Vincent and the Grenadines",
-      "authority_url": "https://www.un.org/en/member-states/saint-vincent-and-the-grenadines",
       "summary": "Saint Vincent and the Grenadines maintains national data governance and cybersecurity provisions governing public and private processing within the Americas region.",
       "key_laws": [
         "Saint Vincent and the Grenadines Electronic Transactions & Cybersecurity Framework",
         "Constitutional Privacy & Digital Safeguards"
       ],
+      "authority": "Ministry of Communications / Data Governance Body of Saint Vincent and the Grenadines",
+      "authority_url": "https://www.un.org/en/member-states/saint-vincent-and-the-grenadines",
       "scores": {
         "policy_coverage": 5,
         "enforcement_strength": 4,
@@ -5471,15 +5110,13 @@
       "code": "VE",
       "name": "Venezuela",
       "flag": "🇻🇪",
-      "region": "Americas",
-      "subregion": "South America",
-      "authority": "Ministry of Communications / Data Governance Body of Venezuela",
-      "authority_url": "https://www.un.org/en/member-states/venezuela",
       "summary": "Venezuela maintains national data governance and cybersecurity provisions governing public and private processing within the Americas region.",
       "key_laws": [
         "Venezuela Electronic Transactions & Cybersecurity Framework",
         "Constitutional Privacy & Digital Safeguards"
       ],
+      "authority": "Ministry of Communications / Data Governance Body of Venezuela",
+      "authority_url": "https://www.un.org/en/member-states/venezuela",
       "scores": {
         "policy_coverage": 5,
         "enforcement_strength": 4,
@@ -5500,14 +5137,12 @@
       "code": "VN",
       "name": "Vietnam",
       "flag": "🇻🇳",
-      "region": "Asia",
-      "subregion": "South-Eastern Asia",
-      "authority": "Ministry of Public Security (Cybersecurity Department)",
-      "authority_url": "https://bocongan.gov.vn/",
       "summary": "Vietnam enforces comprehensive data security and individual privacy laws administered by Ministry of Public Security (Cybersecurity Department) across the jurisdiction.",
       "key_laws": [
         "Personal Data Protection Decree (PDPD)"
       ],
+      "authority": "Ministry of Public Security (Cybersecurity Department)",
+      "authority_url": "https://bocongan.gov.vn/",
       "scores": {
         "policy_coverage": 6,
         "enforcement_strength": 7,
@@ -5528,15 +5163,13 @@
       "code": "VU",
       "name": "Vanuatu",
       "flag": "🇻🇺",
-      "region": "Oceania",
-      "subregion": "Melanesia",
-      "authority": "Ministry of Communications / Data Governance Body of Vanuatu",
-      "authority_url": "https://www.un.org/en/member-states/vanuatu",
       "summary": "Vanuatu maintains national data governance and cybersecurity provisions governing public and private processing within the Oceania region.",
       "key_laws": [
         "Vanuatu Electronic Transactions & Cybersecurity Framework",
         "Constitutional Privacy & Digital Safeguards"
       ],
+      "authority": "Ministry of Communications / Data Governance Body of Vanuatu",
+      "authority_url": "https://www.un.org/en/member-states/vanuatu",
       "scores": {
         "policy_coverage": 5,
         "enforcement_strength": 4,
@@ -5557,15 +5190,13 @@
       "code": "WS",
       "name": "Samoa",
       "flag": "🇼🇸",
-      "region": "Oceania",
-      "subregion": "Polynesia",
-      "authority": "Ministry of Communications / Data Governance Body of Samoa",
-      "authority_url": "https://www.un.org/en/member-states/samoa",
       "summary": "Samoa maintains national data governance and cybersecurity provisions governing public and private processing within the Oceania region.",
       "key_laws": [
         "Samoa Electronic Transactions & Cybersecurity Framework",
         "Constitutional Privacy & Digital Safeguards"
       ],
+      "authority": "Ministry of Communications / Data Governance Body of Samoa",
+      "authority_url": "https://www.un.org/en/member-states/samoa",
       "scores": {
         "policy_coverage": 5,
         "enforcement_strength": 4,
@@ -5586,15 +5217,13 @@
       "code": "YE",
       "name": "Yemen",
       "flag": "🇾🇪",
-      "region": "Asia",
-      "subregion": "Western Asia",
-      "authority": "Ministry of Communications / Data Governance Body of Yemen",
-      "authority_url": "https://www.un.org/en/member-states/yemen",
       "summary": "Yemen maintains national data governance and cybersecurity provisions governing public and private processing within the Asia region.",
       "key_laws": [
         "Yemen Electronic Transactions & Cybersecurity Framework",
         "Constitutional Privacy & Digital Safeguards"
       ],
+      "authority": "Ministry of Communications / Data Governance Body of Yemen",
+      "authority_url": "https://www.un.org/en/member-states/yemen",
       "scores": {
         "policy_coverage": 5,
         "enforcement_strength": 4,
@@ -5615,14 +5244,12 @@
       "code": "ZA",
       "name": "South Africa",
       "flag": "🇿🇦",
-      "region": "Africa",
-      "subregion": "Southern Africa",
-      "authority": "Information Regulator South Africa",
-      "authority_url": "https://inforegulator.org.za/",
       "summary": "South Africa enforces comprehensive data security and individual privacy laws administered by Information Regulator South Africa across the jurisdiction.",
       "key_laws": [
         "POPIA (Protection of Personal Information Act)"
       ],
+      "authority": "Information Regulator South Africa",
+      "authority_url": "https://inforegulator.org.za/",
       "scores": {
         "policy_coverage": 7,
         "enforcement_strength": 6,
@@ -5643,15 +5270,13 @@
       "code": "ZM",
       "name": "Zambia",
       "flag": "🇿🇲",
-      "region": "Africa",
-      "subregion": "Eastern Africa",
-      "authority": "Ministry of Communications / Data Governance Body of Zambia",
-      "authority_url": "https://www.un.org/en/member-states/zambia",
       "summary": "Zambia maintains national data governance and cybersecurity provisions governing public and private processing within the Africa region.",
       "key_laws": [
         "Zambia Electronic Transactions & Cybersecurity Framework",
         "Constitutional Privacy & Digital Safeguards"
       ],
+      "authority": "Ministry of Communications / Data Governance Body of Zambia",
+      "authority_url": "https://www.un.org/en/member-states/zambia",
       "scores": {
         "policy_coverage": 5,
         "enforcement_strength": 4,
@@ -5672,15 +5297,13 @@
       "code": "ZW",
       "name": "Zimbabwe",
       "flag": "🇿🇼",
-      "region": "Africa",
-      "subregion": "Eastern Africa",
-      "authority": "Ministry of Communications / Data Governance Body of Zimbabwe",
-      "authority_url": "https://www.un.org/en/member-states/zimbabwe",
       "summary": "Zimbabwe maintains national data governance and cybersecurity provisions governing public and private processing within the Africa region.",
       "key_laws": [
         "Zimbabwe Electronic Transactions & Cybersecurity Framework",
         "Constitutional Privacy & Digital Safeguards"
       ],
+      "authority": "Ministry of Communications / Data Governance Body of Zimbabwe",
+      "authority_url": "https://www.un.org/en/member-states/zimbabwe",
       "scores": {
         "policy_coverage": 5,
         "enforcement_strength": 4,

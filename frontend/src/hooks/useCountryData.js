@@ -113,8 +113,9 @@ export function useCountryData() {
 
     try {
       // Determine the base path for the fetch
-      // In production (GitHub Pages), the base path includes the repo name
-      const basePath = import.meta.env.BASE_URL || '/';
+      // In production (GitHub Pages) or local preview, ensure correct relative or absolute resolution
+      const rawBase = import.meta.env.BASE_URL || './';
+      const basePath = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
       const url = `${basePath}data/countries.json`;
 
       const response = await fetch(url);

@@ -5,9 +5,9 @@ import react from '@vitejs/plugin-react';
 export default defineConfig({
   plugins: [react()],
 
-  // When deploying to GitHub Pages, set the base path to the repo name.
-  // The GITHUB_PAGES env var is set during CI/CD builds.
-  base: process.env.GITHUB_PAGES ? '/Demo/' : '/',
+  // Relative base ensures assets and data load properly both on localhost
+  // and when deployed to any GitHub Pages repository path.
+  base: process.env.VITE_BASE || './',
 
   // Build output configuration
   build: {
@@ -18,6 +18,7 @@ export default defineConfig({
   // Dev server configuration
   server: {
     port: 5173,
-    open: true,
+    host: '127.0.0.1',
+    open: false,
   },
 });
