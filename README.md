@@ -1,290 +1,186 @@
 # 🛡️ Global Data Security Observatory
 
-> Compare data security policies across nations — powered by real-time scraping of official government sources.
+> **Compare sovereign data security and privacy frameworks across 197 nations — powered by automated scraping of official statutory and regulatory sources.**
 
 [![Deploy to GitHub Pages](https://github.com/dhruvbaslas/global-data-security-observatory/actions/workflows/deploy.yml/badge.svg)](https://github.com/dhruvbaslas/global-data-security-observatory/actions/workflows/deploy.yml)
+[![Live Site](https://img.shields.io/badge/Live%20Website-dhruvbaslas.github.io-00f0ff?style=for-the-badge&logo=google-chrome&logoColor=000)](https://dhruvbaslas.github.io/global-data-security-observatory/)
+[![License: Non-Commercial](https://img.shields.io/badge/License-Non--Commercial%20(No%20Sale)-blueviolet?style=for-the-badge)](LICENSE)
+[![CodeQL Security](https://img.shields.io/badge/Security-CodeQL%20Passed-2ea44f?style=for-the-badge&logo=github)](https://github.com/dhruvbaslas/global-data-security-observatory/security/code-scanning)
+
+---
+
+### 🌐 Live Production Website
+
+👉 **[https://dhruvbaslas.github.io/global-data-security-observatory/](https://dhruvbaslas.github.io/global-data-security-observatory/)**
+
+Experience the live interactive observatory across all devices — desktop, tablet, and mobile browsers.
 
 ---
 
 ## 🌍 Overview
 
-The **Global Data Security Observatory** is a single-page web application that scrapes, analyzes, and compares data security policies from official government websites across multiple countries. It provides:
+The **Global Data Security Observatory** is a high-performance web platform and automated intelligence pipeline that scrapes, analyzes, and evaluates national data security frameworks, statutory regulations, and privacy enforcement practices across the globe.
 
-- **Global 197 Sovereign Nations** — Complete database of all UN-recognized countries and sovereign territories
-- **Instant Type-to-Search Comboboxes** — Fast interactive search & fuzzy filtering across all 197 nations and regulatory archetypes
-- **Country Overview** — Filterable cards with search, jump-to-nation select, and archetype filters
-- **Side-by-Side Comparison** — Head-to-head parameter breakdown, dual radar spider visualizer, and **Cross-Border Transfer Adequacy Matrix** (GDPR Art. 45 & Standard Contractual Clauses)
-- **Interactive Country Swap** — 1-click swap button to invert Comparison perspectives
-- **Social Media Story Sharing & Graphic Export** — Generate and share high-res 1200×630 cards formatted for Twitter/X, Instagram Stories, Facebook, and WhatsApp, plus instant `.png` canvas graphic download
-- **Best of Best Analysis** — Podium showcasing **#1 Champions** and **#2 Runner-Ups** overall and across every security dimension
-- **Dynamic Expansion** — Add new nations or regional frameworks on-the-fly with client-side sandbox validation
-- **Regulatory Archetype Classification** — Grouping nations into EU Omnibus GDPR, US Sectoral, Data Localization, or Modern Hybrid frameworks
-- **72-Hour Breach Mandate Flags** — Instant indicators for mandatory data breach notification requirements
-- **Privacy-First Architecture** — Zero analytics, no cookies, isolated client sandbox, guaranteed viewport-centered modals
-- **7-Language Localization** — Lightweight, accurate dictionary engine for English, French, Spanish, German, Japanese, Chinese, and Hindi
+### Key Capabilities
 
-### Security Parameters Analyzed
-
-| Parameter | Weight | Description |
-|-----------|--------|-------------|
-| **Policy Coverage** | 25% | Breadth and comprehensiveness of data protection laws |
-| **Enforcement Strength** | 25% | Regulatory fines, audits, and statutory enforcement rigor |
-| **Transparency** | 20% | Clarity, public disclosure, and accessibility of guidelines |
-| **Update Frequency** | 15% | Cadence of regulatory updates, circulars, and modernization |
-| **International Alignment** | 15% | Cross-border adequacy, APEC CBPR, Convention 108+, ISO conformity |
-
+- **All 197 Sovereign Nations**: Comprehensive index covering UN member states and sovereign jurisdictions.
+- **Type-Ahead Combobox Filtering**: Search across nation names, ISO codes, and legal archetypes with instant query highlighting.
+- **Deep Head-to-Head Comparison**: 
+  - Dynamic **Dual-Radar Visualizer** showing polygon overlays across 5 critical parameters.
+  - **Cross-Border Transfer Adequacy Matrix** (GDPR Art. 45 adequacy status & Standard Contractual Clauses).
+  - **1-Click Perspective Swap** to invert sovereign comparison sides.
+  - **Adaptive Viewports**: Comprehensive side-by-side table on desktop/tablet; dedicated per-parameter battle cards on mobile.
+- **Social Story & Post Sharing**:
+  - Direct sharing to **Twitter / X**, **Instagram Stories**, **Facebook**, and **WhatsApp**.
+  - One-click high-resolution **Canvas Image Export (`.png`)** pre-formatted with comparison scores, radar graphics, and deep links.
+- **Best of the Best Intelligence**:
+  - Podium showcasing **#1 Champions** and **#2 Runner-Ups** overall and across individual security dimensions.
+- **Dynamic Policy Sandbox**: Client-side form to test, simulate, and analyze prospective national data frameworks against existing regimes.
+- **Privacy-First Architecture**: Viewport-centered modals, zero trackers, zero ad cookies, isolated sandbox execution, and strict client-side data isolation.
+- **7-Language Localization**: Instant runtime switching between English, French, Spanish, German, Japanese, Chinese, and Hindi.
 
 ---
 
-## 🏗️ Architecture
+## 📊 Security Parameters Analyzed
+
+| Parameter | Weight | Description |
+|-----------|:------:|-------------|
+| **Policy Coverage** | 25% | Scope, definitions, data subject rights, and statutory breadth. |
+| **Enforcement Strength** | 25% | Regulatory fines (% of global turnover or fixed caps), audit powers, and litigation rigor. |
+| **Transparency** | 20% | Public disclosure rules, accessibility of privacy guidelines, and register publication. |
+| **Update Frequency** | 15% | Cadence of regulatory amendments, AI/cloud circulars, and framework modernization. |
+| **International Alignment** | 15% | Adequacy recognition, APEC CBPR, Convention 108+, and ISO/IEC standard conformity. |
+
+---
+
+## 🏗️ Architecture & Data Pipeline
 
 ```
-┌─────────────────────────────────────────────────────────┐
-│                    GitHub Actions CI/CD                  │
-│  ┌──────────────┐   ┌──────────────┐   ┌────────────┐  │
-│  │ Python       │──▶│ Generate     │──▶│ Build &    │  │
-│  │ Scraper      │   │ JSON Data    │   │ Deploy     │  │
-│  └──────────────┘   └──────────────┘   └────────────┘  │
-└─────────────────────────────────────────────────────────┘
-                            │
-                            ▼
-┌─────────────────────────────────────────────────────────┐
-│                   GitHub Pages (Static)                  │
-│  ┌──────────────┐   ┌──────────────┐                    │
-│  │ React SPA    │◀──│ countries    │                    │
-│  │ (Vite)       │   │ .json        │                    │
-│  └──────────────┘   └──────────────┘                    │
-└─────────────────────────────────────────────────────────┘
+┌────────────────────────────────────────────────────────────────────────┐
+│                        GitHub Actions CI/CD Pipeline                   │
+│                                                                        │
+│   ┌────────────────────┐    ┌─────────────────────┐    ┌───────────┐   │
+│   │ Python 3.12        │───▶│ Sanitization &      │───▶│ Vite /    │   │
+│   │ Statutory Scraper  │    │ JSON Normalization  │    │ React SPA │   │
+│   └────────────────────┘    └─────────────────────┘    └───────────┘   │
+└────────────────────────────────────────────────────────────────────────┘
+                                     │
+                                     ▼
+┌────────────────────────────────────────────────────────────────────────┐
+│                 GitHub Pages Production Edge Deployment                │
+│                                                                        │
+│    https://dhruvbaslas.github.io/global-data-security-observatory/     │
+│    ├── Instant Client-Side Filtering                                   │
+│    ├── Pure Vector SVG Radar & Interactive Polygons                    │
+│    └── Zero-Tracker Privacy Guarantee                                  │
+└────────────────────────────────────────────────────────────────────────┘
 ```
 
-- **Backend**: Python scraper with caching, sanitization, and policy analysis
-- **Frontend**: React 19 + Vite SPA with pure SVG charts (no heavy chart libraries)
-- **Data Flow**: Scraper runs in CI → generates static JSON → frontend reads at runtime
+1. **Scraper Backend (`scraper/`)**: Python-based statutory scraper with multi-pass security sanitizers, rate limiting, and cached fallback persistence.
+2. **Analysis Engine (`scraper/analyzer.py` & `frontend/src/utils/analysis.js`)**: Deterministic scoring and comparative algorithms.
+3. **Frontend Application (`frontend/`)**: React 19 single-page app bundled with Vite, featuring bespoke SVG charts without third-party tracking or bloated charting libraries.
+4. **CI/CD Pipeline (`.github/workflows/deploy.yml`)**: Automated testing, linting, building, and deployment to GitHub Pages on every `main` push and scheduled weekly refreshes.
 
 ---
 
 ## 📋 Prerequisites
 
-| Tool | Version | Purpose |
-|------|---------|---------|
-| **Python** | 3.10+ | Scraper backend |
-| **Node.js** | 20+ | Frontend build |
-| **npm** | 10+ | Package management |
-| **Git** | 2.30+ | Version control |
+| Component | Minimum Version | Recommended |
+|-----------|:---------------:|:-----------:|
+| **Python** | 3.10+ | 3.12+ |
+| **Node.js** | 20+ | 24 LTS |
+| **npm** | 10+ | 10+ |
+| **Git** | 2.30+ | Latest |
 
 ---
 
-## 🚀 Quick Start
+## 🚀 Local Development Setup
 
-### 1. Clone & Install
+### 1. Clone the Repository
 
 ```bash
-# Clone the repository
 git clone https://github.com/dhruvbaslas/global-data-security-observatory.git
 cd global-data-security-observatory
-
-# Install all dependencies (Python + Node.js)
-pip install -r scraper/requirements.txt
-cd frontend && npm install && cd ..
 ```
 
-### 2. Run the Scraper (Generate Data)
+### 2. Set Up the Python Scraper
 
 ```bash
-# Run scraper with caching (recommended for development)
+# Install Python dependencies
+pip install -r scraper/requirements.txt
+
+# Run the scraper with caching enabled
 cd scraper
 python -m scraper.main --output ../frontend/public/data/countries.json
-
-# Or run without cache (fresh scrape)
-python -m scraper.main --output ../frontend/public/data/countries.json --no-cache
-
-# Scrape a single country
-python -m scraper.main --country US --output ../frontend/public/data/countries.json
+cd ..
 ```
 
-> **Note**: If scraping fails (network issues, blocked requests), the scraper automatically falls back to comprehensive curated data.
-
-### 3. Start the Development Server
+### 3. Launch the Frontend
 
 ```bash
 cd frontend
+npm install
 npm run dev
 ```
 
 Open [http://localhost:5173](http://localhost:5173) in your browser.
 
-### 4. Build for Production
-
-```bash
-cd frontend
-npm run build
-npm run preview  # Preview the production build locally
-```
-
 ---
 
-## 🧪 Testing
+## 🧪 Testing & Quality Assurance
 
-### Run All Tests
+### Run Frontend & Scraper Tests
 
 ```bash
-# From the project root:
+# Python scraper test suite (pytest)
+python -m pytest scraper/tests/ -v
 
-# Python scraper tests
-cd scraper
-python -m pytest tests/ -v
-
-# Frontend tests
-cd ../frontend
-npm test
-
-# Or run frontend tests with coverage
+# Frontend test suite (vitest)
+cd frontend
 npm run test:ci
 ```
 
-### Test Coverage
+### Multi-Device Responsive Verification
 
-| Area | Tests | Coverage |
-|------|-------|----------|
-| Scraper Logic | `test_scraper.py` | HTTP mocking, caching, fallback data |
-| Sanitization | `test_sanitizer.py` | XSS prevention, URL validation, input cleaning |
-| Policy Analysis | `test_analyzer.py` | Scoring, ranking, comparison |
-| React Components | `*.test.jsx` | Rendering, interaction, accessibility |
-| Analysis Utils | `analysis.test.js` | Score calculation, ranking, labels |
+A headless Puppeteer test suite verifies viewport responsiveness and zero layout regressions across 4K TV, 1080p Desktop, iPad/Tablet, and iPhone/Mobile:
 
-### What's Tested
-
-- ✅ Country filter works correctly
-- ✅ Comparison feature selects and compares two countries
-- ✅ Dynamic country addition validates and saves data
-- ✅ Best of Best analysis ranks countries correctly
-- ✅ XSS/injection prevention in all user inputs
-- ✅ Fallback data loads when scraping fails
-- ✅ Cache hit/miss behavior
-- ✅ Responsive rendering
-
----
-
-## 🌐 Deployment (GitHub Pages)
-
-### Automatic Deployment
-
-1. Push your code to the `main` branch on GitHub
-2. Go to **Settings → Pages** in your GitHub repository
-3. Under **Source**, select **GitHub Actions**
-4. The workflow at `.github/workflows/deploy.yml` will automatically:
-   - Run the Python scraper to generate fresh data
-   - Run all tests (scraper + frontend)
-   - Build the React app for production
-   - Deploy to GitHub Pages
-
-### Manual Deployment Trigger
-
-1. Go to **Actions** tab in your GitHub repository
-2. Select **"Deploy to GitHub Pages"** workflow
-3. Click **"Run workflow"** → **"Run workflow"** button
-
-### Scheduled Data Refresh
-
-The workflow runs automatically every **Monday at 06:00 UTC** to refresh scraped data from government websites.
-
-### Configuration
-
-Before deploying, update these values:
-
-1. In `frontend/vite.config.js`: The `base` path is automatically set to `/Demo/` when `GITHUB_PAGES=true`
-2. If your repo name differs from `Demo`, update the base path accordingly
-
----
-
-## 📁 Project Structure
-
-```
-Demo/
-├── .github/
-│   └── workflows/
-│       └── deploy.yml          # CI/CD pipeline
-├── scraper/                    # Python backend
-│   ├── __init__.py
-│   ├── main.py                 # Entry point & CLI
-│   ├── config.py               # Country URLs & settings
-│   ├── scraper.py              # Core scraping logic
-│   ├── sanitizer.py            # Security sanitization
-│   ├── analyzer.py             # Policy scoring engine
-│   ├── cache.py                # Response caching
-│   ├── requirements.txt        # Python dependencies
-│   └── tests/                  # Pytest test suite
-│       ├── test_scraper.py
-│       ├── test_sanitizer.py
-│       └── test_analyzer.py
-├── frontend/                   # React SPA
-│   ├── package.json
-│   ├── vite.config.js
-│   ├── vitest.config.js
-│   ├── index.html
-│   ├── public/
-│   │   └── data/
-│   │       └── countries.json  # Generated data
-│   └── src/
-│       ├── main.jsx
-│       ├── App.jsx             # Main application
-│       ├── App.css             # Global styles
-│       ├── components/         # React components
-│       │   ├── Header.jsx
-│       │   ├── CountryFilter.jsx
-│       │   ├── CountryCard.jsx
-│       │   ├── ComparisonView.jsx
-│       │   ├── AddCountry.jsx
-│       │   ├── BestOfBest.jsx
-│       │   └── ParameterRadar.jsx
-│       ├── hooks/
-│       │   └── useCountryData.js
-│       ├── utils/
-│       │   ├── sanitize.js
-│       │   └── analysis.js
-│       └── __tests__/          # Vitest test suite
-│           ├── setup.js
-│           ├── App.test.jsx
-│           ├── CountryFilter.test.jsx
-│           ├── ComparisonView.test.jsx
-│           ├── AddCountry.test.jsx
-│           ├── BestOfBest.test.jsx
-│           └── analysis.test.js
-├── package.json                # Root orchestration
-└── README.md                   # This file
+```bash
+node frontend/verify_multidevice.cjs
 ```
 
 ---
 
-## 🔒 Security Considerations
+## 🌐 Deployment to GitHub Pages
 
-- **Input Sanitization**: All user inputs are sanitized on both Python and JavaScript sides
-- **XSS Prevention**: HTML entities escaped, dangerous tags stripped, CSP headers configured
-- **URL Validation**: Only `http://` and `https://` schemes accepted
-- **No Sensitive Data**: No API keys, tokens, or credentials stored in the codebase
-- **Rate Limiting**: Scraper includes 2-second delays between requests to be polite
-- **Cache Isolation**: Cached data is stored locally and never served to other users
+Deployments are fully automated via GitHub Actions:
 
----
-
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create a feature branch: `git checkout -b feature/new-country`
-3. Make your changes and add tests
-4. Run the full test suite: `npm run test:scraper && npm run test:frontend`
-5. Commit and push: `git push origin feature/new-country`
-6. Open a Pull Request
+1. **Continuous Deployment**: Pushing to `main` executes scraper validation, frontend unit tests, Vite production builds, and pushes directly to GitHub Pages.
+2. **Weekly Statutory Refreshes**: A scheduled cron trigger (`0 6 * * 1`) checks official sources every Monday at 06:00 UTC.
+3. **Production URL**: 
+   **[https://dhruvbaslas.github.io/global-data-security-observatory/](https://dhruvbaslas.github.io/global-data-security-observatory/)**
 
 ---
 
-## 📄 License
+## 📄 License & Terms of Use
 
-MIT License — see [LICENSE](LICENSE) for details.
+This project is licensed under a **Source-Available Non-Commercial License (Attribution-NonCommercial)**:
+
+- ✅ **Re-use Permitted**: You are welcome to view, study, fork, modify, reference, and re-use this software for **personal, educational, academic, non-commercial, and open-source research purposes**.
+- ❌ **Commercial Copying & Resale Strictly Prohibited**: You **MAY NOT** copy, package, white-label, sublicense, or sell this software, its source code, or any derivative works for commercial gain, monetary compensation, or as a paid commercial product/service.
+- 🏷️ **Attribution Required**: Any permitted non-commercial redistribution must retain the original copyright notice and a link back to this repository.
+
+See the complete terms in the [LICENSE](LICENSE) file.
 
 ---
 
-## ⚠️ Disclaimer
+## 👤 Author
 
-This site provides **informational summaries only** and is **not legal advice**. Data security policies are complex and subject to change. Always consult official government sources and qualified legal professionals for authoritative guidance.
+**Dhruv Baslas**
+- GitHub: [@dhruvbaslas](https://github.com/dhruvbaslas)
+- Repository: [global-data-security-observatory](https://github.com/dhruvbaslas/global-data-security-observatory)
 
+---
+
+## ⚠️ Legal Disclaimer
+
+The data and policy evaluations presented in this observatory are compiled for **educational, academic, and informational purposes only** and do not constitute formal legal counsel. For authoritative statutory interpretations, consult official governmental gazettes and accredited legal counsel.

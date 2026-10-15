@@ -50,3 +50,4 @@ export default function ShieldLogo({ size = 26, className = '' }) {
     </svg>
   );
 }
+
