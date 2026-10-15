@@ -2,7 +2,7 @@
 
 > Compare data security policies across nations — powered by real-time scraping of official government sources.
 
-[![Deploy to GitHub Pages](https://github.com/<YOUR_USERNAME>/Demo/actions/workflows/deploy.yml/badge.svg)](https://github.com/<YOUR_USERNAME>/Demo/actions/workflows/deploy.yml)
+[![Deploy to GitHub Pages](https://github.com/dhruvbaslas/global-data-security-observatory/actions/workflows/deploy.yml/badge.svg)](https://github.com/dhruvbaslas/global-data-security-observatory/actions/workflows/deploy.yml)
 
 ---
 
@@ -80,8 +80,8 @@ The **Global Data Security Observatory** is a single-page web application that s
 
 ```bash
 # Clone the repository
-git clone https://github.com/<YOUR_USERNAME>/Demo.git
-cd Demo
+git clone https://github.com/dhruvbaslas/global-data-security-observatory.git
+cd global-data-security-observatory
 
 # Install all dependencies (Python + Node.js)
 pip install -r scraper/requirements.txt
